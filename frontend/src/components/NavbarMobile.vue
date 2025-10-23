@@ -17,7 +17,7 @@ const isLoggedIn = false;
         <nav id="topNav" class="bg-transparent p-2 z-10 fixed">
                 <div class="h-3rem w-screen flex justify-between items-center">
                     <router-link to="/" class="h-12 flex items-center px-4">
-                        <img src="@/assets/imgs/Itinero_Standalone.svg" alt="Logo" class="w-10 h-10"/>
+                        <img src="@/assets/imgs/Itinero_standalone.svg" alt="Logo" class="w-10 h-10"/>
                     </router-link>
                     <div>
                         <Avatar v-if="isLoggedIn" label="K" class="mr-3 shadow-xl" size="large" style="background-color: #9954DD; color: white" shape="circle" severity="secondary"/>
