@@ -37,7 +37,7 @@ const isLoggedIn = false;
       <nav class="p-2 bg-transparent">
         <div class="bg-pink-100 w-13 h-[98dvh] drop-shadow-2xl flex flex-col p-2 rounded-xl">
            <router-link to="/" class="h-10 flex items-center px-4 hover:opacity-80 transition duration-150">
-               <img src="@/assets/imgs/Itinero_Standalone.svg" alt="Logo" class="h-10 w-10 scale-900"/>
+               <img src="@/assets/imgs/Itinero_standalone.svg" alt="Logo" class="h-10 w-10 scale-900"/>
            </router-link>
            <hr class="mb-2 mt-4">
            <div class="flex flex-col justify-between items-center h-full">
