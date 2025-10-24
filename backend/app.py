@@ -4,6 +4,7 @@ from flask_cors import CORS
 from dotenv import load_dotenv
 from pulp import *
 from datetime import datetime, timedelta
+import pytz
 
 load_dotenv()
 APIKEY = os.getenv('GOOGLE_API_KEY')
@@ -13,7 +14,12 @@ polyline_url = "https://routes.googleapis.com/directions/v2:computeRoutes"
 
 app = Flask(__name__)
 
-
+CORS(app, origins=[
+    "https://itinero.live",
+    "https://www.itinero.live",
+    "https://api.itinero.live", # <--- Your Render service will use this
+    "https://itinero-web.vercel.app" 
+])
 
 @app.route('/api', methods=['POST'])
 def get_all_data():
@@ -276,9 +282,9 @@ TYPE_PARAMETERS = {
 }
                 
 def scheduling(path, results, time_for_activities, segment_durations):
-    
+    MANILA_TZ = pytz.timezone('Asia/Manila')
     # --- Time Setup (RETAINING USER'S REQUESTED VARIABLES) ---
-    timeNow = datetime.now() # Use timezone-aware datetime if needed for production
+    timeNow = datetime.now(MANILA_TZ) # Use timezone-aware datetime if needed for production
     
     # Extract current hour and minute for display/logging
     timeHour = timeNow.hour
@@ -457,5 +463,5 @@ def polyline(route):
     except requests.exceptions.RequestException as e:
         print(f"External API request failed: {e}")
      
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     # app.run(debug=True)

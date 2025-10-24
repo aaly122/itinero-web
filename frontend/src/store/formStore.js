@@ -2,6 +2,9 @@ import { defineStore } from 'pinia';
 import axios from 'axios'
 import router, { routerInstance } from '@/router';
 
+const VITE_API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const BASE_URL = VITE_API_BASE_URL || '';
+
 export const useFormStore = defineStore('form', {
 
   state: () => ({
@@ -34,8 +37,8 @@ export const useFormStore = defineStore('form', {
       this.loading = true;
       this.error = null;
 
-      
-      const response = await axios.post('/api', this.currentFormState);
+      const API_ENDPOINT = `${BASE_URL}/api`;
+      const response = await axios.post(API_ENDPOINT, this.currentFormState);
       this.SuccessMessage = response.data.message;
       console.log('Search Results: ', response.data.search_results);
       console.log('Other Places:', response.data.other_results);
