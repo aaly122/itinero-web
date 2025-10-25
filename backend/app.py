@@ -15,9 +15,9 @@ polyline_url = "https://routes.googleapis.com/directions/v2:computeRoutes"
 app = Flask(__name__)
 
 CORS(app, origins=[
-    "https://itinero.live",
-    "https://www.itinero.live",
-    "https://api.itinero.live", # <--- Your Render service will use this
+    "https://itinero.site",
+    "https://www.itinero.site",
+    "https://api.itinero.site", # <--- Your Render service will use this
     "https://itinero-web.vercel.app" 
 ])
 
@@ -153,6 +153,7 @@ def search(interestsArray, startingLocation, endingLocation):
     return resultsArray, otherPlacesArray    
             
 def trace_distance(results):
+    print("DEBUG sample result:", results[0])
     all_locations = [{"waypoint": {"placeId": result['places']['id']}} for result in results]
     destinationsArray = []
     for eachResult in results:
