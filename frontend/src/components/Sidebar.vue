@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue';
 import Chip from 'primevue/chip';
+import { useRouter } from 'vue-router';
+const router = useRouter();
 
 import { useFormStore } from '@/store/formStore.js';
 
@@ -34,6 +36,11 @@ destinationsArray.forEach((place,index) => {
     stops.push(stop)    
  })
 
+ const regenerateItinerary = () => {
+    router.push('/Loading');
+    formStore.regenerateItinerary();
+ }
+
 
 
 const startTime = ref('3:30')
@@ -44,10 +51,15 @@ console.log("Stops:", stops)
 
 
 <template>
-    <div id="sideBarContainer" class="bg-transparent z-5 p-4 h-full w-full">
+    <div id="sideBarContainer" class="bg-transparent z-5 p-4 h-full w-full flex items-end">
+        <div class="h-[20%] w-[40%] flex flex-col justify-center p-2 gap-2">
+            <Button icon="pi pi-pen-to-square" rounded raised severity="secondary" label="Edit" @click="router.push('/Edit')"/>
+            <Button icon="pi pi-save" rounded disabled raised severity="secondary" label="Save"/>
+            <Button icon="pi pi-replay" rounded raised severity="secondary" label="Regenerate" @click=""/>
+        </div>
         <div class="w-full h-full bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.5)] flex flex-col p-2">
             <div class="flex p-2 gap-2 justify-between">
-                <div class="flex items-center font-bold ">Total Metrics </div>
+                <div class="flex items-center font-bold ">Total Metrics</div>
                 <div class="flex gap-2">
                     <Chip class="rounded-full bg-primary-400 text-white font-bold text-sm pr-2 w-25">
                         <i class="material-icons">straighten</i>
@@ -82,5 +94,7 @@ console.log("Stops:", stops)
             </div>
 
         </div>
+
     </div>
+
 </template>
