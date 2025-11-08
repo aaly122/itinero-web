@@ -8,7 +8,7 @@ const BASE_URL = VITE_API_BASE_URL || '';
 export const useFormStore = defineStore('form', {
 
   state: () => ({
-    currentFormState: {
+    tripData: {
       startingLocation: null,
       endingLocation: null,
       timeAllotted: null,
@@ -29,16 +29,16 @@ export const useFormStore = defineStore('form', {
   },
   actions: {
     async updateFormData(data) {
-      this.currentFormState.startingLocation = data.startingLocation;
-      this.currentFormState.endingLocation = data.endingLocation;
-      this.currentFormState.timeAllotted = data.timeAllotted;
-      this.currentFormState.interests = data.interests;
+      this.tripData.startingLocation = data.startingLocation;
+      this.tripData.endingLocation = data.endingLocation;
+      this.tripData.timeAllotted = data.timeAllotted;
+      this.tripData.interests = data.interests;
 
       this.loading = true;
       this.error = null;
 
       const API_ENDPOINT = `${BASE_URL}/api`;
-      const response = await axios.post(API_ENDPOINT, this.currentFormState);
+      const response = await axios.post(API_ENDPOINT, this.tripData);
       this.SuccessMessage = response.data.message;
       console.log('Search Results: ', response.data.search_results);
       console.log('Other Places:', response.data.other_results);
@@ -53,12 +53,12 @@ export const useFormStore = defineStore('form', {
       console.log("Segment Duration: ", response.data.segments.durations)
       console.log("Segment Distance", response.data.segments.distances)
       console.log("Polyline: ", response.data.polyline)
-      this.currentFormState.stops = response.data.final_schedule
-      this.currentFormState.distances = response.data.segments.distances
-      this.currentFormState.durations = response.data.segments.durations
-      this.currentFormState.polyline = response.data.polyline
-      this.currentFormState.totalDistance = response.data.total_distance
-      this.currentFormState.totalDuration = response.data.total_time
+      this.tripData.stops = response.data.final_schedule
+      this.tripData.distances = response.data.segments.distances
+      this.tripData.durations = response.data.segments.durations
+      this.tripData.polyline = response.data.polyline
+      this.tripData.totalDistance = response.data.total_distance
+      this.tripData.totalDuration = response.data.total_time
       
       routerInstance.push('/Dashboard');
         
@@ -69,8 +69,20 @@ export const useFormStore = defineStore('form', {
       //   this.loading = false;
       // }
     },
+    async regenerateItinerary(){
+      const API_ENDPOINT = `${BASE_URL}/api`;
+      const response = await axios.post(API_ENDPOINT, this.tripData);
+      this.tripData.stops = response.data.final_schedule
+      this.tripData.distances = response.data.segments.distances
+      this.tripData.durations = response.data.segments.durations
+      this.tripData.polyline = response.data.polyline
+      this.tripData.totalDistance = response.data.total_distance
+      this.tripData.totalDuration = response.data.total_time
+      routerInstance.push('/Dashboard');
+
+    },
     resetState () {
-      this.$reset();
+      this.tripData.$reset();
     }
   } 
 });

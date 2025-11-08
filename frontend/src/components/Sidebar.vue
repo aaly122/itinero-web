@@ -10,14 +10,14 @@ import { togglePan, isPanned, activeStopTitle } from '@/composables/useMap';
 
 
 const formStore = useFormStore();
-const destinationsArray = formStore.currentFormState.stops
-const durations = formStore.currentFormState.durations
-const distances = formStore.currentFormState.distances
-const totalDurationData = formStore.currentFormState.totalDuration
+const destinationsArray = formStore.tripData.stops
+const durations = formStore.tripData.durations
+const distances = formStore.tripData.distances
+const totalDurationData = formStore.tripData.totalDuration
 const totalDuration = Math.ceil(totalDurationData / 60)
 
 
-const totalDistanceData = formStore.currentFormState.totalDistance
+const totalDistanceData = formStore.tripData.totalDistance
 const totalDistance = Number(totalDistanceData / 1000).toFixed(1)
 const stops = []
 

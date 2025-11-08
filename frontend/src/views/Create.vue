@@ -247,7 +247,7 @@ onMounted(() => {
                 </div>
             </StepPanel>
 
-            <StepPanel v-slot="{ activateCallback }" value="2" class="flex flex-col h-full">
+            <StepPanel v-slot="{ activateCallback }" value="2" class="flex flex-col h-full bg-slate-50">
                 <div class="md:mb-0 w-full md:w-[60%]">
                     <h1 class="text-2xl md: 4xl font-bold font-[Poppins] w-full text-center md:text-left">
                         How much time do you have available for your trip?
@@ -273,7 +273,7 @@ onMounted(() => {
                 </div>
 
             </StepPanel>
-            <StepPanel v-slot="{ activateCallback }" value="3" class="flex flex-col h-full">
+            <StepPanel v-slot="{ activateCallback }" value="3" class="flex flex-col h-full bg-slate-50">
                 <div class="md:mb-0 w-full md:w-[60%] mb-15">
                     <h1 class="text-2xl md: 4xl font-bold font-[Poppins] w-full text-center md:text-left">
                         What are the stuff you would like to see?

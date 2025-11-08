@@ -5,7 +5,7 @@ import { useFormStore } from '@/store/formStore.js';
 
 const formStore = useFormStore();
 
-console.log("Form store:", formStore.currentFormState.stops)
+console.log("Form store:", formStore.tripData.stops)
 </script>
 
 <template>

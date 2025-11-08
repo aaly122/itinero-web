@@ -17,20 +17,22 @@
       <router-view />
     </main>
 
-    <!-- Top navbar -->
+    <!-- Desktop -->
     <div class="hidden md:block w-25 h-full flex-shrink-0 fixed z-10">
       <Navbar />
     </div>
 
-    <div class="absolute md:hidden left-0 right-0 z-10 pointer-events-none">
-      <NavbarMobile />
+    <div class="md:absolute md:block hidden right-0 h-full w-[35%] z-10">
+      <Sidebar />
     </div>
 
 
 
-    <!-- Sidebar -->
-    <div class="md:absolute md:block hidden right-0 h-full w-[25%] z-10">
-      <Sidebar />
+
+
+    <!-- Mobile -->
+    <div class="absolute md:hidden left-0 right-0 z-10 pointer-events-none">
+      <NavbarMobile />
     </div>
 
     <div class="absolute md:hidden top-[calc(4rem)] left-0 h-[calc(100%-8.5rem)] w-full z-5 pointer-events-none">

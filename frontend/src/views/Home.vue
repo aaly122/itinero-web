@@ -48,7 +48,7 @@ onUnmounted(() => {
         Generate intramuros itineraries in seconds<br></br>
         Skip the research and get straight to exploring Manila's Walled City!
       </p>
-      <Button label="Create Itinerary" rounded raised class=" w-55 transition-all ease-in-out duration-250 hover:scale-115 hover:ring-primary-200 hover:text-black border-0"></Button>
+      <Button label="Create Itinerary" rounded raised class="w-55 transition-all ease-in-out duration-250 hover:scale-115 hover:bg-primary-50 hover:text-black border-0 shadow-primary-500 hover:drop-shadow-2xl" @click="createAndRefresh"></Button>
     </div>
     
     <div class="min-h-screen w-full flex flex-col justify-center items-center" ref="howItWorks">
