@@ -80,7 +80,7 @@ export async function initMap(mapElementId) {
         PinElement = markerLib.PinElement; 
 
 
-        const polylineString = formStore.currentFormState.polyline
+        const polylineString = formStore.tripData.polyline
         const polylinePath = google.maps.geometry.encoding.decodePath(polylineString);
         const routeLine = new google.maps.Polyline({
             path: polylinePath,

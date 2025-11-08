@@ -158,15 +158,15 @@ const submitHandler = () => {
                 interests: selectedTagTypes.value
             });
             router.push('/Loading');
-            console.log('Starting Locations: ', formStore.currentFormState.startingLocation.name)
-            console.log('Lat: ', formStore.currentFormState.startingLocation.lat)
-            console.log('Address: ', formStore.currentFormState.startingLocation.address)
-            console.log('PlaceID: ', formStore.currentFormState.startingLocation.place_id)
-            console.log('Ending Location: ', formStore.currentFormState.endingLocation.name)
-            console.log('Address: ', formStore.currentFormState.endingLocation.address)
-            console.log('Place ID: ', formStore.currentFormState.endingLocation.place_id)
-            console.log('Time: ', formStore.currentFormState.timeAllotted)
-            console.log('Interests chosen: ', formStore.currentFormState.interests)
+            console.log('Starting Locations: ', formStore.tripData.startingLocation.name)
+            console.log('Lat: ', formStore.tripData.startingLocation.lat)
+            console.log('Address: ', formStore.tripData.startingLocation.address)
+            console.log('PlaceID: ', formStore.tripData.startingLocation.place_id)
+            console.log('Ending Location: ', formStore.tripData.endingLocation.name)
+            console.log('Address: ', formStore.tripData.endingLocation.address)
+            console.log('Place ID: ', formStore.tripData.endingLocation.place_id)
+            console.log('Time: ', formStore.tripData.timeAllotted)
+            console.log('Interests chosen: ', formStore.tripData.interests)
         } else if (selectedTagIds.value.length == 1 && simpleTime < 60) {
             formStore.updateFormData( {
                 startingLocation: startPlaceData,
