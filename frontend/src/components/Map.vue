@@ -7,7 +7,7 @@ import { newMarker, mapReady } from '@/composables/useMap';
 const mapContainer = 'map-container';
 
 const formStore = useFormStore();
-const stops = formStore.currentFormState.stops
+const stops = formStore.tripData.stops
 
 
 const allLocationCoords = computed(() => {
