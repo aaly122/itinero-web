@@ -19,12 +19,33 @@ Before getting started, you must first install the following dependencies:
 * [Python](https://www.python.org/)
 
 1. Navigate to the folder you want to clone to and clone the repository.
+
 `https://github.com/karlo-alano/itinero.git` or `git@github.com:karlo-alano/itinero.git`
 
 2. Navigate to ./frontend/ and download the necesarry dependencies.
+
 `npm install`
+
 After installation, the code should now be editable.
 
 3. To run and test, make the dev server live
+
 `npm run dev`
+
+## Completed Features:
+* Basic Create Module. From data gathering to data processing to data presentation.
+* Basic wireframe of static UI components 
+
+## Uncompleted Features:
+* Itinerary editing, regeneration, and saving
+* User account creation
+* User content creation (Blog and Pocket Journal creation)
+* Database integration
+* User authentication and session management
+
+
+## Unpolished features:
+* UI/UX
+* Automatic Scheduling Algorithm 
+
 
