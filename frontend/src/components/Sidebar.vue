@@ -55,7 +55,7 @@ console.log("Stops:", stops)
         <div class="h-[20%] w-[40%] flex flex-col justify-center p-2 gap-2">
             <Button icon="pi pi-pen-to-square" rounded raised severity="secondary" label="Edit" @click="router.push('/Edit')"/>
             <Button icon="pi pi-save" rounded disabled raised severity="secondary" label="Save"/>
-            <Button icon="pi pi-replay" rounded raised severity="secondary" label="Regenerate" @click=""/>
+            <Button icon="pi pi-replay" rounded raised severity="secondary" label="Regenerate" @click="regenerateItinerary"/>
         </div>
         <div class="w-full h-full bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.5)] flex flex-col p-2">
             <div class="flex p-2 gap-2 justify-between">
