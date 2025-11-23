@@ -140,6 +140,21 @@ export function newMarker (locationsArray) {
     })
 }
 
+export function clearMapInstance() {
+    // 1. Clear all markers from the map view before destroying the map.
+    markersArray.forEach(marker => {
+        marker.map = null; 
+    });
+    markersArray = [];
+
+    // 2. Clear the map instance reference itself.
+    if (mapInstance.value) {
+        // NOTE: Google Maps API doesn't have a simple destroy method,
+        // but clearing the ref is essential for the next initMap call.
+        mapInstance.value = null; 
+    }
+}
+
 export async function togglePan(targetLat, targetLng, stopTitle) {
     await mapReady; 
 

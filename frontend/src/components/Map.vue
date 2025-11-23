@@ -1,16 +1,20 @@
 <script setup>
-import { onMounted, watch, computed } from 'vue';
-import { initMap } from '@/composables/useMap'; 
+import { onMounted, watch, computed, onUnmounted } from 'vue';
 import { useFormStore } from '@/store/formStore';
-import { newMarker, mapReady } from '@/composables/useMap';
+import { newMarker, mapReady, initMap, clearMapInstance } from '@/composables/useMap';
 
 const mapContainer = 'map-container';
 
 const formStore = useFormStore();
-const stops = formStore.tripData.stops
+// const stops = formStore.tripData.stops
 
 
 const allLocationCoords = computed(() => {
+    const stops = formStore.tripData.stops; 
+    
+    if (!stops || stops.length === 0) {
+        return [];
+    }
     const locations = [];
     
     stops.forEach((place) => {
@@ -19,7 +23,6 @@ const allLocationCoords = computed(() => {
             lng: place.places.location.longitude
         })
     })
-    console.log(locations)
     return locations;
 });
 
@@ -38,6 +41,10 @@ onMounted(() => {
         console.log('Map is fully initialized and ready for commands.');
         newMarker(allLocationCoords.value);
     });
+});
+
+onUnmounted(() => {
+    clearMapInstance(); 
 });
 
 
