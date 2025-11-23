@@ -74,7 +74,7 @@ console.log("Stops:", stops)
             <div id="lowerBox" class="h-full bg-slate-100 rounded-xl flex flex-col p-2 gap-2 overflow-y-auto">
                 <div v-for="stop in stops" :key="stop.title" @click="togglePan(stop.lat, stop.lng, stop.title)" 
                 :class="{
-                'w-full min-h-55 rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 grid grid-cols-4 grid-rows-5 border-b-8 cursor-pointer transition-all ease-in': true,
+                'w-full min-h-55 rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 grid grid-cols-4 grid-rows-5 cursor-pointer transition-all ease-in': true,
                 
                 'border-primary-200': activeStopTitle !== stop.title,
                 'border-primary-400 scale-101 bg-white': activeStopTitle === stop.title
