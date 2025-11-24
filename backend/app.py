@@ -40,6 +40,7 @@ def get_all_data():
     final_schedule = scheduling(path, results, time_for_activities, segment_durations)
     polylineString = polyline(final_schedule)
     
+    print("OTHER RESULTS: ", other_results)
     return jsonify({
         "status": "success",
         "message": f"Successfully searched {len(interestsArray)} interests.",

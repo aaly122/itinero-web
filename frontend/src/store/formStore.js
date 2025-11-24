@@ -14,6 +14,7 @@ export const useFormStore = defineStore('form', {
       timeAllotted: null,
       interests: [],
       stops: null,
+      otherResults: null,
       distances: [],
       durations: [],
       polyline: null,
@@ -40,26 +41,16 @@ export const useFormStore = defineStore('form', {
       const API_ENDPOINT = `${BASE_URL}/api`;
       const response = await axios.post(API_ENDPOINT, this.tripData);
       this.SuccessMessage = response.data.message;
-      console.log('Search Results: ', response.data.search_results);
-      console.log('Other Places:', response.data.other_results);
-      console.log('Distance Matrix:', response.data.distance_matrix)
-      console.log("Distance: ", response.data.distances)
-      console.log("Durations: ", response.data.durations)
-      console.log("Path: ", response.data.path)
-      console.log("Total Distance: ", response.data.total_distance)
-      console.log("Total Time: ", response.data.total_time)
-      console.log("Final_schedule", response.data.final_schedule)
-      console.log("Time for activities", response.data.time_for_activities)
-      console.log("Segment Duration: ", response.data.segments.durations)
-      console.log("Segment Distance", response.data.segments.distances)
-      console.log("Polyline: ", response.data.polyline)
+
       this.tripData.stops = response.data.final_schedule
+      this.tripData.otherResults = response.data.other_results
       this.tripData.distances = response.data.segments.distances
       this.tripData.durations = response.data.segments.durations
       this.tripData.polyline = response.data.polyline
       this.tripData.totalDistance = response.data.total_distance
       this.tripData.totalDuration = response.data.total_time
       
+      console.log("otherresults:", response.data.other_results)
       routerInstance.push('/Dashboard');
         
       // } catch (error) {
@@ -68,16 +59,33 @@ export const useFormStore = defineStore('form', {
       // } finally {
       //   this.loading = false;
       // }
+      //       console.log('Search Results: ', response.data.search_results);
+      // console.log('Other Places:', response.data.other_results);
+      // console.log('Distance Matrix:', response.data.distance_matrix)
+      // console.log("Distance: ", response.data.distances)
+      // console.log("Durations: ", response.data.durations)
+      // console.log("Path: ", response.data.path)
+      // console.log("Total Distance: ", response.data.total_distance)
+      // console.log("Total Time: ", response.data.total_time)
+      // console.log("Final_schedule", response.data.final_schedule)
+      // console.log("Time for activities", response.data.time_for_activities)
+      // console.log("Segment Duration: ", response.data.segments.durations)
+      // console.log("Segment Distance", response.data.segments.distances)
+      // console.log("Polyline: ", response.data.polyline)
     },
     async regenerateItinerary(){
       const API_ENDPOINT = `${BASE_URL}/api`;
       const response = await axios.post(API_ENDPOINT, this.tripData);
+      console.log("Final_schedule", response.data.final_schedule)
       this.tripData.stops = response.data.final_schedule
+      this.tripData.otherResults = response.data.other_results
       this.tripData.distances = response.data.segments.distances
       this.tripData.durations = response.data.segments.durations
       this.tripData.polyline = response.data.polyline
       this.tripData.totalDistance = response.data.total_distance
       this.tripData.totalDuration = response.data.total_time
+      console.log(response.data.other_results)
+
       routerInstance.push('/Dashboard');
 
     },
