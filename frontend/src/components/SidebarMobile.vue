@@ -5,6 +5,8 @@ import Chip from 'primevue/chip';
 import { useFormStore } from '@/store/formStore.js';
 
 import { togglePan, isPanned, activeStopTitle } from '@/composables/useMap';
+import { useRouter } from 'vue-router';
+const router = useRouter();
 
 
 const formStore = useFormStore();
@@ -46,14 +48,17 @@ const positionClass = computed(() => {
     : 'transform translate-y-[90%]';  
 });
 
-
+ const regenerateItinerary = () => {
+    router.push('/Loading');
+    formStore.regenerateItinerary();
+ }
 </script>
 
 
 <template>
-    <div id="sideBarContainer" class="bg-transparent z-5 p-4 h-full w-full pointer-events-auto flex justify-center items-end transition-all ease-out will-change-transform" 
+    <div id="sideBarContainer" class="z-5 p-4 h-full w-full pointer-events-auto flex flex-col justify-start items-center transition-all ease-out will-change-transform" 
     :class="['my-div', positionClass]">
-        <div class="w-full h-full bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.5)] flex flex-col p-2 gap-2">
+        <div class="w-full h-[92%] bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.5)] flex flex-col p-2 gap-2">
             <span class="flex justify-center">
                 <Button :icon="isOpen ? 'pi pi-chevron-down' : 'pi pi-chevron-up'" class="w-full h-3rem bg-slate-200 border-0 text-slate-700" @click="toggleButton">
                 </Button>
@@ -93,6 +98,11 @@ const positionClass = computed(() => {
                 </div>
             </div>
 
+        </div>
+        <div class="w-full h-[8%] flex flex-row justify-between mt-2">
+            <Button icon="pi pi-pen-to-square" rounded raised severity="secondary" label="Edit" @click="router.push('/Edit')"/>
+            <Button icon="pi pi-save" rounded disabled raised severity="secondary" label="Save"/>
+            <Button icon="pi pi-replay" rounded raised severity="secondary" label="Regenerate" @click="regenerateItinerary"/>
         </div>
     </div>
 </template>
