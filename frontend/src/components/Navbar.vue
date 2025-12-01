@@ -60,6 +60,6 @@ const isLoggedIn = false;
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500;600;700&display=swap");
 
 .itineroword {
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 </style>
