@@ -89,6 +89,33 @@ export const useFormStore = defineStore('form', {
       routerInstance.push('/Dashboard');
 
     },
+
+    async recalculateItinerary(data) {
+      try {
+        const API_ENDPOINT = `${BASE_URL}/api/recalculate`
+        const response = await axios.post(API_ENDPOINT, data)
+
+        console.log('Recalculation successful:', response.data.message)
+
+        // Update form store with recalculated data (same format as original API)
+        this.tripData.stops = response.data.final_schedule
+        // Keep existing otherResults - don't update from recalculate response
+        this.tripData.distances = response.data.segments.distances
+        this.tripData.durations = response.data.segments.durations
+        this.tripData.polyline = response.data.polyline
+        this.tripData.totalDistance = response.data.total_distance
+        this.tripData.totalDuration = response.data.total_time
+
+        router.push('/Dashboard')
+
+      } catch (error) {
+        console.error('Error recalculating itinerary:', error)
+        console.error('Error response:', error.response?.data)
+        console.error('Error status:', error.response?.status)
+        const errorMessage = error.response?.data?.error || error.message || 'Unknown error'
+        alert(`Error updating itinerary: ${errorMessage}. Please try again.`)
+      }
+    },
     resetState () {
       this.tripData.$reset();
     }
