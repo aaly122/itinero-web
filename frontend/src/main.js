@@ -16,7 +16,10 @@ import Avatar from 'primevue/avatar';
 
 //pinia
 import { createPinia } from 'pinia';
-const pinia = createPinia(); 
+const pinia = createPinia();
+
+// Import user store for auth initialization
+import { useUserStore } from '@/store/userStore' 
 
 //Theme
 const itineroTheme = definePreset(Aura, {
@@ -113,5 +116,9 @@ app.use(PrimeVue, {
 
 
 app.mount('#app')
+
+// Initialize user authentication state
+const userStore = useUserStore()
+userStore.initializeAuth()
 
 
