@@ -26,17 +26,13 @@
     </div>
 
     <!-- Desktop Overlays -->
-    <div class="hidden md:block w-25 h-full flex-shrink-0 fixed z-10 left-0">
+    <div class="hidden md:block min-w-18 h-full flex-shrink-0 fixed z-10 left-0">
       <Navbar />
     </div>
 
     <div class="hidden md:block fixed right-0 h-full w-[35%] z-10">
       <Sidebar />
     </div>
-
-
-
-
 
     <!-- Mobile Sidebar Overlay -->
     <div class="absolute md:hidden top-[calc(4rem)] left-0 h-[calc(100%-8.5rem)] w-full z-5 pointer-events-none">

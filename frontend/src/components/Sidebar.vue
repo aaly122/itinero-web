@@ -5,8 +5,12 @@ import { useRouter } from 'vue-router';
 const router = useRouter();
 
 import { useFormStore } from '@/store/formStore.js';
+import { useUserStore } from '@/store/userStore.js';
 
 import { togglePan, isPanned, activeStopTitle } from '@/composables/useMap';
+
+const userStore = useUserStore();
+const isLoggedIn = userStore.hasProfile;
 
 
 const formStore = useFormStore();
@@ -41,40 +45,44 @@ destinationsArray.forEach((place,index) => {
     formStore.regenerateItinerary();
  }
 
+ async function saveItinerary() {
+    const result = await formStore.saveTripPlan();
 
+    if (result.success) {
+        console.log('Successfully saved')
+    } else {
+        alert(`Failed to save trip: ${result.error}`);
+    }
+ }
 
-const startTime = ref('3:30')
-const endTime = ref('4:45')
-console.log("sidebar", destinationsArray)
-console.log("Stops:", stops)
 </script>
 
 
 <template>
     <div id="sideBarContainer" class="bg-transparent z-5 p-4 h-full w-full flex items-end">
         <div class="h-[20%] w-[40%] flex flex-col justify-center p-2 gap-2">
-            <Button icon="pi pi-pen-to-square" rounded raised severity="secondary" label="Edit" @click="router.push('/Edit')"/>
-            <Button icon="pi pi-save" rounded disabled raised severity="secondary" label="Save"/>
-            <Button icon="pi pi-replay" rounded raised severity="secondary" label="Regenerate" @click="regenerateItinerary"/>
+            <Button icon="pi pi-pen-to-square" rounded raised severity="secondary" label="Edit" class="interactive-btn-secondary !text-slate-800" @click="router.push('/Edit')"/>
+            <Button icon="pi pi-save" rounded :disabled="!isLoggedIn" raised severity="secondary" class="interactive-btn-secondary !text-slate-800" label="Save" @click="saveItinerary"/>
+            <Button icon="pi pi-replay" rounded raised severity="secondary" label="Regenerate" class="interactive-btn-secondary !text-slate-800" @click="regenerateItinerary"/>
         </div>
-        <div class="w-full h-full bg-white rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.5)] flex flex-col p-2">
+        <div class="w-full h-full card flex flex-col bg-white card">
             <div class="flex p-2 gap-2 justify-between">
                 <div class="flex items-center font-bold ">Total Metrics</div>
                 <div class="flex gap-2">
-                    <Chip class="rounded-full bg-primary-400 text-white font-bold text-sm pr-2 w-25">
+                    <Chip class="rounded-full bg-slate-700 text-white font-bold text-sm pr-2 w-25">
                         <i class="material-icons">straighten</i>
                         {{ totalDistance }} km
                     </Chip>
-                    <Chip icon="" class="rounded-full bg-primary-400 text-white font-bold text-sm w-25">
+                    <Chip icon="" class="rounded-full bg-slate-700 text-white font-bold text-sm w-25">
                         <i class="material-icons">directions_walk</i>
                         {{ totalDuration }} min
                     </Chip>
                 </div>
             </div>
-            <div id="lowerBox" class="h-full bg-slate-100 rounded-xl flex flex-col p-2 gap-2 overflow-y-auto">
+            <div id="lowerBox" class="h-full bg-white rounded-xl flex flex-col p-2 gap-2 overflow-y-auto">
                 <div v-for="stop in stops" :key="stop.title" @click="togglePan(stop.lat, stop.lng, stop.title)" 
                 :class="{
-                'w-full min-h-55 rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 grid grid-cols-4 grid-rows-5 cursor-pointer transition-all ease-in': true,
+                'card bg-slate-100 w-full min-h-55 rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 grid grid-cols-4 grid-rows-5 cursor-pointer transition-all ease-in': true,
                 
                 'border-primary-200': activeStopTitle !== stop.title,
                 'border-primary-400 scale-101 bg-white': activeStopTitle === stop.title
@@ -82,8 +90,8 @@ console.log("Stops:", stops)
                     <div class="col-start-1 row-start-1 col-span-3 overflow-hidden row-span-2 min-h-10 flex justify-baseline">
                         <p class="font-bold text-xl">{{ stop.title }}</p>
                     </div>
-                    <div class="p-2 h-10 text-xs bg-primary-200 rounded-full col-start-4 row-span-1 flex justify-center items-center">
-                        <p class="font-bold text-white">{{ stop.tag.charAt(0).toUpperCase() + stop.tag.slice(1) }}</p>
+                    <div class="p-2 w-18 h-10 text-xs bg-slate-200 border-1 border-slate-300 rounded-full col-start-4 row-span-1 flex justify-center items-center">
+                        <p class="font-bold text-slate-800">{{ stop.tag.charAt(0).toUpperCase() + stop.tag.slice(1) }}</p>
                     </div>
                     <p class="row-start-3 col-span-4 row-span-2 text-slate-700 italic text-md overflow-hidden">{{stop.address}}</p>
                     <p class="row-start-5 text-slate-700 w-5">{{ stop.arrivalTime }}</p>
