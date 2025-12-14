@@ -8,6 +8,7 @@ import router from './router'
 import PrimeVue from 'primevue/config';
 import { definePreset } from '@primeuix/themes';
 import Aura from '@primeuix/themes/aura';
+import ToastService from 'primevue/toastservice';
 
 //PrimeVue components
 import Button from 'primevue/button';
@@ -96,6 +97,7 @@ const app = createApp(App)
 app.use(pinia)
 app.component('Button', Button)
 app.component('Avatar', Avatar)
+app.use(ToastService);
 app.use(router)
 app.use(PrimeVue, {
     ripple: true,

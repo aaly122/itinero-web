@@ -25,7 +25,7 @@
     </div>
 
     <!-- Desktop Navbar Overlay -->
-    <div class="hidden md:block w-18 h-full flex-shrink-0 fixed z-10 left-0">
+    <div class="hidden md:block min-w-18 h-full flex-shrink-0 fixed z-10 left-0">
       <Navbar />
     </div>
 

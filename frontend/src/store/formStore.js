@@ -1,12 +1,15 @@
 import { defineStore } from 'pinia';
-import axios from 'axios'
+import { supabase } from '@/lib/supabase';
+import { useUserStore } from '@/store/userStore';
+import axios from 'axios';
 import router, { routerInstance } from '@/router';
 
 const VITE_API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const BASE_URL = VITE_API_BASE_URL || '';
 
-export const useFormStore = defineStore('form', {
 
+
+export const useFormStore = defineStore('form', {
   state: () => ({
     tripData: {
       startingLocation: null,
@@ -20,7 +23,11 @@ export const useFormStore = defineStore('form', {
       polyline: null,
       totalDistance: null,
       totalDuration: null
-    }
+    },
+    loading: false,
+    error: null,
+    successMessage: null
+    
 
   }),
   getters: {
@@ -117,7 +124,75 @@ export const useFormStore = defineStore('form', {
       }
     },
     resetState () {
-      this.tripData.$reset();
+      this.$reset();
+    },
+
+    async saveTripPlan(title = 'New Itinerary', description = null) {
+      this.loading = true;
+      this.error = null;
+    
+      try {
+        const userStore = useUserStore();
+        const ownerId = userStore.profile?.id; 
+    
+        if (!ownerId) {
+          throw new Error("Authentication error: User profile ID is missing.");
+        }
+    
+        // A. INSERT INTO public.itineraries (HEADER)
+        const { data: itineraryData, error: itineraryError } = await supabase
+          .from('itineraries')
+          .insert({
+            owner_id: ownerId, 
+            title: title, 
+            description: description, 
+            is_public: false, 
+            // Tags and other itinerary-level data can be added here if needed
+          })
+          .select('id')
+          .single();
+    
+        if (itineraryError) throw itineraryError;
+    
+        const newItineraryId = itineraryData.id;
+    
+        // B. INSERT INTO public.itinerary_stops (DETAILS)
+        const stopsData = {
+          itinerary_id: newItineraryId,
+          full_trip_data: this.tripData, // Store the entire tripData object
+        };
+    
+        const { error: stopsError } = await supabase
+          .from('itinerary_stops')
+          .insert(stopsData);
+    
+        if (stopsError) throw stopsError;
+    
+        this.successMessage = "Trip plan successfully saved!";
+        return { success: true, itineraryId: newItineraryId };
+    
+      } catch (error) {
+        console.error('Save error:', error);
+        this.error = error.message;
+        return { success: false, error: error.message };
+      } finally {
+        this.loading = false;
+      }
+    },
+
+    async loadItineraryForEditing(itinerary) {
+      this.resetState(); // Clear all tripData fields first
+
+      // Repopulate tripData with selected itinerary's full_trip_data
+      if (itinerary.itinerary_stops?.[0]?.full_trip_data) {
+        // Deep merge or assign to ensure all properties are set
+        Object.assign(this.tripData, itinerary.itinerary_stops[0].full_trip_data);
+      } else {
+        console.warn('Itinerary stops data (full_trip_data) is missing for selected itinerary.');
+        // Potentially set some default empty state or show an error
+      }
+      
+      router.push('/Dashboard'); // Navigate to the dashboard
     }
   } 
 });

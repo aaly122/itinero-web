@@ -240,7 +240,7 @@ onUnmounted(() => {
           label="Try Itinero"
           rounded
           raised
-          class="w-55 transition-transform transition-colors ease-out duration-300 bg-[#835AF8] hover:bg-[#9C7BFF] hover:scale-110 text-white border-0 focus:outline-none focus-visible:ring-4 focus-visible:ring-[#C5B6FE]/60"
+          class="w-55 interactive-btn-primary"
           @click="createAndRefresh"
         ></Button>
       </div>
