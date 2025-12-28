@@ -204,7 +204,7 @@ import { length } from '@vee-validate/rules';
 
 </script>
 <template>
-    <section class="h-full w-full">
+    <section class="min-h-full md:h-full w-full">
         <Tabs value="0" >
             <TabList>
                 <Tab value="0">Saved</Tab>
@@ -217,7 +217,7 @@ import { length } from '@vee-validate/rules';
                     </div>
 
                     <div v-else class="h-full w-full">
-                        <div class="grid grid-cols-3 gap-2">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
                             <div v-for="entry in savedItineraries" :key="savedItineraries.id" class="card bg-white cursor-pointer hover:bg-slate-100 active:scale-98 animate-enter" style="--delay:0s" @click="selectItinerary(entry)">
                                 <h1 class="text-xl text-slate-800 font-bold">{{ entry.title }}</h1>
                                 <p class="mt-10 text-slate-600">{{ entry.description }}</p>
@@ -233,90 +233,108 @@ import { length } from '@vee-validate/rules';
             </TabPanels>
         </Tabs>
 
-        <Dialog v-model:visible="visible" modal :header="selectedItinerary?.title || 'Edit Itinerary'" :style="{ width: '60rem'}" class="card gradient-5 h-150">
-            <div class="h-full flex flex-col justify-between">
-                <div class="flex-1">
-                    <span class="text-surface-500 dark:text-surface-400 block mb-8">
-                        Update your itinerary details.
-                    </span>
-                    
-                    <div class="flex">
-                        <div class="w-[50%]">
-                            <div class="flex items-center gap-4 mb-4">
-                                <label for="title" class="font-semibold w-24">Title</label>
-                                <InputText id="title" autocomplete="off" v-model="selectedItinerary.title" class="field-input" :disabled="saving"/>
-                            </div>
-                            
-                            <div class="flex items-center gap-4 mb-4">
-                                <label for="description" class="font-semibold w-24">Description</label>
-                                <InputText id="description" autocomplete="off" v-model="selectedItinerary.description" class="field-input" :disabled="saving"/>
-                            </div>
-                            
-                            <div class="flex items-start gap-4 mb-4">
-                                <label for="tags" class="font-semibold w-32 pt-2">Tags</label>
-                                <div class="flex flex-col gap-2 w-full">
-                                    <div class="flex">
-                                        <InputText 
-                                            id="newTag" 
-                                            v-model="newTag" 
-                                            placeholder="Add a tag..." 
-                                            class="field-input rounded-r-none!"
-                                            @keyup.enter="addTag"
-                                            :disabled="saving"
-                                        />
-                                        <Button 
-                                            icon="pi pi-plus"
-                                            @click="addTag" 
-                                            :disabled="!newTag.trim() || newTag.includes(' ') || saving"
-                                            size="small"
-                                            class="interactive-btn-secondary cursor-pointer rounded-l-none! font-extrabold"
-                                        />
-                                    </div>
-                                    <div class="flex flex-wrap gap-1">
-                                        <Chip 
-                                            v-for="tag in tags" 
-                                            :key="tag" 
-                                            :label="tag" 
-                                            removable 
-                                            @remove="removeTag(tag)"
-                                            class="text-sm bg-white border border-slate-300 rounded-xl"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center gap-4 mb-8">
-                                <label for="isPublic" class="font-semibold w-24">Public</label>
-                                <ToggleSwitch id="isPublic" v-model="isPublic" :disabled="saving"/>
-                            </div>
-
-
+        <Dialog 
+    v-model:visible="visible" 
+    modal 
+    :header="selectedItinerary?.title || 'Edit Itinerary'" 
+    :style="{ width: '60rem'}" 
+    :breakpoints="{ '960px': '75vw', '641px': '100vw' }"
+    class="card gradient-5 h-full md:h-150"
+>
+    <div class="h-full flex flex-col justify-between">
+        
+        <div class="flex-1 overflow-y-auto md:overflow-visible p-1">
+            <span class="text-surface-500 dark:text-surface-400 block mb-8">
+                Update your itinerary details.
+            </span>
             
-                            <p class="text-sm">Created: {{ new Date(selectedItinerary.created_at).toLocaleDateString() }}</p>
-                            <p class="text-sm">Total Stops: {{ stopsArray?.length || 0 }}</p>
-                        </div>
-                        <div class="flex flex-col gap-2 overflow-y-scroll p-4">
-                            <h1 class="font-bold text-xl">Stops:</h1>
-                            <div v-for="stop in stopsArray" class="card bg-slate-100 w-full p-2">
-                                <h1>{{ stop.places.displayName.text }}</h1>
+            <div class="flex flex-col md:flex-row gap-6">
+                
+                <div class="w-full md:w-1/2">
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4">
+                        <label for="title" class="font-semibold w-24">Title</label>
+                        <InputText id="title" autocomplete="off" v-model="selectedItinerary.title" class="field-input w-full" :disabled="saving"/>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mb-4">
+                        <label for="description" class="font-semibold w-24">Description</label>
+                        <InputText id="description" autocomplete="off" v-model="selectedItinerary.description" class="field-input w-full" :disabled="saving"/>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-4 mb-4">
+                        <label for="tags" class="font-semibold w-32 sm:pt-2">Tags</label>
+                        <div class="flex flex-col gap-2 w-full">
+                            <div class="flex w-full">
+                                <InputText 
+                                    id="newTag" 
+                                    v-model="newTag" 
+                                    placeholder="Add a tag..." 
+                                    class="field-input rounded-r-none! w-full"
+                                    @keyup.enter="addTag"
+                                    :disabled="saving"
+                                />
+                                <Button 
+                                    icon="pi pi-plus"
+                                    @click="addTag" 
+                                    :disabled="!newTag.trim() || newTag.includes(' ') || saving"
+                                    size="small"
+                                    class="interactive-btn-secondary cursor-pointer rounded-l-none! font-extrabold"
+                                />
+                            </div>
+                            <div class="flex flex-wrap gap-1">
+                                <Chip 
+                                    v-for="tag in tags" 
+                                    :key="tag" 
+                                    :label="tag" 
+                                    removable 
+                                    @remove="removeTag(tag)"
+                                    class="text-sm bg-white border border-slate-300 rounded-xl"
+                                />
                             </div>
                         </div>
                     </div>
-                </div>    
-                
-                <div class="flex justify-between gap-2 pt-20">
-                    <div class="flex gap-2">
-                        <Button type="button" label="Edit in Itinerary Viewer" severity="secondary" @click="visible = false" class="interactive-btn-secondary w-55 h-full" :disabled="saving"></Button>
-                        <Button type="button" label="Delete" severity="secondary" @click="deleteItinerary()" class="interactive-btn-secondary w-25 h-full" :disabled="saving"></Button>
-                        <Button type="button" label="Open" severity="secondary" @click="openItineraryInViewer()" class="interactive-btn-secondary w-25 h-full" :disabled="saving"></Button>
+
+                    <div class="flex items-center gap-4 mb-8">
+                        <label for="isPublic" class="font-semibold w-24">Public</label>
+                        <ToggleSwitch id="isPublic" v-model="isPublic" :disabled="saving"/>
                     </div>
-                    <div class="flex gap-2">
-                        <Button type="button" label="Cancel" severity="secondary" @click="visible = false" class="interactive-btn-secondary w-25 h-full" :disabled="saving"></Button>
-                        <Button type="button" label="Save" @click="saveChanges" class="interactive-btn-primary w-25" :loading="saving" :disabled="!selectedItinerary?.title?.trim()"></Button>
+
+                    <div class="mt-4">
+                        <p class="text-sm">Created: {{ new Date(selectedItinerary.created_at).toLocaleDateString() }}</p>
+                        <p class="text-sm">Total Stops: {{ stopsArray?.length || 0 }}</p>
                     </div>
+                </div>
+
+                <div class="w-full md:w-1/2 flex flex-col gap-2">
+                    <h1 class="font-bold text-xl">Stops:</h1>
+                    <div class="flex flex-col gap-2 max-h-60 md:max-h-[25rem] overflow-y-auto p-1">
+                        <div v-for="stop in stopsArray" :key="stop.id" class="card bg-slate-100 w-full p-2">
+                            <h1>{{ stop.places.displayName.text }}</h1>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>    
+        
+        <div class="flex flex-col-reverse md:flex-row justify-between gap-4 pt-8 pb-2">
+            
+            <div class="flex flex-col md:flex-row gap-2 w-full md:w-auto">
+                <Button type="button" label="Edit in Viewer" severity="secondary" @click="visible = false" class="interactive-btn-secondary w-full md:w-auto" :disabled="saving"></Button>
+                <div class="flex gap-2">
+                    <Button type="button" label="Delete" severity="secondary" @click="deleteItinerary()" class="interactive-btn-secondary w-full md:w-25" :disabled="saving"></Button>
+                    <Button type="button" label="Open" severity="secondary" @click="openItineraryInViewer()" class="interactive-btn-secondary w-full md:w-25" :disabled="saving"></Button>
                 </div>
             </div>
 
-        </Dialog>
+            <div class="flex gap-2 w-full md:w-auto">
+                <Button type="button" label="Cancel" severity="secondary" @click="visible = false" class="interactive-btn-secondary w-full md:w-25" :disabled="saving"></Button>
+                <Button type="button" label="Save" @click="saveChanges" class="interactive-btn-primary w-full md:w-25" :loading="saving" :disabled="!selectedItinerary?.title?.trim()"></Button>
+            </div>
+        </div>
+    </div>
+
+</Dialog>
     </section>
 </template>

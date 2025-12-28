@@ -4,6 +4,7 @@ import { ref, computed } from 'vue';
 import { VueDraggable } from 'vue-draggable-plus';
 import { useRouter } from 'vue-router';
 import Button from 'primevue/button';
+import Chip from 'primevue/chip';
 
 const router = useRouter();
 
@@ -117,16 +118,16 @@ const updateFormStore = async () => {
 </script>
 
 <template>
-    <section class="min-h-screen w-screen bg-slate-50 flex flex-col md:flex-row">
-        <section class="w-full md:w-[30%] h-auto md:h-full bg-transparent p-4 md:ml-20 min-h-[50vh] md:min-h-0">
-            <div class="w-full h-full bg-white rounded-xl shadow-2xl flex flex-col p-2 overflow-y-scroll">
-                <div id="lowerBox" class="h-full bg-slate-100 rounded-xl flex flex-col p-2 gap-2 overflow-y-scroll">
+    <section class="h-full w-screen gradient-1 flex flex-col md:flex-row overflow-hidden animate-enter" style="--delay:0s">
+        <section class="w-full md:w-[30%] h-full bg-transparent p-4 md:ml-20 min-h-[50vh] md:min-h-0">
+            <div class="w-full h-full bg-white rounded-xl shadow-2xl flex flex-col overflow-y-scroll overflow-x-hidden card">
+                <div id="lowerBox" class="h-full rounded-xl flex flex-col p-2 gap-2 overflow-y-scroll">
 
                     <!-- Fixed Start Stop -->
-                    <div class="w-full rounded-xl shadow-lg p-4 bg-white relative" style="min-height: 13.75rem">
+                    <div class="w-full bg-white relative card animate-enter" style="min-height: 13.75rem; --delay:0.1s">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="font-bold text-xl text-slate-800 flex-1 overflow-hidden">{{ startStop.title }}</h3>
-                            <span class="px-2 py-1 text-xs rounded-full font-bold text-white flex-shrink-0 bg-slate-500">Start</span>
+                            <Chip label="Start" class="border-1 border-slate-300 flex justify-center p-1 text-sm w-15 rounded-xl"/>
                         </div>
                         <p class="text-slate-700 italic text-md mb-2 overflow-hidden">{{ startStop.address }}</p>
                         <div class="flex items-center gap-2 text-sm">
@@ -141,12 +142,12 @@ const updateFormStore = async () => {
                         <div
                             v-for="(stop, index) in draggableStops"
                             :key="`draggable-${stop.title}-${index}`"
-                            class="w-full rounded-xl shadow-lg p-4 bg-white relative cursor-move transition-all duration-200 hover:shadow-xl hover:transform hover:scale-[1.02]"
-                            style="min-height: 13.75rem"
+                            class="w-full bg-white card relative cursor-move transition-all duration-200 hover:shadow-xl hover:transform hover:scale-[1.02]"
+                            style="min-height: 13.75rem; --delay:0.2"
                         >
                             <div class="flex justify-between items-start mb-2">
                                 <h3 class="font-bold text-xl text-slate-800 flex-1 overflow-hidden">{{ stop.title }}</h3>
-                                <span class="px-2 py-1 text-xs rounded-full font-bold flex-shrink-0 bg-primary-200 text-slate-800">{{ stop.tag.charAt(0).toUpperCase() + stop.tag.slice(1) }}</span>
+                                <Chip :label="stop.tag.charAt(0).toUpperCase() + stop.tag.slice(1)" class="border-1 border-slate-300 flex justify-center p-1 text-sm w-15 rounded-xl"/>
                             </div>
                             <p class="text-slate-700 italic text-md mb-2 overflow-hidden">{{ stop.address }}</p>
                             <div class="flex items-center gap-2 text-sm">
@@ -169,11 +170,10 @@ const updateFormStore = async () => {
                     </VueDraggable>
 
                     <!-- Fixed End Stop -->
-                    <div class="w-full rounded-xl shadow-lg p-4 bg-white relative" style="min-height: 13.75rem">
+                    <div class="w-fullbg-white relative card animate-enter" style="min-height: 13.75rem; --delay:0.3s">
                         <div class="flex justify-between items-start mb-2">
                             <h3 class="font-bold text-xl text-slate-800 flex-1 overflow-hidden">{{ endStop.title }}</h3>
-                            <span class="px-2 py-1 text-xs rounded-full font-bold text-white flex-shrink-0 bg-slate-500">End</span>
-                        </div>
+                            <Chip label="End" class="border-1 border-slate-300 flex justify-center p-1 text-sm w-15 rounded-xl"/>                        </div>
                         <p class="text-slate-700 italic text-md mb-2 overflow-hidden">{{ endStop.address }}</p>
                         <div class="flex items-center gap-2 text-sm">
                             <span class="text-slate-700 font-medium">{{ endStop.arrivalTime }}</span>
@@ -187,7 +187,7 @@ const updateFormStore = async () => {
 
 
         </section>
-        <section class="w-full md:w-[70%] h-auto md:h-[100dvh] p-4 flex flex-col min-h-[50vh] md:min-h-0">
+        <section class="w-full md:w-[70%] h-full md:h-[100dvh] p-4 flex flex-col min-h-[50vh] md:min-h-0">
             <div class="text-2xl md:text-3xl font-bold mb-4">
                 Edit Itinerary
             </div>
@@ -199,22 +199,20 @@ const updateFormStore = async () => {
                 <div
                     v-for="(stop, stopIndex) in otherStops"
                     :key="stop.title"
-                    class="h-40 md:h-40 w-full rounded-xl bg-white drop-shadow-2xl p-4 md:p-3 flex flex-col justify-between hover:shadow-lg transition-all line-clamp-1"
+                    class="h-40 md:h-40 w-full card bg-white p-4 md:p-3 flex flex-col justify-between hover:bg-slate-100 transition-all line-clamp-1 cursor-pointer animate-enter" style="--delay:0s"
                 >
                     <div>
                         <p class="font-bold text-lg mb-1 text-slate-700">{{ stop.title }}</p>
                         <p class="text-sm text-slate-600 mb-2 line-clamp-2">{{ stop.address }}</p>
                     </div>
                     <div class="flex justify-between items-center">
-                        <span class="px-2 py-1 text-xs bg-slate-500 rounded-full text-white">
-                            {{ stop.tag.charAt(0).toUpperCase() + stop.tag.slice(1) }}
-                        </span>
+                        <Chip :label="stop.tag.charAt(0).toUpperCase() + stop.tag.slice(1)" class="border-1 border-slate-300 flex justify-center p-1 text-sm w-15 rounded-xl"/>
                         <Button
                             @click="addStop(stop)"
                             :disabled="draggableStops.length >= 6"
                             :severity="draggableStops.length >= 6 ? 'secondary' : 'secondary'"
                             rounded
-                            class="p-2 w-full md:w-35 text-xs"
+                            class="w-full md:w-35 text-sm interactive-btn-secondary"
                         >
                             Add to Itinerary
                         </Button>
@@ -224,8 +222,8 @@ const updateFormStore = async () => {
 
             <div class="flex justify-center md:justify-end items-center h-[15%] w-full">
                 <div class="flex gap-2 w-full md:w-auto">
-                    <Button @click="router.push('/Dashboard')" label="Cancel" severity="secondary" class="flex-1 md:w-45" rounded/>
-                    <Button @click="updateFormStore" label="Save" severity="primary" class="flex-1 md:w-45" rounded/>
+                    <Button @click="router.push('/Dashboard')" label="Cancel" severity="secondary" class="flex-1 md:w-45 interactive-btn-secondary" rounded/>
+                    <Button @click="updateFormStore" label="Save" severity="primary" class="flex-1 md:w-45 interactive-btn-primary" rounded/>
                 </div>
             </div>
         </section>
