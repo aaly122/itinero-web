@@ -55,7 +55,17 @@ const submitHandler = async () => {
     
         if (result && result.success) {
             console.log('Success')
-            router.push('/')
+            if (!isSignInMode.value) {
+                // If in sign-up mode, inform the user to check their email
+                startTypewriter("Please check your email to confirm your account.");
+                // Optionally, clear the form fields
+                email.value = null;
+                password.value = null;
+                username.value = null; // Clear username too if applicable
+            } else {
+                // If in sign-in mode, redirect to the homepage
+                router.push('/');
+            }
         } else {
             console.error('Error:', result?.error)
         }
@@ -79,8 +89,8 @@ onUnmounted(() => {
 
 <template>
 
-    <section class="h-[100dvh] w-screen flex bg-gradient-to-tr from-purple-300 via-purple-100 to-white overflow-hidden font-['Inter']">
-        <div class="w-full lg:w-1/2 flex flex-col justify-center items-start pl-24 lg:pl-40 pr-8 relative">
+    <section class="h-full md:h-[100dvh] w-screen flex bg-gradient-to-tr from-purple-300 via-purple-100 to-white overflow-hidden font-['Inter']">
+        <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-4 md:pl-25 lg:pl-40 pr-8 relative">
             <div class="w-full max-w-md flex flex-col gap-8">
 
                 <div class="animate-enter" style="--delay: 0s">
