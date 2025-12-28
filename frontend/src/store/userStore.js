@@ -56,29 +56,22 @@ export const useUserStore = defineStore('user', {
       this.loading = true
       try {
         // Create auth user
+        // userStore.js
         const { data: authData, error: authError } = await supabase.auth.signUp({
           email,
-          password
+          password,
+          options: {
+            data: {
+              username: username
+            }
+          }
         })
 
         if (authError) throw authError
-        const userId = authData.user.id;
-
-        // Create profile in users table
-        const { data: profileData, error: profileError } = await supabase
-          .from('users')
-          .insert([{
-            uuid_id: userId,
-            user_name: username,
-            email: email
-          }])
-          .select()
-          .single()
-
-        if (profileError) throw profileError
-
         this.user = authData.user
-        this.profile = profileData
+        // The profile will be created by a Supabase database trigger after email confirmation,
+        // so we don't set this.profile here directly after sign up.
+        // It will be loaded on subsequent sign-in after confirmation.
 
         return { success: true }
       } catch (error) {
@@ -129,7 +122,7 @@ export const useUserStore = defineStore('user', {
         const { data, error } = await supabase
           .from('users')
           .update(updates)
-          .eq('uui_id', this.user.id)
+          .eq('uuid_id', this.user.id)
           .select()
           .single()
 

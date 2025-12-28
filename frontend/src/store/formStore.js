@@ -16,6 +16,8 @@ export const useFormStore = defineStore('form', {
       endingLocation: null,
       timeAllotted: null,
       interests: [],
+      itineraryStartTime: null,
+      rankingPreference: 'DISTANCE', // Default to distance
       stops: null,
       otherResults: null,
       distances: [],
@@ -41,6 +43,7 @@ export const useFormStore = defineStore('form', {
       this.tripData.endingLocation = data.endingLocation;
       this.tripData.timeAllotted = data.timeAllotted;
       this.tripData.interests = data.interests;
+      this.tripData.rankingPreference = data.rankingPreference;
 
       this.loading = true;
       this.error = null;
