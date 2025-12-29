@@ -1,10 +1,10 @@
 {
-  "last_updated": "2025-12-23T03:39:12.763009+00:00",
+  "last_updated": "2025-12-29T12:17:10.334707+00:00",
   "establishments": {
     "restaurant": {
       "distance": [
         {
-          "id": "ChIJFXCk5hfKlzMRjcCimILOzFo",
+          "place_id": "ChIJFXCk5hfKlzMRjcCimILOzFo",
           "displayName": {
             "text": "La Parilla Kitchennette",
             "languageCode": "en"
@@ -17,7 +17,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJazf_V8vLlzMRFKWkyNF1RGA",
+          "place_id": "ChIJazf_V8vLlzMRFKWkyNF1RGA",
           "displayName": {
             "text": "680 Chimkim",
             "languageCode": "en"
@@ -124,11 +124,11 @@
               "Saturday: 9:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T14:00:00Z"
+            "nextCloseTime": "2025-12-29T14:00:00Z"
           }
         },
         {
-          "id": "ChIJUfbb3xfKlzMRL1avKeZo0m8",
+          "place_id": "ChIJUfbb3xfKlzMRL1avKeZo0m8",
           "displayName": {
             "text": "Daddy’s Sizzling",
             "languageCode": "en"
@@ -141,7 +141,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJwxFeXz3KlzMRz45odlw65Xg",
+          "place_id": "ChIJwxFeXz3KlzMRz45odlw65Xg",
           "displayName": {
             "text": "Toppings 101 Food Services",
             "languageCode": "en"
@@ -154,7 +154,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJwxFeXz3KlzMRqvfSu8x0oUU",
+          "place_id": "ChIJwxFeXz3KlzMRqvfSu8x0oUU",
           "displayName": {
             "text": "4-C'Sters Shawarma",
             "languageCode": "en"
@@ -167,7 +167,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJwxFeXz3KlzMRG41cTYZKCmA",
+          "place_id": "ChIJwxFeXz3KlzMRG41cTYZKCmA",
           "displayName": {
             "text": "Cafe Troia Mediterranean Bar Resto & Humidor",
             "languageCode": "en"
@@ -178,7 +178,7 @@
           },
           "formattedAddress": "5 Muralla Puerta De Isabel II, Bgy 654, Zone 069 Intramuros, Manila, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -274,11 +274,11 @@
               "Saturday: 10:00 AM – 8:00 PM",
               "Sunday: 10:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T12:00:00Z"
+            "nextOpenTime": "2025-12-30T02:00:00Z"
           }
         },
         {
-          "id": "ChIJwxFeXz3KlzMR0iZuBZwbw_0",
+          "place_id": "ChIJwxFeXz3KlzMR0iZuBZwbw_0",
           "displayName": {
             "text": "Manila Bulletin Multi-Purpose Cooperative",
             "languageCode": "en"
@@ -289,7 +289,7 @@
           },
           "formattedAddress": "Muralla St Cor Recoletos St, Bgy 657, Zone 070 Intramuros, Manila, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -385,11 +385,11 @@
               "Saturday: 8:00 AM – 8:00 PM",
               "Sunday: 8:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T12:00:00Z"
+            "nextOpenTime": "2025-12-30T00:00:00Z"
           }
         },
         {
-          "id": "ChIJvQbXVKDLlzMRCS3TH7ETI0U",
+          "place_id": "ChIJvQbXVKDLlzMRCS3TH7ETI0U",
           "displayName": {
             "text": "Del Rosario Compound",
             "languageCode": "en"
@@ -402,7 +402,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJTfqjXz3KlzMRkADVWol-KjA",
+          "place_id": "ChIJTfqjXz3KlzMRkADVWol-KjA",
           "displayName": {
             "text": "NRC Canteen",
             "languageCode": "en"
@@ -413,7 +413,7 @@
           },
           "formattedAddress": "Naval Reserve Compound Phil Navy Cabildo St, Bgy 656, Zone 069 Intramuros, Manila, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -509,11 +509,11 @@
               "Saturday: 7:30 AM – 5:00 PM",
               "Sunday: 7:30 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-29T23:30:00Z"
           }
         },
         {
-          "id": "ChIJQWJCXz3KlzMRYc1EUehelO8",
+          "place_id": "ChIJQWJCXz3KlzMRYc1EUehelO8",
           "displayName": {
             "text": "Pacific Moon Bar & Restaurant",
             "languageCode": "en"
@@ -620,13 +620,13 @@
               "Saturday: 10:00 AM – 10:00 PM",
               "Sunday: 10:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T14:00:00Z"
+            "nextCloseTime": "2025-12-29T14:00:00Z"
           }
         }
       ],
       "popularity": [
         {
-          "id": "ChIJVVVVFT3KlzMRH30aPRyhfw0",
+          "place_id": "ChIJVVVVFT3KlzMRH30aPRyhfw0",
           "displayName": {
             "text": "Barbara's Heritage Restaurant",
             "languageCode": "en"
@@ -733,11 +733,11 @@
               "Saturday: 9:00 AM – 9:00 PM",
               "Sunday: 9:00 AM – 9:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T13:00:00Z"
+            "nextCloseTime": "2025-12-29T13:00:00Z"
           }
         },
         {
-          "id": "ChIJqRbXBgDLlzMRuQEN7scrNWA",
+          "place_id": "ChIJqRbXBgDLlzMRuQEN7scrNWA",
           "displayName": {
             "text": "Café Y Ruedas",
             "languageCode": "en"
@@ -844,11 +844,11 @@
               "Saturday: 7:00 AM – 10:00 PM",
               "Sunday: 7:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T14:00:00Z"
+            "nextCloseTime": "2025-12-29T14:00:00Z"
           }
         },
         {
-          "id": "ChIJEWjKJSPKlzMRqHB5OJgKmpo",
+          "place_id": "ChIJEWjKJSPKlzMRqHB5OJgKmpo",
           "displayName": {
             "text": "Ilustrado Restaurant",
             "languageCode": "en"
@@ -955,11 +955,11 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T14:00:00Z"
+            "nextCloseTime": "2025-12-29T14:00:00Z"
           }
         },
         {
-          "id": "ChIJb6ooBhfKlzMRLDhgU-952ZY",
+          "place_id": "ChIJb6ooBhfKlzMRLDhgU-952ZY",
           "displayName": {
             "text": "Jollibee",
             "languageCode": "en"
@@ -1066,11 +1066,11 @@
               "Saturday: 6:00 AM – 11:00 PM",
               "Sunday: 6:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T14:00:00Z"
+            "nextCloseTime": "2025-12-29T14:00:00Z"
           }
         },
         {
-          "id": "ChIJqZbQSxjKlzMRABPFbSJYJh0",
+          "place_id": "ChIJqZbQSxjKlzMRABPFbSJYJh0",
           "displayName": {
             "text": "McDonald's Muralla",
             "languageCode": "en"
@@ -1177,11 +1177,11 @@
               "Saturday: 5:30 AM – 10:00 PM",
               "Sunday: 5:30 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T14:00:00Z"
+            "nextCloseTime": "2025-12-29T14:00:00Z"
           }
         },
         {
-          "id": "ChIJdWLAhiLKlzMR3HvkICLyvxo",
+          "place_id": "ChIJdWLAhiLKlzMR3HvkICLyvxo",
           "displayName": {
             "text": "Sky Deck",
             "languageCode": "en"
@@ -1192,7 +1192,7 @@
           },
           "formattedAddress": "HXRH+2G3 The Bayleaf, Muralla St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -1288,11 +1288,11 @@
               "Saturday: 4:00 – 11:00 PM",
               "Sunday: 4:00 – 11:00 PM"
             ],
-            "nextOpenTime": "2025-12-23T08:00:00Z"
+            "nextCloseTime": "2025-12-29T15:00:00Z"
           }
         },
         {
-          "id": "ChIJ4a8oQ0_LlzMRrC84Tc1q00E",
+          "place_id": "ChIJ4a8oQ0_LlzMRrC84Tc1q00E",
           "displayName": {
             "text": "Grotto Hookah Lounge",
             "languageCode": "en"
@@ -1399,11 +1399,11 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextCloseTime": "2025-12-23T17:30:00Z"
+            "nextCloseTime": "2025-12-29T17:30:00Z"
           }
         },
         {
-          "id": "ChIJcRtjxBfKlzMR0tizmNqi76o",
+          "place_id": "ChIJcRtjxBfKlzMR0tizmNqi76o",
           "displayName": {
             "text": "Patio de Conchita Restaurant",
             "languageCode": "en"
@@ -1510,11 +1510,11 @@
               "Saturday: 6:00 AM – 8:00 PM",
               "Sunday: 6:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T13:00:00Z"
+            "nextCloseTime": "2025-12-29T13:00:00Z"
           }
         },
         {
-          "id": "ChIJ9eTbqRHJlzMRKA42QietdTc",
+          "place_id": "ChIJ9eTbqRHJlzMRKA42QietdTc",
           "displayName": {
             "text": "Batala Bar / Philippine Artisan Trade",
             "languageCode": "en"
@@ -1525,7 +1525,7 @@
           },
           "formattedAddress": "Plaza San Luis Complex General Luna Street, cor Real St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -1621,11 +1621,11 @@
               "Saturday: 10:00 AM – 8:30 PM",
               "Sunday: 10:00 AM – 8:30 PM"
             ],
-            "nextCloseTime": "2025-12-23T12:00:00Z"
+            "nextOpenTime": "2025-12-30T02:00:00Z"
           }
         },
         {
-          "id": "ChIJdbyYFT3KlzMRM8EiaTmVlvk",
+          "place_id": "ChIJdbyYFT3KlzMRM8EiaTmVlvk",
           "displayName": {
             "text": "Ristorante delle Mitre",
             "languageCode": "en"
@@ -1636,7 +1636,7 @@
           },
           "formattedAddress": "Opposite San Agustin Church, Real St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -1732,7 +1732,7 @@
               "Saturday: 8:30 AM – 8:00 PM",
               "Sunday: 8:30 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T12:00:00Z"
+            "nextOpenTime": "2025-12-30T00:30:00Z"
           }
         }
       ]
@@ -1740,7 +1740,7 @@
     "cafe": {
       "distance": [
         {
-          "id": "ChIJwxFeXz3KlzMRVs_RFuYuKlw",
+          "place_id": "ChIJwxFeXz3KlzMRVs_RFuYuKlw",
           "displayName": {
             "text": "Cafe Coffeepoint",
             "languageCode": "en"
@@ -1753,7 +1753,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJMZGl5RfKlzMRMmM2mcTVnuo",
+          "place_id": "ChIJMZGl5RfKlzMRMmM2mcTVnuo",
           "displayName": {
             "text": "Cup Eat Area",
             "languageCode": "fil"
@@ -1766,7 +1766,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJwxFeXz3KlzMRMwdR9vQ1R1I",
+          "place_id": "ChIJwxFeXz3KlzMRMwdR9vQ1R1I",
           "displayName": {
             "text": "Mod Cafe",
             "languageCode": "en"
@@ -1779,7 +1779,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJwxFeXz3KlzMRrSPojeCq_Hw",
+          "place_id": "ChIJwxFeXz3KlzMRrSPojeCq_Hw",
           "displayName": {
             "text": "Bac\"S Brewers Coffee and Net Cafe",
             "languageCode": "en"
@@ -1792,7 +1792,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJQWJCXz3KlzMR4o28zUEIfn0",
+          "place_id": "ChIJQWJCXz3KlzMR4o28zUEIfn0",
           "displayName": {
             "text": "Cafe Timmonz",
             "languageCode": "en"
@@ -1805,7 +1805,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJGXBs2xfKlzMRp-WFR8n0nhU",
+          "place_id": "ChIJGXBs2xfKlzMRp-WFR8n0nhU",
           "displayName": {
             "text": "La Casteilaya Cafe",
             "languageCode": "en"
@@ -1816,7 +1816,7 @@
           },
           "formattedAddress": "1002, Cabildo Street, Corner Beaterio Street, Intramuros, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -1912,11 +1912,11 @@
               "Saturday: 10:00 AM – 8:00 PM",
               "Sunday: 10:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T12:00:00Z"
+            "nextOpenTime": "2025-12-30T02:00:00Z"
           }
         },
         {
-          "id": "ChIJX-DM0bjLlzMRUNlxJEbuznI",
+          "place_id": "ChIJX-DM0bjLlzMRUNlxJEbuznI",
           "displayName": {
             "text": "BigBrew Intramuros",
             "languageCode": "en"
@@ -2011,11 +2011,11 @@
               "Saturday: 11:00 AM – 9:00 PM",
               "Sunday: Closed"
             ],
-            "nextCloseTime": "2025-12-23T13:00:00Z"
+            "nextCloseTime": "2025-12-29T13:00:00Z"
           }
         },
         {
-          "id": "ChIJVaDZiEPLlzMRHBX8KlZjKBQ",
+          "place_id": "ChIJVaDZiEPLlzMRHBX8KlZjKBQ",
           "displayName": {
             "text": "La Cathedral Cafe",
             "languageCode": "en"
@@ -2122,11 +2122,11 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T13:00:00Z"
+            "nextCloseTime": "2025-12-29T13:00:00Z"
           }
         },
         {
-          "id": "ChIJQZa4lBfKlzMRobKhshHnwgU",
+          "place_id": "ChIJQZa4lBfKlzMRobKhshHnwgU",
           "displayName": {
             "text": "Cafe Mercantile",
             "languageCode": "en"
@@ -2139,7 +2139,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJ4a8oQ0_LlzMRrC84Tc1q00E",
+          "place_id": "ChIJ4a8oQ0_LlzMRrC84Tc1q00E",
           "displayName": {
             "text": "Grotto Hookah Lounge",
             "languageCode": "en"
@@ -2246,13 +2246,13 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextCloseTime": "2025-12-23T17:30:00Z"
+            "nextCloseTime": "2025-12-29T17:30:00Z"
           }
         }
       ],
       "popularity": [
         {
-          "id": "ChIJVaDZiEPLlzMRHBX8KlZjKBQ",
+          "place_id": "ChIJVaDZiEPLlzMRHBX8KlZjKBQ",
           "displayName": {
             "text": "La Cathedral Cafe",
             "languageCode": "en"
@@ -2359,11 +2359,11 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T13:00:00Z"
+            "nextCloseTime": "2025-12-29T13:00:00Z"
           }
         },
         {
-          "id": "ChIJqRbXBgDLlzMRuQEN7scrNWA",
+          "place_id": "ChIJqRbXBgDLlzMRuQEN7scrNWA",
           "displayName": {
             "text": "Café Y Ruedas",
             "languageCode": "en"
@@ -2470,11 +2470,11 @@
               "Saturday: 7:00 AM – 10:00 PM",
               "Sunday: 7:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T14:00:00Z"
+            "nextCloseTime": "2025-12-29T14:00:00Z"
           }
         },
         {
-          "id": "ChIJEWjKJSPKlzMRqHB5OJgKmpo",
+          "place_id": "ChIJEWjKJSPKlzMRqHB5OJgKmpo",
           "displayName": {
             "text": "Ilustrado Restaurant",
             "languageCode": "en"
@@ -2581,11 +2581,11 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T14:00:00Z"
+            "nextCloseTime": "2025-12-29T14:00:00Z"
           }
         },
         {
-          "id": "ChIJe6y6OYXLlzMR38iigYnPnRc",
+          "place_id": "ChIJe6y6OYXLlzMR38iigYnPnRc",
           "displayName": {
             "text": "1919 Grand Cafe",
             "languageCode": "en"
@@ -2692,11 +2692,11 @@
               "Saturday: 7:00 AM – 11:00 PM",
               "Sunday: 7:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T14:00:00Z"
+            "nextCloseTime": "2025-12-29T14:00:00Z"
           }
         },
         {
-          "id": "ChIJWViMKz3KlzMRrOGazaFFs-s",
+          "place_id": "ChIJWViMKz3KlzMRrOGazaFFs-s",
           "displayName": {
             "text": "Starbucks Pandiman Building Intramuros",
             "languageCode": "en"
@@ -2803,11 +2803,11 @@
               "Saturday: 8:00 AM – 8:00 PM",
               "Sunday: 8:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T13:00:00Z"
+            "nextCloseTime": "2025-12-29T13:00:00Z"
           }
         },
         {
-          "id": "ChIJt5j1TbbLlzMRVDrlg2oLUxQ",
+          "place_id": "ChIJt5j1TbbLlzMRVDrlg2oLUxQ",
           "displayName": {
             "text": "Cafe Intramuros",
             "languageCode": "en"
@@ -2818,7 +2818,7 @@
           },
           "formattedAddress": "Stall 1-C Plaza San Luis Complex Gen. A. Luna St, cor Real St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -2914,11 +2914,11 @@
               "Saturday: 10:30 AM – 8:00 PM",
               "Sunday: 10:30 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T12:00:00Z"
+            "nextOpenTime": "2025-12-30T02:30:00Z"
           }
         },
         {
-          "id": "ChIJ4a8oQ0_LlzMRrC84Tc1q00E",
+          "place_id": "ChIJ4a8oQ0_LlzMRrC84Tc1q00E",
           "displayName": {
             "text": "Grotto Hookah Lounge",
             "languageCode": "en"
@@ -3025,11 +3025,11 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextCloseTime": "2025-12-23T17:30:00Z"
+            "nextCloseTime": "2025-12-29T17:30:00Z"
           }
         },
         {
-          "id": "ChIJgwWtulXLlzMR-cjuuO4pbsM",
+          "place_id": "ChIJgwWtulXLlzMR-cjuuO4pbsM",
           "displayName": {
             "text": "Belfry Café",
             "languageCode": "en"
@@ -3040,7 +3040,7 @@
           },
           "formattedAddress": "Building, 1002 Sto. Tomas, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -3136,11 +3136,11 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T13:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJzQQ8SMDLlzMRfhh4RRL1e0M",
+          "place_id": "ChIJzQQ8SMDLlzMRfhh4RRL1e0M",
           "displayName": {
             "text": "Starbucks - Herald Building",
             "languageCode": "en"
@@ -3247,11 +3247,11 @@
               "Saturday: 7:00 AM – 8:00 PM",
               "Sunday: 8:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T13:00:00Z"
+            "nextCloseTime": "2025-12-29T13:00:00Z"
           }
         },
         {
-          "id": "ChIJW6KSTwDLlzMRvQT2k4Wz-sg",
+          "place_id": "ChIJW6KSTwDLlzMRvQT2k4Wz-sg",
           "displayName": {
             "text": "Starbucks Noble Place Binondo",
             "languageCode": "en"
@@ -3358,7 +3358,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T14:00:00Z"
+            "nextCloseTime": "2025-12-29T14:00:00Z"
           }
         }
       ]
@@ -3366,7 +3366,7 @@
     "museum": {
       "distance": [
         {
-          "id": "ChIJL6j94RfKlzMRwAyLpAf1fnA",
+          "place_id": "ChIJL6j94RfKlzMRwAyLpAf1fnA",
           "displayName": {
             "text": "Bahay Tsinoy, Museum of Chinese in Philippine Life",
             "languageCode": "en"
@@ -3377,7 +3377,7 @@
           },
           "formattedAddress": "32 Anda St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -3461,11 +3461,11 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextCloseTime": "2025-12-23T08:30:00Z"
+            "nextOpenTime": "2025-12-30T02:00:00Z"
           }
         },
         {
-          "id": "ChIJUQfeIBjKlzMRiRs3-xy3Ei0",
+          "place_id": "ChIJUQfeIBjKlzMRiRs3-xy3Ei0",
           "displayName": {
             "text": "Palacio De José",
             "languageCode": "fil"
@@ -3478,7 +3478,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJgS96OD3KlzMR91wyTDiHHCg",
+          "place_id": "ChIJgS96OD3KlzMR91wyTDiHHCg",
           "displayName": {
             "text": "Casa Manila",
             "languageCode": "en"
@@ -3489,7 +3489,7 @@
           },
           "formattedAddress": "plaza sans luis complex, General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -3573,11 +3573,11 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T10:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJ09JFFQDLlzMR4oey0C32QxM",
+          "place_id": "ChIJ09JFFQDLlzMR4oey0C32QxM",
           "displayName": {
             "text": "Intramuros maynila",
             "languageCode": "en"
@@ -3590,7 +3590,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJ6a10IwDLlzMR_zFaT_Phd9Q",
+          "place_id": "ChIJ6a10IwDLlzMR_zFaT_Phd9Q",
           "displayName": {
             "text": "National Museum of the Philippines",
             "languageCode": "en"
@@ -3600,10 +3600,108 @@
             "longitude": 120.9747258
           },
           "formattedAddress": "HXQF+RVQ, Intramuros, Manila, 1002 Metro Manila, Philippines",
-          "regularOpeningHours": null
+          "regularOpeningHours": {
+            "openNow": false,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 18,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 9:00 AM – 6:00 PM",
+              "Tuesday: 9:00 AM – 6:00 PM",
+              "Wednesday: 9:00 AM – 6:00 PM",
+              "Thursday: 9:00 AM – 6:00 PM",
+              "Friday: 9:00 AM – 6:00 PM",
+              "Saturday: 9:00 AM – 6:00 PM",
+              "Sunday: 9:00 AM – 6:00 PM"
+            ],
+            "nextOpenTime": "2025-12-30T01:00:00Z"
+          }
         },
         {
-          "id": "ChIJOQ1jn_7LlzMR_ga5TzgGXKg",
+          "place_id": "ChIJOQ1jn_7LlzMR_ga5TzgGXKg",
           "displayName": {
             "text": "Manila Fort Santiago Heritage",
             "languageCode": "en"
@@ -3616,7 +3714,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJnX8magDLlzMRsMNwlpLjEXA",
+          "place_id": "ChIJnX8magDLlzMRsMNwlpLjEXA",
           "displayName": {
             "text": "Museu Mandaragat (The Filipino Seafarers Museum)",
             "languageCode": "en"
@@ -3627,7 +3725,7 @@
           },
           "formattedAddress": "HXQG+RC9, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -3699,11 +3797,11 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextCloseTime": "2025-12-23T08:00:00Z"
+            "nextOpenTime": "2025-12-30T02:00:00Z"
           }
         },
         {
-          "id": "ChIJIbMCLgDLlzMRNTfJrnp0yXg",
+          "place_id": "ChIJIbMCLgDLlzMRNTfJrnp0yXg",
           "displayName": {
             "text": "Centro de Turismo Intramuros",
             "languageCode": "en"
@@ -3714,7 +3812,7 @@
           },
           "formattedAddress": "Old San Ignacio Church, Arzobispo St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -3798,11 +3896,11 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T10:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJx5k-nj3KlzMRpZZ0IjMCqsA",
+          "place_id": "ChIJx5k-nj3KlzMRpZZ0IjMCqsA",
           "displayName": {
             "text": "Museo de Intramuros",
             "languageCode": "en"
@@ -3815,7 +3913,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJnzSlPD3KlzMRfqgTwJ3ku98",
+          "place_id": "ChIJnzSlPD3KlzMRfqgTwJ3ku98",
           "displayName": {
             "text": "San Agustin Convent Museum",
             "languageCode": "en"
@@ -3826,7 +3924,7 @@
           },
           "formattedAddress": "HXQF+JXP, General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -4006,13 +4104,13 @@
               "Saturday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM",
               "Sunday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T04:00:00Z"
+            "nextOpenTime": "2025-12-30T00:00:00Z"
           }
         }
       ],
       "popularity": [
         {
-          "id": "ChIJgS96OD3KlzMR91wyTDiHHCg",
+          "place_id": "ChIJgS96OD3KlzMR91wyTDiHHCg",
           "displayName": {
             "text": "Casa Manila",
             "languageCode": "en"
@@ -4023,7 +4121,7 @@
           },
           "formattedAddress": "plaza sans luis complex, General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -4107,11 +4205,11 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T10:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJIbMCLgDLlzMRNTfJrnp0yXg",
+          "place_id": "ChIJIbMCLgDLlzMRNTfJrnp0yXg",
           "displayName": {
             "text": "Centro de Turismo Intramuros",
             "languageCode": "en"
@@ -4122,7 +4220,7 @@
           },
           "formattedAddress": "Old San Ignacio Church, Arzobispo St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -4206,11 +4304,11 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T10:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJx5k-nj3KlzMRpZZ0IjMCqsA",
+          "place_id": "ChIJx5k-nj3KlzMRpZZ0IjMCqsA",
           "displayName": {
             "text": "Museo de Intramuros",
             "languageCode": "en"
@@ -4223,7 +4321,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJL6j94RfKlzMRwAyLpAf1fnA",
+          "place_id": "ChIJL6j94RfKlzMRwAyLpAf1fnA",
           "displayName": {
             "text": "Bahay Tsinoy, Museum of Chinese in Philippine Life",
             "languageCode": "en"
@@ -4234,7 +4332,7 @@
           },
           "formattedAddress": "32 Anda St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -4318,11 +4416,11 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextCloseTime": "2025-12-23T08:30:00Z"
+            "nextOpenTime": "2025-12-30T02:00:00Z"
           }
         },
         {
-          "id": "ChIJnzSlPD3KlzMRfqgTwJ3ku98",
+          "place_id": "ChIJnzSlPD3KlzMRfqgTwJ3ku98",
           "displayName": {
             "text": "San Agustin Convent Museum",
             "languageCode": "en"
@@ -4333,7 +4431,7 @@
           },
           "formattedAddress": "HXQF+JXP, General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -4513,11 +4611,11 @@
               "Saturday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM",
               "Sunday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T04:00:00Z"
+            "nextOpenTime": "2025-12-30T00:00:00Z"
           }
         },
         {
-          "id": "ChIJVanx4WnLlzMR34j1YsjJ4jw",
+          "place_id": "ChIJVanx4WnLlzMR34j1YsjJ4jw",
           "displayName": {
             "text": "Rizal Shrine",
             "languageCode": "en"
@@ -4528,7 +4626,7 @@
           },
           "formattedAddress": "Fort Santiago, 53 General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -4612,11 +4710,11 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T10:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJEwBKOBjKlzMRF1yUdCbudiQ",
+          "place_id": "ChIJEwBKOBjKlzMRF1yUdCbudiQ",
           "displayName": {
             "text": "Destileria Limtuaco Museum",
             "languageCode": "en"
@@ -4627,7 +4725,7 @@
           },
           "formattedAddress": "481 San Juan de Letran, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -4711,11 +4809,11 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJKQIAxzzKlzMRfYFMR_yMKs4",
+          "place_id": "ChIJKQIAxzzKlzMRfYFMR_yMKs4",
           "displayName": {
             "text": "Intramuros and Rizal’s Bagumbayan Light and Sound Museum",
             "languageCode": "en"
@@ -4728,7 +4826,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJ6a10IwDLlzMR_zFaT_Phd9Q",
+          "place_id": "ChIJ6a10IwDLlzMR_zFaT_Phd9Q",
           "displayName": {
             "text": "National Museum of the Philippines",
             "languageCode": "en"
@@ -4738,10 +4836,108 @@
             "longitude": 120.9747258
           },
           "formattedAddress": "HXQF+RVQ, Intramuros, Manila, 1002 Metro Manila, Philippines",
-          "regularOpeningHours": null
+          "regularOpeningHours": {
+            "openNow": false,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 18,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 9:00 AM – 6:00 PM",
+              "Tuesday: 9:00 AM – 6:00 PM",
+              "Wednesday: 9:00 AM – 6:00 PM",
+              "Thursday: 9:00 AM – 6:00 PM",
+              "Friday: 9:00 AM – 6:00 PM",
+              "Saturday: 9:00 AM – 6:00 PM",
+              "Sunday: 9:00 AM – 6:00 PM"
+            ],
+            "nextOpenTime": "2025-12-30T01:00:00Z"
+          }
         },
         {
-          "id": "ChIJUQfeIBjKlzMRiRs3-xy3Ei0",
+          "place_id": "ChIJUQfeIBjKlzMRiRs3-xy3Ei0",
           "displayName": {
             "text": "Palacio De José",
             "languageCode": "fil"
@@ -4758,7 +4954,7 @@
     "park": {
       "distance": [
         {
-          "id": "ChIJwxFeXz3KlzMRrI27POE0MxE",
+          "place_id": "ChIJwxFeXz3KlzMRrI27POE0MxE",
           "displayName": {
             "text": "Plaza Santiago Corporationoration",
             "languageCode": "en"
@@ -4771,7 +4967,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJe-5IT3zLlzMReP7rlAQxMf8",
+          "place_id": "ChIJe-5IT3zLlzMReP7rlAQxMf8",
           "displayName": {
             "text": "Memorial Peter de Guzman",
             "languageCode": "en"
@@ -4804,7 +5000,7 @@
           }
         },
         {
-          "id": "ChIJYyDiZT3KlzMRchE6NP4HatM",
+          "place_id": "ChIJYyDiZT3KlzMRchE6NP4HatM",
           "displayName": {
             "text": "Plaza Sampalucan",
             "languageCode": "en"
@@ -4815,7 +5011,7 @@
           },
           "formattedAddress": "HXRF+4PX, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -4911,11 +5107,11 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJYyDiZT3KlzMRB2NN28532_E",
+          "place_id": "ChIJYyDiZT3KlzMRB2NN28532_E",
           "displayName": {
             "text": "Plazuela de Sta. Isabel",
             "languageCode": "en"
@@ -4948,7 +5144,7 @@
           }
         },
         {
-          "id": "ChIJMUp7NBbKlzMRqR_GBP8HBMk",
+          "place_id": "ChIJMUp7NBbKlzMRqR_GBP8HBMk",
           "displayName": {
             "text": "Plaza Roma",
             "languageCode": "en"
@@ -4981,7 +5177,7 @@
           }
         },
         {
-          "id": "ChIJk8gdJgDLlzMR4fP_eYR3u9M",
+          "place_id": "ChIJk8gdJgDLlzMR4fP_eYR3u9M",
           "displayName": {
             "text": "Inner Garden",
             "languageCode": "en"
@@ -4994,7 +5190,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJkzKOIknLlzMRKe441nk71nU",
+          "place_id": "ChIJkzKOIknLlzMRKe441nk71nU",
           "displayName": {
             "text": "Plaza Willard",
             "languageCode": "en"
@@ -5007,7 +5203,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJ__8vKT3KlzMRtsIP5mMJHkQ",
+          "place_id": "ChIJ__8vKT3KlzMRtsIP5mMJHkQ",
           "displayName": {
             "text": "Dr. Jaime C. Laya - National Committee on Monuments and Sites",
             "languageCode": "en"
@@ -5020,7 +5216,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJsyh16RzLlzMRdVXLIrqGsws",
+          "place_id": "ChIJsyh16RzLlzMRdVXLIrqGsws",
           "displayName": {
             "text": "Fray Andres de Urdaneta Garden",
             "languageCode": "en"
@@ -5033,7 +5229,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJGy3pYgDLlzMR7SG8CALLA4Y",
+          "place_id": "ChIJGy3pYgDLlzMR7SG8CALLA4Y",
           "displayName": {
             "text": "Parking space",
             "languageCode": "en"
@@ -5048,7 +5244,7 @@
       ],
       "popularity": [
         {
-          "id": "ChIJ1abFKYXLlzMRLFUriVPw1cs",
+          "place_id": "ChIJ1abFKYXLlzMRLFUriVPw1cs",
           "displayName": {
             "text": "Pasig River Esplanade",
             "languageCode": "en"
@@ -5155,11 +5351,11 @@
               "Saturday: 10:00 AM – 12:00 AM",
               "Sunday: 10:00 AM – 12:00 AM"
             ],
-            "nextCloseTime": "2025-12-23T16:00:00Z"
+            "nextCloseTime": "2025-12-29T16:00:00Z"
           }
         },
         {
-          "id": "ChIJS00NHwDLlzMRX4bpf8zkxG4",
+          "place_id": "ChIJS00NHwDLlzMRX4bpf8zkxG4",
           "displayName": {
             "text": "Jones Bridge Esplanade",
             "languageCode": "en"
@@ -5172,7 +5368,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJEWjKJSPKlzMRqHB5OJgKmpo",
+          "place_id": "ChIJEWjKJSPKlzMRqHB5OJgKmpo",
           "displayName": {
             "text": "Ilustrado Restaurant",
             "languageCode": "en"
@@ -5279,11 +5475,11 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T14:00:00Z"
+            "nextCloseTime": "2025-12-29T14:00:00Z"
           }
         },
         {
-          "id": "ChIJ1z7dUrnLlzMRNTQRI_lU2xM",
+          "place_id": "ChIJ1z7dUrnLlzMRNTQRI_lU2xM",
           "displayName": {
             "text": "Puerta Real Gardens",
             "languageCode": "en"
@@ -5296,7 +5492,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJMUp7NBbKlzMRqR_GBP8HBMk",
+          "place_id": "ChIJMUp7NBbKlzMRqR_GBP8HBMk",
           "displayName": {
             "text": "Plaza Roma",
             "languageCode": "en"
@@ -5329,7 +5525,7 @@
           }
         },
         {
-          "id": "ChIJcUvpbxbKlzMRTmWOHTmunpI",
+          "place_id": "ChIJcUvpbxbKlzMRTmWOHTmunpI",
           "displayName": {
             "text": "Plaza Moriones",
             "languageCode": "en"
@@ -5340,7 +5536,7 @@
           },
           "formattedAddress": "HXVC+6JG, 18 Sta. Clara St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -5436,11 +5632,11 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJCeM62RjKlzMRrc9fx641khA",
+          "place_id": "ChIJCeM62RjKlzMRrc9fx641khA",
           "displayName": {
             "text": "Mehan Garden Manila",
             "languageCode": "en"
@@ -5451,7 +5647,7 @@
           },
           "formattedAddress": "HXRJ+W8P, Taft Ave, Ermita, Manila, 1000 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -5547,11 +5743,11 @@
               "Saturday: 8:30 AM – 9:30 PM",
               "Sunday: 7:30 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T12:00:00Z"
+            "nextOpenTime": "2025-12-29T23:30:00Z"
           }
         },
         {
-          "id": "ChIJLQlBy6vLlzMRBZ8JAjT5xYk",
+          "place_id": "ChIJLQlBy6vLlzMRBZ8JAjT5xYk",
           "displayName": {
             "text": "Anda Circle Park",
             "languageCode": "en"
@@ -5584,7 +5780,7 @@
           }
         },
         {
-          "id": "ChIJnZVPrTzKlzMRZouXxpfcZaw",
+          "place_id": "ChIJnZVPrTzKlzMRZouXxpfcZaw",
           "displayName": {
             "text": "San Diego Gardens",
             "languageCode": "en"
@@ -5597,7 +5793,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJX26pburLlzMRTFIazT8cmrg",
+          "place_id": "ChIJX26pburLlzMRTFIazT8cmrg",
           "displayName": {
             "text": "Plaza Mexico",
             "languageCode": "en"
@@ -5614,7 +5810,7 @@
     "church": {
       "distance": [
         {
-          "id": "ChIJwxFeXz3KlzMRw21wUyjMBrs",
+          "place_id": "ChIJwxFeXz3KlzMRw21wUyjMBrs",
           "displayName": {
             "text": "Borromeo Refresments",
             "languageCode": "en"
@@ -5627,7 +5823,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJAUR01hfKlzMRgDjCN1W9ias",
+          "place_id": "ChIJAUR01hfKlzMRgDjCN1W9ias",
           "displayName": {
             "text": "St Peter Adoration Chapel",
             "languageCode": "en"
@@ -5640,7 +5836,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJdQcAwBfKlzMRvSo9OiOLnRo",
+          "place_id": "ChIJdQcAwBfKlzMRvSo9OiOLnRo",
           "displayName": {
             "text": "Villena, Jesus E.",
             "languageCode": "en"
@@ -5653,7 +5849,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJAQBAUz3KlzMRSo5ppuil2J8",
+          "place_id": "ChIJAQBAUz3KlzMRSo5ppuil2J8",
           "displayName": {
             "text": "Joy Christian Fellowship",
             "languageCode": "en"
@@ -5666,7 +5862,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJE6VNFD3KlzMRwU4MpVMbF6w",
+          "place_id": "ChIJE6VNFD3KlzMRwU4MpVMbF6w",
           "displayName": {
             "text": "Episcopal Commission on Youth (ECY)",
             "languageCode": "en"
@@ -5677,7 +5873,7 @@
           },
           "formattedAddress": "3/F, CBCP Building, 470 General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -5749,11 +5945,11 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-30T00:00:00Z"
           }
         },
         {
-          "id": "ChIJvcr5aj3KlzMRagSfBNheQIc",
+          "place_id": "ChIJvcr5aj3KlzMRagSfBNheQIc",
           "displayName": {
             "text": "Committee on Eucharistic Congresses (PCIEC)",
             "languageCode": "en"
@@ -5766,7 +5962,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJYcQrCtLLlzMRleHyf7enWbw",
+          "place_id": "ChIJYcQrCtLLlzMRleHyf7enWbw",
           "displayName": {
             "text": "Joy Student Center",
             "languageCode": "en"
@@ -5779,7 +5975,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
+          "place_id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
           "displayName": {
             "text": "Minor Basilica and Metropolitan Cathedral of the Immaculate Conception - The Manila Cathedral",
             "languageCode": "en"
@@ -5790,7 +5986,7 @@
           },
           "formattedAddress": "Cabildo, 132 Beaterio St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -5886,11 +6082,11 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-29T23:00:00Z"
           }
         },
         {
-          "id": "ChIJjxQJYgDLlzMRHGq5nxVkzbM",
+          "place_id": "ChIJjxQJYgDLlzMRHGq5nxVkzbM",
           "displayName": {
             "text": "Catedral de San Pablo",
             "languageCode": "es"
@@ -5903,7 +6099,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJl7ykBxjKlzMRM04r6qia1Og",
+          "place_id": "ChIJl7ykBxjKlzMRM04r6qia1Og",
           "displayName": {
             "text": "Canon Law Society of the Philippines",
             "languageCode": "en"
@@ -5918,7 +6114,7 @@
       ],
       "popularity": [
         {
-          "id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
+          "place_id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
           "displayName": {
             "text": "Minor Basilica and Metropolitan Cathedral of the Immaculate Conception - The Manila Cathedral",
             "languageCode": "en"
@@ -5929,7 +6125,7 @@
           },
           "formattedAddress": "Cabildo, 132 Beaterio St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -6025,11 +6221,11 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-29T23:00:00Z"
           }
         },
         {
-          "id": "ChIJY1NEIz3KlzMRamMm7IEXLWw",
+          "place_id": "ChIJY1NEIz3KlzMRamMm7IEXLWw",
           "displayName": {
             "text": "San Agustin Church",
             "languageCode": "en"
@@ -6040,7 +6236,7 @@
           },
           "formattedAddress": "General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -6124,11 +6320,11 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-30T00:00:00Z"
           }
         },
         {
-          "id": "ChIJE5bqjz3KlzMRORKj3qWFvn0",
+          "place_id": "ChIJE5bqjz3KlzMRORKj3qWFvn0",
           "displayName": {
             "text": "Archdiocese of Manila",
             "languageCode": "en"
@@ -6141,7 +6337,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJR41caALLlzMRWWi7iCyuznk",
+          "place_id": "ChIJR41caALLlzMRWWi7iCyuznk",
           "displayName": {
             "text": "Former Santo Domingo Church Site",
             "languageCode": "en"
@@ -6154,7 +6350,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJrQ7rUiPKlzMRaxT2Jgqc9xU",
+          "place_id": "ChIJrQ7rUiPKlzMRaxT2Jgqc9xU",
           "displayName": {
             "text": "PLM Chapel (Shrine of Jesus the Divine Teacher)",
             "languageCode": "en"
@@ -6167,7 +6363,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJA3j0Oj3KlzMRiSc5L6lEkEc",
+          "place_id": "ChIJA3j0Oj3KlzMRiSc5L6lEkEc",
           "displayName": {
             "text": "Chapel of the Immaculate Conception",
             "languageCode": "en"
@@ -6180,7 +6376,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJtyceJT3KlzMR8jZIJ4g1hyI",
+          "place_id": "ChIJtyceJT3KlzMR8jZIJ4g1hyI",
           "displayName": {
             "text": "Chapel of San Nicolas de Tontentino",
             "languageCode": "en"
@@ -6193,7 +6389,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJS8eFZRjKlzMRw5ASoiMU2zQ",
+          "place_id": "ChIJS8eFZRjKlzMRw5ASoiMU2zQ",
           "displayName": {
             "text": "Mapua University Chapel",
             "languageCode": "en"
@@ -6206,7 +6402,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJV_mDZZbLlzMRYK3vSIJN-Ac",
+          "place_id": "ChIJV_mDZZbLlzMRYK3vSIJN-Ac",
           "displayName": {
             "text": "Tempoy Church(Former Site)",
             "languageCode": "en"
@@ -6219,7 +6415,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJhSGOR6LLlzMRmzFgz_bb5Dc",
+          "place_id": "ChIJhSGOR6LLlzMRmzFgz_bb5Dc",
           "displayName": {
             "text": "Tempoy Church (Former Site)",
             "languageCode": "en"
@@ -6236,7 +6432,7 @@
     "tourist_attraction": {
       "distance": [
         {
-          "id": "ChIJL6j94RfKlzMRwAyLpAf1fnA",
+          "place_id": "ChIJL6j94RfKlzMRwAyLpAf1fnA",
           "displayName": {
             "text": "Bahay Tsinoy, Museum of Chinese in Philippine Life",
             "languageCode": "en"
@@ -6247,7 +6443,7 @@
           },
           "formattedAddress": "32 Anda St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -6331,11 +6527,11 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextCloseTime": "2025-12-23T08:30:00Z"
+            "nextOpenTime": "2025-12-30T02:00:00Z"
           }
         },
         {
-          "id": "ChIJP4nmZj3KlzMRxMid9fS-DhU",
+          "place_id": "ChIJP4nmZj3KlzMRxMid9fS-DhU",
           "displayName": {
             "text": "Manila 1945 Memorial",
             "languageCode": "en"
@@ -6368,7 +6564,7 @@
           }
         },
         {
-          "id": "ChIJYyDiZT3KlzMRchE6NP4HatM",
+          "place_id": "ChIJYyDiZT3KlzMRchE6NP4HatM",
           "displayName": {
             "text": "Plaza Sampalucan",
             "languageCode": "en"
@@ -6379,7 +6575,7 @@
           },
           "formattedAddress": "HXRF+4PX, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -6475,11 +6671,11 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJAWuBIavLlzMR6brHBEiKEzI",
+          "place_id": "ChIJAWuBIavLlzMR6brHBEiKEzI",
           "displayName": {
             "text": "Private Tour Intramuros",
             "languageCode": "en"
@@ -6490,7 +6686,7 @@
           },
           "formattedAddress": "27B Beaterio St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -6586,11 +6782,11 @@
               "Saturday: 9:00 AM – 3:00 PM",
               "Sunday: 9:00 AM – 3:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T07:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJgS96OD3KlzMR91wyTDiHHCg",
+          "place_id": "ChIJgS96OD3KlzMR91wyTDiHHCg",
           "displayName": {
             "text": "Casa Manila",
             "languageCode": "en"
@@ -6601,7 +6797,7 @@
           },
           "formattedAddress": "plaza sans luis complex, General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -6685,11 +6881,11 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T10:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJrdp7SQDLlzMRj1qRYjgOCzs",
+          "place_id": "ChIJrdp7SQDLlzMRj1qRYjgOCzs",
           "displayName": {
             "text": "General Luna Steet",
             "languageCode": "en"
@@ -6702,7 +6898,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
+          "place_id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
           "displayName": {
             "text": "Minor Basilica and Metropolitan Cathedral of the Immaculate Conception - The Manila Cathedral",
             "languageCode": "en"
@@ -6713,7 +6909,7 @@
           },
           "formattedAddress": "Cabildo, 132 Beaterio St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -6809,11 +7005,11 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-29T23:00:00Z"
           }
         },
         {
-          "id": "ChIJBVGVRz3KlzMR8xOpNndF5VM",
+          "place_id": "ChIJBVGVRz3KlzMR8xOpNndF5VM",
           "displayName": {
             "text": "Bambike Ecotours Intramuros",
             "languageCode": "en"
@@ -6824,7 +7020,7 @@
           },
           "formattedAddress": "Bambike HQ, Plaza San Luis Complex. Real St, corner M General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -6920,11 +7116,11 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T10:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJmfHtaADLlzMR7dku61giY_U",
+          "place_id": "ChIJmfHtaADLlzMR7dku61giY_U",
           "displayName": {
             "text": "Intramuros",
             "languageCode": "en"
@@ -6937,7 +7133,7 @@
           "regularOpeningHours": null
         },
         {
-          "id": "ChIJMUp7NBbKlzMRqR_GBP8HBMk",
+          "place_id": "ChIJMUp7NBbKlzMRqR_GBP8HBMk",
           "displayName": {
             "text": "Plaza Roma",
             "languageCode": "en"
@@ -6972,7 +7168,7 @@
       ],
       "popularity": [
         {
-          "id": "ChIJvZ4MeBbKlzMRQ7CLeMYOQ80",
+          "place_id": "ChIJvZ4MeBbKlzMRQ7CLeMYOQ80",
           "displayName": {
             "text": "Fort Santiago",
             "languageCode": "en"
@@ -7079,11 +7275,11 @@
               "Saturday: 8:00 AM – 11:00 PM",
               "Sunday: 8:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T15:00:00Z"
+            "nextCloseTime": "2025-12-29T15:00:00Z"
           }
         },
         {
-          "id": "ChIJ1abFKYXLlzMRLFUriVPw1cs",
+          "place_id": "ChIJ1abFKYXLlzMRLFUriVPw1cs",
           "displayName": {
             "text": "Pasig River Esplanade",
             "languageCode": "en"
@@ -7190,11 +7386,11 @@
               "Saturday: 10:00 AM – 12:00 AM",
               "Sunday: 10:00 AM – 12:00 AM"
             ],
-            "nextCloseTime": "2025-12-23T16:00:00Z"
+            "nextCloseTime": "2025-12-29T16:00:00Z"
           }
         },
         {
-          "id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
+          "place_id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
           "displayName": {
             "text": "Minor Basilica and Metropolitan Cathedral of the Immaculate Conception - The Manila Cathedral",
             "languageCode": "en"
@@ -7205,7 +7401,7 @@
           },
           "formattedAddress": "Cabildo, 132 Beaterio St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -7301,11 +7497,11 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-29T23:00:00Z"
           }
         },
         {
-          "id": "ChIJ3ekUHhrKlzMR9Tn7K6JBUBY",
+          "place_id": "ChIJ3ekUHhrKlzMR9Tn7K6JBUBY",
           "displayName": {
             "text": "Jones Bridge",
             "languageCode": "en"
@@ -7338,7 +7534,7 @@
           }
         },
         {
-          "id": "ChIJY1NEIz3KlzMRamMm7IEXLWw",
+          "place_id": "ChIJY1NEIz3KlzMRamMm7IEXLWw",
           "displayName": {
             "text": "San Agustin Church",
             "languageCode": "en"
@@ -7349,7 +7545,7 @@
           },
           "formattedAddress": "General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -7433,11 +7629,11 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-30T00:00:00Z"
           }
         },
         {
-          "id": "ChIJ-2XPChrKlzMRqX24Y0diny0",
+          "place_id": "ChIJ-2XPChrKlzMRqX24Y0diny0",
           "displayName": {
             "text": "Binondo Chinatown Arch",
             "languageCode": "en"
@@ -7470,7 +7666,7 @@
           }
         },
         {
-          "id": "ChIJgS96OD3KlzMR91wyTDiHHCg",
+          "place_id": "ChIJgS96OD3KlzMR91wyTDiHHCg",
           "displayName": {
             "text": "Casa Manila",
             "languageCode": "en"
@@ -7481,7 +7677,7 @@
           },
           "formattedAddress": "plaza sans luis complex, General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -7565,11 +7761,11 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T10:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJ48-0VzvKlzMRg16kTvO3p8U",
+          "place_id": "ChIJ48-0VzvKlzMRg16kTvO3p8U",
           "displayName": {
             "text": "Baluarte de San Diego",
             "languageCode": "en"
@@ -7580,7 +7776,7 @@
           },
           "formattedAddress": "HXPG+564, Sta. Lucia St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -7676,11 +7872,11 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-30T00:00:00Z"
           }
         },
         {
-          "id": "ChIJBVGVRz3KlzMR8xOpNndF5VM",
+          "place_id": "ChIJBVGVRz3KlzMR8xOpNndF5VM",
           "displayName": {
             "text": "Bambike Ecotours Intramuros",
             "languageCode": "en"
@@ -7691,7 +7887,7 @@
           },
           "formattedAddress": "Bambike HQ, Plaza San Luis Complex. Real St, corner M General Luna St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -7787,11 +7983,11 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2025-12-23T10:00:00Z"
+            "nextOpenTime": "2025-12-30T01:00:00Z"
           }
         },
         {
-          "id": "ChIJpbdG1RvKlzMRiwUU7PTXIu0",
+          "place_id": "ChIJpbdG1RvKlzMRiwUU7PTXIu0",
           "displayName": {
             "text": "Philippine Postal Corporation",
             "languageCode": "en"
@@ -7802,7 +7998,7 @@
           },
           "formattedAddress": "Liwasang Bonifacio, Magallanes Dr, Intramuros, Manila, 1000 Kalakhang Maynila, Philippines",
           "regularOpeningHours": {
-            "openNow": true,
+            "openNow": false,
             "periods": [
               {
                 "open": {
@@ -7874,7 +8070,7 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextCloseTime": "2025-12-23T09:00:00Z"
+            "nextOpenTime": "2025-12-30T00:00:00Z"
           }
         }
       ]
