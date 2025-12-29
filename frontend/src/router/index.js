@@ -1,6 +1,8 @@
 // src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router'
 
+import { useUserStore } from '@/store/userStore';
+
 //layouts
 import NavbarLayout from '@/layouts/NavbarLayout.vue'
 import SidebarLayout from '@/layouts/SidebarLayout.vue'
@@ -29,7 +31,7 @@ const routes = [
             {path: '/Blog', name: 'Blog', component: Blog},
             {path: '/Registration', name: 'Registration', component: Registration},
             {path: '/Edit', name: 'Edit', component: ItineraryEdit},
-            {path: '/Account', name: 'Account', component: Account}
+            {path: '/Account', name: 'Account', component: Account, meta: { requiresProfile: true }}
             
         ]
     },
@@ -46,6 +48,17 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
+
+router.beforeEach(async (to, from) => {
+    const userStore = useUserStore();
+
+    if (to.matched.some(record => record.meta.requiresProfile)) {
+        if (!userStore.hasProfile) {
+            console.warn("No profile found! Redirecting...");
+            return { name: 'Home' }; // Redirect to home
+        }
+    }
+});
 
 
 export let routerInstance = router
