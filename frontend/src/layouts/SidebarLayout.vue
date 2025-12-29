@@ -9,7 +9,7 @@
 
 
 <template>
-  <div class="relative h-screen w-screen flex flex-col overflow-hidden">
+  <div class="relative h-full w-screen flex flex-col overflow-hidden">
     <!-- Mobile Top Overlay (fixed positioning) -->
     <div class="md:hidden">
       <NavbarMobileOverlay />
@@ -30,12 +30,12 @@
       <Navbar />
     </div>
 
-    <div class="hidden md:block fixed right-0 h-full w-[35%] z-10">
+    <div class="hidden md:block fixed right-0 h-full w-[30%] z-10">
       <Sidebar />
     </div>
 
     <!-- Mobile Sidebar Overlay -->
-    <div class="absolute md:hidden top-[calc(4rem)] left-0 h-[calc(100%-8.5rem)] w-full z-5 pointer-events-none">
+    <div class="absolute md:hidden left-0 h-[calc(100%-4rem)] w-full z-5 pointer-events-none">
       <SidebarMobile />
     </div>
 
