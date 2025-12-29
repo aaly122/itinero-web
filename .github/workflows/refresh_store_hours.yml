@@ -1,8 +1,14 @@
 name: Refresh Store Hours
 on:
+  # Add this section to force it to run on your branch
+  push:
+    branches:
+      - feature/setup-automation
+  
+  # Keep these for later
   schedule:
-    - cron: '0 0 */14 * *' # Runs every 14 days at midnight
-  workflow_dispatch:      # Allows you to click a "Run Now" button to test it
+    - cron: '0 0 */14 * *'
+  workflow_dispatch:
 
 permissions:
   contents: write         # Gives permission to commit the JSON file back
