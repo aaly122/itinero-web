@@ -228,7 +228,9 @@ import { length } from '@vee-validate/rules';
 
                 </TabPanel>
                 <TabPanel value="1">
-
+                  <div class="flex justify-center items-center h-full">
+                        <p class="text-slate-500 text-xl">This page is in progress</p>
+                    </div>
                 </TabPanel>
             </TabPanels>
         </Tabs>
@@ -318,10 +320,9 @@ import { length } from '@vee-validate/rules';
             </div>
         </div>    
         
-        <div class="flex flex-col-reverse md:flex-row justify-between gap-4 pt-8 pb-2">
+        <div class="flex flex-col md:flex-row justify-between gap-4 pt-8 pb-2">
             
             <div class="flex flex-col md:flex-row gap-2 w-full md:w-auto">
-                <Button type="button" label="Edit in Viewer" severity="secondary" @click="visible = false" class="interactive-btn-secondary w-full md:w-auto" :disabled="saving"></Button>
                 <div class="flex gap-2">
                     <Button type="button" label="Delete" severity="secondary" @click="deleteItinerary()" class="interactive-btn-secondary w-full md:w-25" :disabled="saving"></Button>
                     <Button type="button" label="Open" severity="secondary" @click="openItineraryInViewer()" class="interactive-btn-secondary w-full md:w-25" :disabled="saving"></Button>
