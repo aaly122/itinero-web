@@ -620,82 +620,100 @@ def nearest_neighbor(distanceMatrix,durationsMatrix):
 
 
 TYPE_PARAMETERS = {
-    "restaurant":  {"multiplier": 1.5, "min_duration": 45},  
-    "cafe":        {"multiplier": 1.2, "min_duration": 30}, 
-    "museum":      {"multiplier": 0.8, "min_duration": 60},  
-    "park":        {"multiplier": 1.0, "min_duration": 20},  
-    "church":       {"multiplier": 1.1, "min_duration": 30},
-    "tourist_attraction": {"multiplier": 1.0, "min_duration": 30},
+    "restaurant":  {"multiplier": 1.5, "min_duration": 60},  
+    "cafe":        {"multiplier": 1.2, "min_duration": 45}, 
+    "museum":      {"multiplier": 0.8, "min_duration": 90},  
+    "park":        {"multiplier": 1.0, "min_duration": 45},  
+    "church":      {"multiplier": 1.1, "min_duration": 30},
+    "tourist_attraction": {"multiplier": 1.0, "min_duration": 60},
     "Start": {"multiplier": 1.0, "min_duration": 0},
     "End":   {"multiplier": 1.0, "min_duration": 0}
 }
                 
 def scheduling(path, results, time_for_activities, segment_durations):
     MANILA_TZ = pytz.timezone('Asia/Manila')
-
     timeNow = datetime.now(MANILA_TZ)
-
-    timeHour = timeNow.hour
-    timeMinutes = timeNow.minute
     
-    T_target = time_for_activities 
-    
+    # Check if we are dealing with a request that has user-defined durations
+    # The frontend sends 'duration' in seconds.
+    # We check the first schedulable stop to see if it has a 'duration' key.
     scheduled_stops = [results[i] for i in path]
     schedulable_periods = [
         item for item in scheduled_stops 
         if item['interestType'] not in ['Start', 'End']
     ]
-    N = len(schedulable_periods)
-
-    if N == 0 or T_target <= 0:
-        final_schedule = []
-        current_time = timeNow
-        for i, item in enumerate(scheduled_stops):
-            item['scheduled_activity_minutes'] = 0
-            item['travel_time_seconds'] = segment_durations[i] if i < len(segment_durations) else 0
-            item['arrival_time'] = current_time.strftime("%I:%M %p")
-            item['leave_time'] = current_time.strftime("%I:%M %p")
-            final_schedule.append(item)
-        return final_schedule
-
-
-    initial_equal_duration = T_target / N 
-    period_data = {}
-    for period_info in schedulable_periods:
-        p_id = period_info['places']['id']
-        p_type = period_info['interestType']
-        params = TYPE_PARAMETERS.get(p_type, {"multiplier": 1.0, "min_duration": 10})
-        period_data[p_id] = {
-            "orig_duration": initial_equal_duration, "multiplier": params["multiplier"],
-            "min_duration": params["min_duration"], "type": p_type
-        }
-    lp_period_ids = list(period_data.keys())
-
-    # LINEAR PROGRAMMING MODEL
-    prob = LpProblem("Scheduling_Resizing_Optimization", LpMinimize)
-    x = LpVariable.dict("FinalDuration", lp_period_ids, lowBound=0) 
-    d_inc = LpVariable.dict("IncreaseDeviation", lp_period_ids, lowBound=0)
-    d_dec = LpVariable.dict("DecreaseDeviation", lp_period_ids, lowBound=0)
     
-    objective = lpSum([ (d_inc[p_id] + d_dec[p_id]) / period_data[p_id]["multiplier"] for p_id in lp_period_ids ])
-    prob += objective, "Minimize_Weighted_Resizing_Deviation"
-    prob += lpSum([x[p_id] for p_id in lp_period_ids]) == T_target, "Total_Schedule_Time"
-    for p_id in lp_period_ids:
-        min_dur = period_data[p_id]["min_duration"]
-        orig_dur = period_data[p_id]["orig_duration"]
-        prob += x[p_id] >= min_dur, f"MinDuration_Constraint_{p_id}"
-        prob += x[p_id] - orig_dur == d_inc[p_id] - d_dec[p_id], f"Deviation_Linkage_{p_id}"
+    # DETECT MANUAL OVERRIDE
+    # If the request contains 'duration', we skip the LP Optimizer.
+    has_manual_durations = len(schedulable_periods) > 0 and 'duration' in schedulable_periods[0]
 
-    # SOLVE AND MAP
-    prob.solve()
     final_schedule_map = {}
-    if LpStatus[prob.status] == "Optimal":
-        for p_id in lp_period_ids:
-            final_schedule_map[p_id] = value(x[p_id])
+
+    if has_manual_durations:
+        print("Manual durations detected. Skipping Linear Programming optimization.")
+        for item in schedulable_periods:
+            p_id = item['places']['id']
+            # Frontend sends duration in SECONDS.
+            # Backend logic usually calculates in MINUTES.
+            # We convert to minutes for the map, but keep precision if needed.
+            duration_seconds = item.get('duration', 0)
+            final_schedule_map[p_id] = duration_seconds / 60
     else:
+        # --- ORIGINAL LINEAR PROGRAMMING LOGIC ---
+        # Only run this if no durations were provided (e.g. initial search)
+        
+        T_target = time_for_activities 
+        N = len(schedulable_periods)
+
+        if N == 0 or T_target <= 0:
+            # Fallback for empty/invalid schedules
+            final_schedule = []
+            current_time = timeNow
+            for i, item in enumerate(scheduled_stops):
+                item['scheduled_activity_minutes'] = 0
+                item['travel_time_seconds'] = segment_durations[i] if i < len(segment_durations) else 0
+                item['arrival_time'] = current_time.strftime("%I:%M %p")
+                item['leave_time'] = current_time.strftime("%I:%M %p")
+                final_schedule.append(item)
+            return final_schedule
+
+        initial_equal_duration = T_target / N 
+        period_data = {}
+        for period_info in schedulable_periods:
+            p_id = period_info['places']['id']
+            p_type = period_info['interestType']
+            params = TYPE_PARAMETERS.get(p_type, {"multiplier": 1.0, "min_duration": 10})
+            period_data[p_id] = {
+                "orig_duration": initial_equal_duration, "multiplier": params["multiplier"],
+                "min_duration": params["min_duration"], "type": p_type
+            }
+        lp_period_ids = list(period_data.keys())
+
+        # LINEAR PROGRAMMING MODEL
+        prob = LpProblem("Scheduling_Resizing_Optimization", LpMinimize)
+        x = LpVariable.dict("FinalDuration", lp_period_ids, lowBound=0) 
+        d_inc = LpVariable.dict("IncreaseDeviation", lp_period_ids, lowBound=0)
+        d_dec = LpVariable.dict("DecreaseDeviation", lp_period_ids, lowBound=0)
+        
+        objective = lpSum([ (d_inc[p_id] + d_dec[p_id]) / period_data[p_id]["multiplier"] for p_id in lp_period_ids ])
+        prob += objective, "Minimize_Weighted_Resizing_Deviation"
+        prob += lpSum([x[p_id] for p_id in lp_period_ids]) == T_target, "Total_Schedule_Time"
         for p_id in lp_period_ids:
-             final_schedule_map[p_id] = period_data[p_id]["min_duration"]
-    
+            min_dur = period_data[p_id]["min_duration"]
+            orig_dur = period_data[p_id]["orig_duration"]
+            prob += x[p_id] >= min_dur, f"MinDuration_Constraint_{p_id}"
+            prob += x[p_id] - orig_dur == d_inc[p_id] - d_dec[p_id], f"Deviation_Linkage_{p_id}"
+
+        # SOLVE AND MAP
+        prob.solve()
+        if LpStatus[prob.status] == "Optimal":
+            for p_id in lp_period_ids:
+                final_schedule_map[p_id] = value(x[p_id])
+        else:
+            for p_id in lp_period_ids:
+                final_schedule_map[p_id] = period_data[p_id]["min_duration"]
+
+    # --- TIMESTAMP CALCULATION (Shared by both logic paths) ---
     final_schedule = []
     
     current_arrival_time = timeNow 
@@ -730,10 +748,13 @@ def scheduling(path, results, time_for_activities, segment_durations):
         # Final Output Formatting
         item['scheduled_activity_minutes'] = activity_minutes
         
-        # Travel time is the time spent traveling *to the next stop*
+        # IMPORTANT: If we are in manual mode, ensure we return the 'duration' in seconds
+        # so the frontend stays synced on the next reload
+        if has_manual_durations and p_type not in ['Start', 'End']:
+             item['duration'] = activity_minutes * 60
+        
         item['travel_time_to_next_stop_seconds'] = travel_out_seconds
         
-            
         final_schedule.append(item)
     
     return final_schedule
