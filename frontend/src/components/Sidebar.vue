@@ -77,7 +77,7 @@
                     <div v-for="stop in stops" :key="stop.title" 
                         @click="togglePan(stop.lat, stop.lng, stop.title)"
                         :class="{
-                            'card bg-slate-100 w-full rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 cursor-pointer transition-all ease-in': true,
+                            'card bg-slate-100 w-full rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 cursor-pointer transition-all ease-in h-auto min-h-[10rem] md:min-h-40 ': true,
                             /* CHANGED: Removed 'grid grid-cols-4...' and added Flexbox classes */
                             'flex flex-col gap-2 min-h-[140px]': true, 
                             'border-primary-200': activeStopTitle !== stop.title,
