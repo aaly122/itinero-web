@@ -248,9 +248,6 @@ onMounted(() => {
         </div>    
         
         <div class="flex flex-col-reverse md:flex-row justify-between gap-4 pt-10">
-            <div>
-                <Button type="button" label="View in Map" severity="secondary" @click="visible = false" class="interactive-btn-secondary w-full md:w-55 h-full"></Button>
-            </div>
             <div class="flex flex-col md:flex-row gap-2">
                 <Button type="button" label="Close" severity="secondary" @click="visible = false" class="interactive-btn-secondary w-full md:w-25 h-full"></Button>
                 <Button 
