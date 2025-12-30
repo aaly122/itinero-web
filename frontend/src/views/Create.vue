@@ -325,7 +325,7 @@
                     </div>
                 </StepPanel>
     
-                <StepPanel v-slot="{ activateCallback }" value="3" class="flex flex-col h-full bg-transparent">
+                <StepPanel v-slot="{ activateCallback }" value="3" class="flex flex-col h-full bg-transparent overflow-y-scroll">
                     <div class="md:mb-0 w-full md:w-[60%] mb-15">
                         <h1 class="text-2xl md: 4xl font-bold font-[Poppins] w-full text-center md:text-left animate-enter px-4" style="--delay:0s">
                             What are the places you would like to see?
