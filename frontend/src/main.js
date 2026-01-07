@@ -9,6 +9,7 @@ import PrimeVue from 'primevue/config';
 import { definePreset } from '@primeuix/themes';
 import Aura from '@primeuix/themes/aura';
 import ToastService from 'primevue/toastservice';
+import ConfirmationService from 'primevue/confirmationservice';
 
 //PrimeVue components
 import Button from 'primevue/button';
@@ -98,6 +99,7 @@ app.use(pinia)
 app.component('Button', Button)
 app.component('Avatar', Avatar)
 app.use(ToastService);
+app.use(ConfirmationService);
 app.use(router)
 app.use(PrimeVue, {
     ripple: true,
