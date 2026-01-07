@@ -1,37 +1,22 @@
 <script setup>
-import { onMounted, onUnmounted, ref } from "vue";
+import { onMounted, onUnmounted, ref, watch } from "vue";
 
 import { useFormStore } from '@/store/formStore';
 const formStore = useFormStore();
 
-import { useRouter } from 'vue-router';
+import { useRouter, useRoute } from 'vue-router';
 const router = useRouter();
 
-const stepCards = ref(null);
-const howItWorks = ref(null);
-const heroSection = ref(null);
-const heroTitle = ref(null);
-const heroSubtitle = ref(null);
-const heroButton = ref(null);
-const heroOverlay = ref(null);
-const howItWorksTitle = ref(null);
-const historySection = ref(null);
-const historyTitle = ref(null);
-const historyText = ref(null);
-const historyImage = ref(null);
-const mapPath = ref(null);
-const mapMarkers = ref(null);
-const mapElements = ref(null);
-const maximizeSection = ref(null);
-const maximizeTitle = ref(null);
-const maximizeText = ref(null);
-const maximizeImage = ref(null);
-const communitySection = ref(null);
-const communityTitle = ref(null);
-const communityText = ref(null);
-const communityImage = ref(null);
-const communityCardsBg = ref(null);
-const communityMainCard = ref(null);
+import { useToast } from 'primevue/usetoast';
+import { useToastStore } from '@/store/toastStore';       
+import Toast from 'primevue/toast';
+
+const toast = useToast();
+const toastStore = useToastStore();
+const route = useRoute();   
+
+
+
 const displayedTitle = ref("");
 const fullTitleText = "Plan Your Intramuros Trip in a Minute";
 const hourHandRotation = ref(0);
@@ -63,6 +48,8 @@ onMounted(() => {
   };
   typeWriter();
 
+
+  
   // Clock update
   const updateClock = () => {
     const now = new Date();
@@ -183,7 +170,7 @@ onUnmounted(() => {
               </svg>
             </div>
             <div class="w-full flex flex-col items-center">
-              <span class="step-card-title gradient-text-accent font-bold text-xl md:text-2xl mb-2">Get Your Smart Route</span>
+              <span class="step-card-title gradient-text-accent font-bold text-xl md:text-2xl mb-2 text-center">Get Your Smart Walking Route</span>
               <div class="progress-bar-container w-16 h-1 bg-gray-200 rounded-full mb-4 overflow-hidden">
                 <div class="progress-bar h-full bg-gradient-to-r from-[#ec4899] to-[#c026d3] rounded-full"></div>
               </div>
@@ -681,7 +668,9 @@ onUnmounted(() => {
       </div>
     </div>
 
-    <div class="h-[40dvh] w-full bg-primary-300"></div>
+    <div class="h-[10dvh] w-full bg-primary-300 flex items-center justify-center">
+      <div class="text-white">@Software Engineering 2 || Itinero </div>
+    </div>
   
   </div>
 </template>
