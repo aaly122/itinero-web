@@ -13,7 +13,8 @@ import { supabase } from '@/lib/supabase'
 import { ref, onMounted, computed } from 'vue';
 import { useToast } from 'primevue/usetoast';
 import { useUserStore } from '@/store/userStore';
-import { useFormStore } from '@/store/formStore'; // Add this import
+import { useFormStore } from '@/store/formStore';
+
 
 const savedItineraries = ref([]);
 
@@ -121,7 +122,8 @@ const deleteItinerary = async () => {
     return;
   }
 
-  saving.value = true; // Use saving state to disable buttons during deletion
+
+  saving.value = true; 
   try {
     const itineraryIdToDelete = selectedItinerary.value.id;
 
@@ -142,7 +144,7 @@ const deleteItinerary = async () => {
     if (deleteItineraryError) throw deleteItineraryError;
 
     toast.add({ severity: 'success', summary: 'Success', detail: 'Itinerary deleted successfully!', life: 3000 });
-    await fetchSavedItineraries(); // Refresh the list
+    await fetchSavedItineraries(); 
     visible.value = false; // Close dialog
   } catch (error) {
     console.error('Error deleting itinerary:', error);
