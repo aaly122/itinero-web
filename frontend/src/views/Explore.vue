@@ -10,9 +10,10 @@ import ToggleSwitch from 'primevue/toggleswitch';
 import { useToast } from 'primevue/usetoast';
 import { useUserStore } from '@/store/userStore';
 
-const catalog = 2
+import { useRouter } from 'vue-router';
+  
+const router = useRouter();
 
-const search = null;
 
 const publicItineraries = ref([]);
 
@@ -26,6 +27,8 @@ let visible = ref(false);
 const selectedItinerary = ref(null);
 let stopsArray = ref(null);
 let isPublic = ref(null);
+
+const isLoggedIn = userStore.hasProfile;
 
 // Typing animation
 const displayedTitle = ref("");
@@ -169,15 +172,25 @@ onMounted(() => {
 
     fetchPublicItineraries();
 });
+
+let helpVisible = ref(false);
 </script>
 
 <template>
     <section class="min-h-full md:h-full w-full gradient-5 p-4 md:pl-25 pt-15 md:mt-0 animate-enter" style="--delay:0s">
-        <div class="mb-8">
-            <h1 class="text-4xl md:text-5xl font-extrabold mb-2">
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-600 text-center md:text-left">{{ displayedTitle }}</span><span class="blinking-cursor text-purple-700">|</span>
-            </h1>
-            <p class="text-lg text-slate-600 subtext-animate text-center md:text-left">Your saved itineraries and discoveries.</p>
+        <div class="mb-8 flex justify-between w-full items-center md:flex-row flex-col">
+            <div>
+                <h1 class="text-4xl md:text-5xl font-extrabold mb-2">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-600 text-center md:text-left">{{ displayedTitle }}</span><span class="blinking-cursor text-purple-700">|</span>
+                </h1>
+                <p class="text-lg text-slate-600 subtext-animate text-center md:text-left">Your saved itineraries and discoveries.</p>
+            </div>
+            <div class="flex gap-2 items-center">
+                <Button v-if="isLoggedIn" label="Sign in to use this feature!" class="interactive-btn-primary" @click="router.push('/Registration')"/>
+                <Button icon="pi pi-question" class="h-10 w-10  rounded-full" @click="helpVisible = true"></Button>
+            </div>
+
+
         </div>
         <div v-if="isLoading" class="flex justify-center items-center text-xl">Loading...</div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-2">
@@ -194,6 +207,18 @@ onMounted(() => {
             </div>
         </div>
 
+        <Dialog v-model:visible="helpVisible" modal header="What are Pocket Journals?" 
+        :style="{ width: '60rem' }" 
+        :breakpoints="{ '960px': '75vw', '641px': '100vw' }"
+        class="card gradient-5 h-300 md:h-70 px-4">
+            <div class="flex justify-center items-center">
+                <div>Pocket Journals are itineraries that other people have saved and made public. If you have a registered account, you
+                    can save the itineraries for yourself. With the itinerary saved, you can open it, follow it as a guide, or even modify it to
+                    suit your needs.
+                </div>
+            </div>
+    
+        </Dialog>
 
         <Dialog 
     v-model:visible="visible" 
