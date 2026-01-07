@@ -1,14 +1,24 @@
 <script setup>
     import { useFormStore } from '@/store/formStore.js';
-    import { ref, computed } from 'vue';
+    import { ref, computed, onMounted, onBeforeMount } from 'vue'; // Added onBeforeMount
     import { VueDraggable } from 'vue-draggable-plus';
     import { useRouter } from 'vue-router';
     import Button from 'primevue/button';
     import Chip from 'primevue/chip';
+    import Dialog from 'primevue/dialog';
     
     const router = useRouter();
     const formStore = useFormStore();
     
+    // --- 1. SAFETY REDIRECT ---
+    onBeforeMount(() => {
+        // If data is missing, kick user back to Create page
+        if (!formStore.tripData || !formStore.tripData.stops) {
+            console.warn("Editor: No trip data found. Redirecting...");
+            router.push('/Create');
+        }
+    });
+
     // --- HELPER: Time String Manipulation ---
     const adjustTimeString = (timeStr, minutesToAdd) => {
         if (!timeStr || timeStr === '--:--') return timeStr;
@@ -27,12 +37,18 @@
         return `${newHours.toString().padStart(2, '0')}:${newMinutes.toString().padStart(2, '0')} ${newModifier}`;
     }
 
-    // --- DATA LOGIC ---
-    const stops = formStore.tripData.stops.map((place, index) => ({
+    // --- DATA LOGIC (Fixed for Safety) ---
+    
+    // 1. Safely extract raw data (or use empty arrays if null)
+    const rawStops = formStore.tripData?.stops || [];
+    const rawDistances = formStore.tripData?.distances || [];
+
+    // 2. Map the data (This won't crash now because rawStops is at least [])
+    const stops = rawStops.map((place, index) => ({
         tag: place.interestType,
         title: place.places.displayName.text,
         address: place.places.formattedAddress,
-        distance: formStore.tripData.distances[index] || 0,
+        distance: rawDistances[index] || 0,
         durationSeconds: place.duration || (place.scheduled_activity_minutes ? place.scheduled_activity_minutes * 60 : 0),
         lat: place.places.location.latitude,
         lng: place.places.location.longitude,
@@ -40,9 +56,18 @@
         departureTime: place.leave_time,
         id: place.places.id,
         placeId: place.places.id
-    }))
+    }));
     
+    // 3. Initialize Refs safely (Handle case where stops might be empty)
+    const startStop = ref(stops.length > 0 ? stops[0] : {});
+    const endStop = ref(stops.length > 0 ? stops[stops.length - 1] : {});
+    const draggableStops = ref(stops.length > 2 ? stops.slice(1, -1) : []);
+    
+    // 4. Safe Computed Property for "Other Stops"
     const otherStops = computed(() => {
+        // Safety check
+        if (!formStore.tripData || !formStore.tripData.otherResults) return [];
+
         const currentItineraryIds = [
             startStop.value?.placeId || startStop.value?.id,
             ...draggableStops.value.map(stop => stop.placeId || stop.id),
@@ -62,10 +87,6 @@
                 }))
         )
     })
-    
-    const startStop = ref(stops[0])
-    const endStop = ref(stops[stops.length - 1])
-    const draggableStops = ref(stops.slice(1, -1))
     
     const handleDragEnd = () => {}
     
@@ -158,174 +179,223 @@
             }
         });
     }
+
+    const showFirstTimeDialog = ref(false);
+
+    onMounted(() => {
+        const hasVisited = localStorage.getItem('hasSeenIntro');
+        if (!hasVisited) {
+            showFirstTimeDialog.value = true;
+        }
+    });
+
+    const handleClose = () => {
+        showFirstTimeDialog.value = false;
+        localStorage.setItem('hasSeenIntro', 'true');
+    };
 </script>
     
 <template>
-    <section class="w-screen gradient-1 flex flex-col md:flex-row md:h-screen md:overflow-hidden h-full overflow-y-auto animate-enter" style="--delay:0s">
-        
-        <section class="w-full md:w-[30%] min-h-[85vh] md:min-h-0 md:h-full bg-transparent p-4 md:ml-20 shrink-0">
-            <div class="w-full h-full bg-white rounded-xl shadow-2xl flex flex-col overflow-hidden card pt-15 md:pb-0">
-                
-                <div class="p-4 border-b border-slate-100 md:hidden">
-                    <h2 class="font-bold text-xl text-slate-800">Your Route</h2>
-                    <p class="text-sm text-slate-500">Drag items to reorder</p>
-                </div>
-
-                <div id="lowerBox" class="h-full rounded-xl flex flex-col p-2 gap-2 md:overflow-y-auto">
+    <div v-if="formStore.tripData && formStore.tripData.stops">
+        <Dialog 
+            v-model:visible="showFirstTimeDialog" 
+            modal 
+            header="Welcome to the Editor" 
+            :style="{ width: '25rem' }"
+            :closable="false"
+        >
+            <p class="text-slate-600 mb-4">
+                This is the itinerary editor. You can add, delete, and rearrange stops - you could even edit the time! <br>
+                Keep in mind though that manually editing the time bypasses our service's algorithms so editing it is under your discretion.
+            </p>
+            
+            <div class="flex justify-end gap-2">
+                <Button 
+                    label="I Understand" 
+                    @click="handleClose" 
+                    class="interactive-btn-primary" 
+                    rounded 
+                />
+            </div>
+        </Dialog>
+        <section class="w-screen gradient-1 flex flex-col md:flex-row md:h-screen md:overflow-hidden h-full overflow-y-auto animate-enter" style="--delay:0s">
+            <section class="w-full md:w-[30%] min-h-[85vh] md:min-h-0 md:h-full bg-transparent p-4 md:ml-20 shrink-0">
+                <div class="w-full h-full bg-white rounded-xl shadow-2xl flex flex-col overflow-hidden card pt-15 md:pb-0">
                     
-                    <div class="card bg-slate-100 w-full rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 flex flex-col gap-2 min-h-[140px] animate-enter shrink-0 relative" style="--delay:0.1s">
-                        <div class="flex justify-between items-start w-full">
-                            <div class="flex-1">
-                                <p class="font-bold text-lg md:text-xl leading-tight text-slate-800">{{ startStop.title }}</p>
-                            </div>
-                        <Chip label="Start" class="border-1 border-slate-300 flex justify-center p-2 text-sm min-w-15 rounded-xl"/>
-                        </div>
-                        <p class="text-slate-700 italic text-md flex-1 overflow-hidden">{{ startStop.address }}</p>
-                        
-                        <div class="flex flex-col gap-1 text-sm mt-1 w-full border-t border-slate-200 pt-2">
-                            <div class="flex items-center justify-between w-full">
-                                <span class="text-slate-500 flex items-center gap-1"><i class="pi pi-arrow-down-right text-slate-400"></i> Arrive:</span>
-                                <span class="text-slate-700 font-medium">{{ startStop.arrivalTime }}</span>
-                                <div class="w-[52px]"></div>
-                            </div>
-                            <div class="flex items-center justify-between w-full">
-                                <span class="text-slate-500 flex items-center gap-1"><i class="pi pi-arrow-up-right text-primary-500"></i> Depart:</span>
-                                <div class="flex items-center gap-1">
-                                    <Button @click="changeTime('start', 'departure', -15)" icon="pi pi-minus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
-                                    <span class="text-slate-700 font-medium min-w-[4.5rem] text-center">{{ startStop.departureTime }}</span>
-                                    <Button @click="changeTime('start', 'departure', 15)" icon="pi pi-plus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="p-4 border-b border-slate-100 md:hidden">
+                        <h2 class="font-bold text-xl text-slate-800">Your Route</h2>
+                        <p class="text-sm text-slate-500">Drag items to reorder</p>
                     </div>
 
-                    <VueDraggable 
-                        v-model="draggableStops" 
-                        @end="handleDragEnd" 
-                        class="space-y-2"
-                        handle=".drag-handle"
-                        :animation="200"
-                        ghost-class="ghost-card"
-                        drag-class="drag-active"
-                    >
-                        <div
-                            v-for="(stop, index) in draggableStops"
-                            :key="`draggable-${stop.title}-${index}`"
-                            class="card bg-slate-100 w-full rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 flex flex-col gap-2 min-h-[140px] relative transition-all duration-200"
-                            style="--delay:0.2"
-                        >
-                            <div class="flex justify-between items-start w-full"> 
-                                <div class="flex items-start gap-2 flex-1">
-                                    <p class="font-bold text-lg md:text-xl leading-tight text-slate-800">{{ stop.title }}</p>
+                    <div id="lowerBox" class="h-full rounded-xl flex flex-col p-2 gap-2 md:overflow-y-auto">
+                        
+                        <div class="card bg-slate-100 w-full rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 flex flex-col gap-2 min-h-[140px] animate-enter shrink-0 relative" style="--delay:0.1s">
+                            <div class="flex justify-between items-start w-full">
+                                <div class="flex-1">
+                                    <p class="font-bold text-lg md:text-xl leading-tight text-slate-800">{{ startStop.title }}</p>
                                 </div>
-                                <Chip :label="stop.tag.charAt(0).toUpperCase() + stop.tag.slice(1)" class="border-1 border-slate-300 flex justify-center p-2 text-sm min-w-15 rounded-xl"/>
-                                <div class="drag-handle cursor-grab active:cursor-grabbing text-slate-400 hover:text-slate-600 mt-1 touch-none pl-3">
-                                    <i class="pi pi-bars text-lg" style="transform: rotate(90deg);"></i>
-                                </div>
+                            <Chip label="Start" class="border-1 border-slate-300 flex justify-center p-2 text-sm min-w-15 rounded-xl"/>
                             </div>
-
-                            <p class="text-slate-700 italic text-md flex-1 overflow-hidden">{{ stop.address }}</p>
+                            <p class="text-slate-700 italic text-md flex-1 overflow-hidden">{{ startStop.address }}</p>
                             
                             <div class="flex flex-col gap-1 text-sm mt-1 w-full border-t border-slate-200 pt-2">
                                 <div class="flex items-center justify-between w-full">
                                     <span class="text-slate-500 flex items-center gap-1"><i class="pi pi-arrow-down-right text-slate-400"></i> Arrive:</span>
-                                    <div class="flex items-center gap-1">
-                                        <Button @click.stop="changeTime(index, 'arrival', -15)" icon="pi pi-minus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
-                                        <span class="text-slate-700 font-medium min-w-[4.5rem] text-center">{{ stop.arrivalTime }}</span>
-                                        <Button @click.stop="changeTime(index, 'arrival', 15)" icon="pi pi-plus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
-                                    </div>
+                                    <span class="text-slate-700 font-medium">{{ startStop.arrivalTime }}</span>
+                                    <div class="w-[52px]"></div>
                                 </div>
                                 <div class="flex items-center justify-between w-full">
                                     <span class="text-slate-500 flex items-center gap-1"><i class="pi pi-arrow-up-right text-primary-500"></i> Depart:</span>
                                     <div class="flex items-center gap-1">
-                                        <Button @click.stop="changeTime(index, 'departure', -15)" icon="pi pi-minus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
-                                        <span class="text-slate-700 font-medium min-w-[4.5rem] text-center">{{ stop.departureTime }}</span>
-                                        <Button @click.stop="changeTime(index, 'departure', 15)" icon="pi pi-plus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
+                                        <Button @click="changeTime('start', 'departure', -15)" icon="pi pi-minus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
+                                        <span class="text-slate-700 font-medium min-w-[4.5rem] text-center">{{ startStop.departureTime }}</span>
+                                        <Button @click="changeTime('start', 'departure', 15)" icon="pi pi-plus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
                                     </div>
                                 </div>
-                                <span class="text-slate-400 italic text-[10px] text-right mt-1 w-full block">{{ stop.distance }}m leg</span>
                             </div>
-
-                            <Button @click="removeStop(index)" icon="pi pi-trash" severity="danger" size="small" rounded class="absolute top-2 right-2 w-7 h-7 !p-0"/>
                         </div>
-                    </VueDraggable>
 
-                    <div class="card bg-slate-100 w-full rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 flex flex-col gap-2 min-h-[140px] animate-enter shrink-0 relative" style="--delay:0.3s">
-                        <div class="flex justify-between items-start w-full">
-                             <div class="flex-1">
-                                <p class="font-bold text-lg md:text-xl leading-tight text-slate-800">{{ endStop.title }}</p>
+                        <VueDraggable 
+                            v-model="draggableStops" 
+                            @end="handleDragEnd" 
+                            class="space-y-2"
+                            handle=".drag-handle"
+                            :animation="200"
+                            ghost-class="ghost-card"
+                            drag-class="drag-active"
+                        >
+                            <div
+                                v-for="(stop, index) in draggableStops"
+                                :key="`draggable-${stop.title}-${index}`"
+                                class="card bg-slate-100 w-full rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 flex flex-col gap-2 min-h-[140px] relative transition-all duration-200"
+                                style="--delay:0.2"
+                            >
+                                <div class="flex justify-between items-start w-full"> 
+                                    <div class="flex items-start gap-2 flex-1">
+                                        <p class="font-bold text-lg md:text-xl leading-tight text-slate-800">{{ stop.title }}</p>
+                                    </div>
+                                    <Chip :label="stop.tag.charAt(0).toUpperCase() + stop.tag.slice(1)" class="border-1 border-slate-300 flex justify-center p-2 text-sm min-w-15 rounded-xl"/>
+                                    <div class="drag-handle cursor-grab active:cursor-grabbing text-slate-400 hover:text-slate-600 mt-1 touch-none pl-3">
+                                        <i class="pi pi-bars text-lg" style="transform: rotate(90deg);"></i>
+                                    </div>
+                                </div>
+
+                                <p class="text-slate-700 italic text-md flex-1 overflow-hidden">{{ stop.address }}</p>
+                                
+                                <div class="flex flex-col gap-1 text-sm mt-1 w-full border-t border-slate-200 pt-2">
+                                    <div class="flex items-center justify-between w-full">
+                                        <span class="text-slate-500 flex items-center gap-1"><i class="pi pi-arrow-down-right text-slate-400"></i> Arrive:</span>
+                                        <div class="flex items-center gap-1">
+                                            <Button @click.stop="changeTime(index, 'arrival', -15)" icon="pi pi-minus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
+                                            <span class="text-slate-700 font-medium min-w-[4.5rem] text-center">{{ stop.arrivalTime }}</span>
+                                            <Button @click.stop="changeTime(index, 'arrival', 15)" icon="pi pi-plus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between w-full">
+                                        <span class="text-slate-500 flex items-center gap-1"><i class="pi pi-arrow-up-right text-primary-500"></i> Depart:</span>
+                                        <div class="flex items-center gap-1">
+                                            <Button @click.stop="changeTime(index, 'departure', -15)" icon="pi pi-minus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
+                                            <span class="text-slate-700 font-medium min-w-[4.5rem] text-center">{{ stop.departureTime }}</span>
+                                            <Button @click.stop="changeTime(index, 'departure', 15)" icon="pi pi-plus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
+                                        </div>
+                                    </div>
+                                    <span class="text-slate-400 italic text-[10px] text-right mt-1 w-full block">{{ stop.distance }}m leg</span>
+                                </div>
+
+                                <Button 
+                                    @click="removeStop(index)" 
+                                    :disabled="draggableStops.length <= 1" 
+                                    icon="pi pi-trash" 
+                                    severity="danger" 
+                                    size="small" 
+                                    rounded 
+                                    class="absolute top-2 right-2 w-7 h-7 !p-0"
+                                />                        </div>
+                        </VueDraggable>
+
+                        <div class="card bg-slate-100 w-full rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.2)] p-4 flex flex-col gap-2 min-h-[140px] animate-enter shrink-0 relative" style="--delay:0.3s">
+                            <div class="flex justify-between items-start w-full">
+                                 <div class="flex-1">
+                                    <p class="font-bold text-lg md:text-xl leading-tight text-slate-800">{{ endStop.title }}</p>
+                                </div>
+                                <Chip label="Start" class="border-1 border-slate-300 flex justify-center p-2 text-sm min-w-15 rounded-xl"/>
                             </div>
-                            <Chip label="Start" class="border-1 border-slate-300 flex justify-center p-2 text-sm min-w-15 rounded-xl"/>
-                        </div>
-                        <p class="text-slate-700 italic text-md flex-1 overflow-hidden">{{ endStop.address }}</p>
+                            <p class="text-slate-700 italic text-md flex-1 overflow-hidden">{{ endStop.address }}</p>
 
-                        <div class="flex flex-col gap-1 text-sm mt-1 w-full border-t border-slate-200 pt-2">
-                            <div class="flex items-center justify-between w-full">
-                                <span class="text-slate-500 flex items-center gap-1"><i class="pi pi-arrow-down-right text-slate-400"></i> Arrive:</span>
-                                <div class="flex items-center gap-1">
-                                    <Button @click="changeTime('end', 'arrival', -15)" icon="pi pi-minus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
-                                    <span class="text-slate-700 font-medium min-w-[4.5rem] text-center">{{ endStop.arrivalTime }}</span>
-                                    <Button @click="changeTime('end', 'arrival', 15)" icon="pi pi-plus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
+                            <div class="flex flex-col gap-1 text-sm mt-1 w-full border-t border-slate-200 pt-2">
+                                <div class="flex items-center justify-between w-full">
+                                    <span class="text-slate-500 flex items-center gap-1"><i class="pi pi-arrow-down-right text-slate-400"></i> Arrive:</span>
+                                    <div class="flex items-center gap-1">
+                                        <Button @click="changeTime('end', 'arrival', -15)" icon="pi pi-minus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
+                                        <span class="text-slate-700 font-medium min-w-[4.5rem] text-center">{{ endStop.arrivalTime }}</span>
+                                        <Button @click="changeTime('end', 'arrival', 15)" icon="pi pi-plus" severity="secondary" text rounded size="small" class="w-6 h-6 !p-0"/>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between w-full">
+                                    <span class="text-slate-500 flex items-center gap-1"><i class="pi pi-arrow-up-right text-primary-500"></i> Depart:</span>
+                                    <span class="text-slate-700 font-medium">{{ endStop.departureTime }}</span>
+                                    <div class="w-[52px]"></div> 
                                 </div>
                             </div>
-                            <div class="flex items-center justify-between w-full">
-                                <span class="text-slate-500 flex items-center gap-1"><i class="pi pi-arrow-up-right text-primary-500"></i> Depart:</span>
-                                <span class="text-slate-700 font-medium">{{ endStop.departureTime }}</span>
-                                <div class="w-[52px]"></div> 
-                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="w-full md:w-[70%] h-auto md:h-full p-4 flex flex-col bg-white/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
+                
+                <div class="flex-none mb-4 px-2 pt-4 md:pt-0">
+                    <div class="text-2xl md:text-3xl font-bold">Add Stops</div>
+                    <div class="text-sm text-slate-600">
+                        Stops: {{ draggableStops.length }}/6
+                        <span v-if="draggableStops.length >= 6" class="text-red-500 font-medium">(Max reached)</span>
+                    </div>
+                </div>
+                
+                <div class="md:flex-1 md:overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-4 pb-32 md:pb-4">
+                    <div
+                        v-for="(stop, stopIndex) in otherStops"
+                        :key="stop.title"
+                        class="h-auto min-h-[10rem] md:min-h-40 w-full card bg-white p-3 flex flex-col justify-between hover:bg-slate-100 transition-all cursor-pointer animate-enter"
+                    >
+                        <div>
+                            <p class="font-bold text-lg mb-1 text-slate-700 leading-tight">{{ stop.title }}</p>
+                            <p class="text-sm text-slate-600 mb-2 line-clamp-2">{{ stop.address }}</p>
+                        </div>
+                        <div class="flex justify-between items-center mt-2">
+                            <Chip :label="stop.tag.charAt(0).toUpperCase() + stop.tag.slice(1)" class="border-1 border-slate-300 flex justify-center p-2 text-sm min-w-15 rounded-xl"/>
+                            <Button @click="addStop(stop)" :disabled="draggableStops.length >= 6" rounded class="w-auto px-4 interactive-btn-secondary text-sm">Add</Button>
                         </div>
                     </div>
-
                 </div>
-            </div>
-        </section>
 
-        <section class="w-full md:w-[70%] h-auto md:h-full p-4 flex flex-col bg-white/50 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
-            
-            <div class="flex-none mb-4 px-2 pt-4 md:pt-0">
-                <div class="text-2xl md:text-3xl font-bold">Add Stops</div>
-                <div class="text-sm text-slate-600">
-                    Stops: {{ draggableStops.length }}/6
-                    <span v-if="draggableStops.length >= 6" class="text-red-500 font-medium">(Max reached)</span>
-                </div>
-            </div>
-            
-            <div class="md:flex-1 md:overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-4 pb-32 md:pb-4">
-                <div
-                    v-for="(stop, stopIndex) in otherStops"
-                    :key="stop.title"
-                    class="h-auto min-h-[10rem] md:min-h-40 w-full card bg-white p-3 flex flex-col justify-between hover:bg-slate-100 transition-all cursor-pointer animate-enter"
-                >
-                    <div>
-                        <p class="font-bold text-lg mb-1 text-slate-700 leading-tight">{{ stop.title }}</p>
-                        <p class="text-sm text-slate-600 mb-2 line-clamp-2">{{ stop.address }}</p>
-                    </div>
-                    <div class="flex justify-between items-center mt-2">
-                        <Chip :label="stop.tag.charAt(0).toUpperCase() + stop.tag.slice(1)" class="border-1 border-slate-300 flex justify-center p-2 text-sm min-w-15 rounded-xl"/>
-                        <Button @click="addStop(stop)" :disabled="draggableStops.length >= 6" rounded class="w-auto px-4 interactive-btn-secondary text-sm">Add</Button>
+                <div class="hidden md:flex md:flex-none md:justify-end md:items-center md:h-[15%]">
+                    <div class="flex gap-2 w-auto">
+                        <Button @click="router.push('/Dashboard')" label="Cancel" severity="secondary" class="w-45 interactive-btn-secondary" rounded/>
+                        <Button @click="updateFormStore" label="Save Changes" severity="primary" class="w-45 interactive-btn-primary" rounded/>
                     </div>
                 </div>
-            </div>
 
-            <div class="hidden md:flex md:flex-none md:justify-end md:items-center md:h-[15%]">
-                <div class="flex gap-2 w-auto">
-                    <Button @click="router.push('/Dashboard')" label="Cancel" severity="secondary" class="w-45 interactive-btn-secondary" rounded/>
-                    <Button @click="updateFormStore" label="Save Changes" severity="primary" class="w-45 interactive-btn-primary" rounded/>
+            </section>
+        </section>
+
+        <Teleport to="body">
+            <div class="md:hidden fixed bottom-16 left-0 w-full bg-white/95 backdrop-blur-md p-4 border-t border-slate-200 z-[9999] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+                <div class="flex gap-2 w-full">
+                    <Button @click="router.push('/Dashboard')" label="Cancel" severity="secondary" class="flex-1 interactive-btn-secondary" rounded/>
+                    <Button @click="updateFormStore" label="Save" severity="primary" class="flex-1 interactive-btn-primary" rounded/>
                 </div>
             </div>
-
-        </section>
-    </section>
-
-    <Teleport to="body">
-        <div class="md:hidden fixed bottom-16 left-0 w-full bg-white/95 backdrop-blur-md p-4 border-t border-slate-200 z-[9999] shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
-            <div class="flex gap-2 w-full">
-                <Button @click="router.push('/Dashboard')" label="Cancel" severity="secondary" class="flex-1 interactive-btn-secondary" rounded/>
-                <Button @click="updateFormStore" label="Save" severity="primary" class="flex-1 interactive-btn-primary" rounded/>
-            </div>
+        </Teleport>
+    </div>
+    
+    <div v-else class="flex h-screen w-screen items-center justify-center bg-slate-50">
+        <div class="flex flex-col items-center">
+            <i class="pi pi-spin pi-spinner text-4xl text-primary-500 mb-2"></i>
+            <p class="text-slate-500">Redirecting to create...</p>
         </div>
-    </Teleport>
-
+    </div>
 </template>
 
 <style scoped>
