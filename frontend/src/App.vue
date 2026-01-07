@@ -1,8 +1,28 @@
 <script setup>
+import { watch } from 'vue';
+import { useRoute } from 'vue-router'; // We watch the route changing
+import { useToast } from 'primevue/usetoast';
+import { useToastStore } from '@/store/toastStore';
+import Toast from 'primevue/toast';
+
+const toast = useToast();
+const toastStore = useToastStore();
+const route = useRoute();
+
+  watch(() => route.path, () => {
+    // Check if there is a message waiting in the store
+    const message = toastStore.consume(); 
+    
+    if (message) {
+        // If yes, show it now
+        toast.add(message);
+    }
+}, { immediate: true });
 </script>
 
 <template>
   <div id="app" class="h-dvh w-full relative overflow-hidden">
+    <Toast />
     <router-view />
   </div>
     
