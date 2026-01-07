@@ -102,38 +102,95 @@ export async function initMap(mapElementId) {
  * This function clears existing markers and redraws the new set.
  * * @param {Array<Object>} locationsArray - Array of {lat, lng} objects.
  */
-export function newMarker (locationsArray) {
+export function newMarker(locationsArray) {
     if (!mapInstance.value) {
-        mapReady.then(() => {
-            newMarker(locationsArray);
-        })
+        mapReady.then(() => newMarker(locationsArray));
         return;
     }
-    markersArray.forEach(marker => {
-        marker.map = null; 
-    });
+
+    markersArray.forEach(marker => marker.map = null);
     markersArray = [];
 
-    locationsArray.forEach((coordinates, index) => {
-        if (!coordinates || !coordinates.lat || !coordinates.lng) return;
+    const positionRegistry = {}; 
 
+    locationsArray.forEach((data, index) => {
+        
+        let placeName = "Unknown Location";
+        if (data.title) placeName = data.title;
+        else if (data.places?.displayName?.text) placeName = data.places.displayName.text;
+        else if (data.name) placeName = data.name;
+
+        const rawLat = data.lat || (data.location?.latitude) || (data.places?.location?.latitude);
+        const rawLng = data.lng || (data.location?.longitude) || (data.places?.location?.longitude);
+
+        if (!rawLat || !rawLng) return;
+
+       
+        const locKey = `${rawLat.toFixed(5)}_${rawLng.toFixed(5)}`;
+        let finalLat = rawLat;
+        let finalLng = rawLng;
+
+        if (positionRegistry[locKey]) {
+            const count = positionRegistry[locKey];
+            const offset = 0.00015 * count; 
+            finalLat = rawLat + offset; 
+            finalLng = rawLng + offset; 
+            positionRegistry[locKey]++;
+        } else {
+            positionRegistry[locKey] = 1;
+        }
+
+        
         let color;
-        if (index === 0) color = '#7025BB'; // Start
-        else if (index === locationsArray.length - 1) color = '#1C092E'; // End
+        if (index === 0) color = '#7025BB'; 
+        else if (index === locationsArray.length - 1) color = '#7025BB'; 
         else color = '#AD76E4'; 
 
-        const pinElement = new PinElement({ 
-            background:'#7025BB', 
+        const pinElement = new google.maps.marker.PinElement({
+            background: color,
             borderColor: '#FFFFFF',
             glyphColor: '#FFFFFF',
             scale: 1.0 
         });
 
-        const marker = new Marker({
-            position: { lat: coordinates.lat, lng: coordinates.lng },
+       
+
+        const labelElement = document.createElement("div");
+        labelElement.textContent = `${index + 1}. ${placeName}`;
+        
+        
+        labelElement.style.position = "absolute"; 
+        labelElement.style.left = "100%";         
+        labelElement.style.top = "50%";           
+        labelElement.style.transform = "translateY(-50%)"; 
+        labelElement.style.marginLeft = "8px"; 
+        
+       
+        labelElement.style.backgroundColor = "white";
+        labelElement.style.color = "#333";
+        labelElement.style.padding = "4px 8px";
+        labelElement.style.borderRadius = "4px";
+        labelElement.style.fontSize = "10px";
+        labelElement.style.fontWeight = "600";
+        labelElement.style.boxShadow = "0 2px 6px rgba(0,0,0,0.3)";
+        labelElement.style.whiteSpace = "nowrap";
+
+        
+        const container = document.createElement("div");
+        container.style.position = "relative";
+        container.style.cursor = "pointer";
+        
+        container.style.transform = "translateY(-20%)"; 
+
+        container.appendChild(pinElement.element);
+        container.appendChild(labelElement);
+
+        const marker = new google.maps.marker.AdvancedMarkerElement({
+            position: { lat: finalLat, lng: finalLng },
             map: mapInstance.value,
-            content: pinElement.element,
-            title: `Location ${index + 1}`
+            content: container,
+            title: placeName,
+            zIndex: index + 10 
         });
 
         markersArray.push(marker);
@@ -141,16 +198,12 @@ export function newMarker (locationsArray) {
 }
 
 export function clearMapInstance() {
-    // 1. Clear all markers from the map view before destroying the map.
     markersArray.forEach(marker => {
         marker.map = null; 
     });
     markersArray = [];
 
-    // 2. Clear the map instance reference itself.
     if (mapInstance.value) {
-        // NOTE: Google Maps API doesn't have a simple destroy method,
-        // but clearing the ref is essential for the next initMap call.
         mapInstance.value = null; 
     }
 }
@@ -177,15 +230,12 @@ export async function togglePan(targetLat, targetLng, stopTitle) {
         newCenter = new google.maps.LatLng(targetLat, targetLng); 
         newZoom = stopZoom; 
 
-        activeStopTitle.value = stopTitle; // Set the new active element
-        isPanned.value = true; // Set to true to begin the feature
+        activeStopTitle.value = stopTitle;
+        isPanned.value = true;
         console.log(activeStopTitle)
         console.log(newCenter)
     }
         mapInstance.value.setZoom(newZoom); 
-        mapInstance.value.panTo(newCenter);
-        
-
-    // Always ensure the map is centered precisely
+        mapInstance.value.panTo(newCenter); 
     
 }
