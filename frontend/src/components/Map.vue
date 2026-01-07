@@ -20,7 +20,9 @@ const allLocationCoords = computed(() => {
     stops.forEach((place) => {
         locations.push({
             lat: place.places.location.latitude, 
-            lng: place.places.location.longitude
+            lng: place.places.location.longitude,
+
+            title: place.places.displayName.text 
         })
     })
     return locations;
