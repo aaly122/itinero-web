@@ -51,6 +51,7 @@ export const useFormStore = defineStore('form', {
       const API_ENDPOINT = `${BASE_URL}/api`;
       const response = await axios.post(API_ENDPOINT, this.tripData);
       this.SuccessMessage = response.data.message;
+      console.log('Status', response.data.status)
 
       this.tripData.stops = response.data.final_schedule
       this.tripData.otherResults = response.data.other_results
@@ -60,7 +61,6 @@ export const useFormStore = defineStore('form', {
       this.tripData.totalDistance = response.data.total_distance
       this.tripData.totalDuration = response.data.total_time
       
-      console.log("otherresults:", response.data.other_results)
       routerInstance.push('/Dashboard');
         
       // } catch (error) {
@@ -86,7 +86,6 @@ export const useFormStore = defineStore('form', {
     async regenerateItinerary(){
       const API_ENDPOINT = `${BASE_URL}/api`;
       const response = await axios.post(API_ENDPOINT, this.tripData);
-      console.log("Final_schedule", response.data.final_schedule)
       this.tripData.stops = response.data.final_schedule
       this.tripData.otherResults = response.data.other_results
       this.tripData.distances = response.data.segments.distances
@@ -104,12 +103,9 @@ export const useFormStore = defineStore('form', {
       try {
         const API_ENDPOINT = `${BASE_URL}/api/recalculate`
         const response = await axios.post(API_ENDPOINT, data)
-
-        console.log('Recalculation successful:', response.data.message)
-
-        // Update form store with recalculated data (same format as original API)
+        
         this.tripData.stops = response.data.final_schedule
-        // Keep existing otherResults - don't update from recalculate response
+        
         this.tripData.distances = response.data.segments.distances
         this.tripData.durations = response.data.segments.durations
         this.tripData.polyline = response.data.polyline
