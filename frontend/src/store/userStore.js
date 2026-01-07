@@ -9,12 +9,8 @@ export const useUserStore = defineStore('user', {
   }),
 
   getters: {
-    isAuthenticated() {
-      return !!this.user
-    },
-    hasProfile() {
-      return !!this.profile
-    }
+    isAuthenticated: (state) => !!state.user,
+    hasProfile: (state) => !!state.profile
   },
 
   actions: {
@@ -40,48 +36,114 @@ export const useUserStore = defineStore('user', {
           .eq('uuid_id', userId)
           .single()
 
-        if (error && error.code !== 'PGRST116') { // PGRST116 = no rows returned
-          console.error('Error loading profile:', error)
-          return
+        if (error) {
+            
+            if (error.code === 'PGRST116') {
+                this.profile = null
+                return
+            }
+            console.error('Error loading profile:', error)
+            return
         }
 
-        this.profile = data || null
+        this.profile = data
       } catch (error) {
         console.error('Error loading profile:', error)
       }
     },
 
-    // Sign up - creates auth user + profile in users table
-    async signUp(email, password, username) {
+    async resetPassword(email) {
       this.loading = true
       try {
-        // Create auth user
-        // userStore.js
-        const { data: authData, error: authError } = await supabase.auth.signUp({
-          email,
-          password,
-          options: {
-            data: {
-              username: username
-            }
-          }
+        const { error } = await supabase.auth.resetPasswordForEmail(email, {
+          redirectTo: window.location.origin + '/UpdatePassword',
         })
-
-        if (authError) throw authError
-        this.user = authData.user
-        // The profile will be created by a Supabase database trigger after email confirmation,
-        // so we don't set this.profile here directly after sign up.
-        // It will be loaded on subsequent sign-in after confirmation.
-
+    
+        if (error) throw error
         return { success: true }
       } catch (error) {
+        // Rate limit error is common here (429)
         return { success: false, error: error.message }
       } finally {
         this.loading = false
       }
     },
 
-    // Sign in - loads existing user
+    // --- NEW: Helper to check username before attempting signup ---
+    async checkUsernameTaken(username) {
+      try {
+          // We use .rpc() instead of .from().select()
+          const { data, error } = await supabase.rpc('check_username_available', {
+              username_input: username
+          });
+  
+          if (error) {
+              console.error("RPC Error:", error);
+              return false;
+          }
+  
+          // The function returns TRUE if it exists (is taken)
+          return data; 
+      } catch (err) {
+          console.error("Unexpected error:", err);
+          return false;
+      }
+  },
+
+    // Sign up
+    async checkEmailTaken(email) {
+      // This relies on the new 'email' column we just added
+      const { count } = await supabase
+          .from('users')
+          .select('id', { count: 'exact', head: true })
+          .eq('email', email)
+      
+      return count > 0
+  },
+
+  // 2. Update the signUp action
+  async signUp(email, password, username) {
+    this.loading = true
+    try {
+      // Check Username
+      const isUserTaken = await this.checkUsernameTaken(username)
+      if (isUserTaken) throw new Error("This username is already taken.")
+
+      // NEW: Check Email manually
+      const isEmailTaken = await this.checkEmailTaken(email)
+      if (isEmailTaken) throw new Error("This email is already registered. Please sign in instead.")
+
+      // Proceed to create auth user
+      const { data: authData, error: authError } = await supabase.auth.signUp({
+        email,
+        password,
+        options: {
+          data: { username: username }
+        }
+      })
+      
+      if (authError) throw authError
+
+        // 3. Handle case where email confirmation is required
+        if (authData.user && !authData.session) {
+             return { success: true, message: "Check email for confirmation link" }
+        }
+
+        this.user = authData.user
+        return { success: true }
+      } catch (error) {
+        // IMPROVEMENT: Map specific Supabase error codes to friendly messages
+        let message = error.message
+        if (message.includes("User already registered")) {
+            message = "This email is already registered. Please sign in instead."
+        }
+        return { success: false, error: message }
+      } finally {
+        this.loading = false
+      }
+    },
+
+    // Sign in
     async signIn(email, password) {
       this.loading = true
       try {
@@ -97,7 +159,7 @@ export const useUserStore = defineStore('user', {
 
         return { success: true }
       } catch (error) {
-        return { success: false, error: error.message }
+        return { success: false, error: "Invalid email or password." } // Generic security message
       } finally {
         this.loading = false
       }
@@ -109,6 +171,7 @@ export const useUserStore = defineStore('user', {
         await supabase.auth.signOut()
         this.user = null
         this.profile = null
+        // Optional: Clear router or redirect here if needed
       } catch (error) {
         console.error('Error signing out:', error)
       }
@@ -116,7 +179,7 @@ export const useUserStore = defineStore('user', {
 
     // Update profile
     async updateProfile(updates) {
-      if (!this.user || !this.profile) return { success: false, error: 'Not authenticated' }
+      if (!this.user) return { success: false, error: 'Not authenticated' }
 
       try {
         const { data, error } = await supabase
@@ -137,17 +200,23 @@ export const useUserStore = defineStore('user', {
 
     // Set up auth state listener
     setupAuthListener() {
-      supabase.auth.onAuthStateChange(async (event, session) => {
-        console.log('Auth state changed:', event, session?.user?.email)
+      // Returns the subscription so you can unsubscribe if needed (though rare in main store)
+      const { data: { subscription } } = supabase.auth.onAuthStateChange(async (event, session) => {
+        // console.log('Auth state changed:', event)
 
         this.user = session?.user ?? null
 
-        if (session?.user) {
-          await this.loadProfile(session.user.id)
-        } else {
-          this.profile = null
+        if (event === 'SIGNED_IN' || event === 'TOKEN_REFRESHED') {
+            if (session?.user) {
+                await this.loadProfile(session.user.id)
+            }
+        } else if (event === 'SIGNED_OUT') {
+            this.profile = null
+            this.user = null
         }
       })
+      
+      return subscription
     }
   }
 })
