@@ -10,7 +10,6 @@ const toastStore = useToastStore();
 const route = useRoute();
 
   watch(() => route.path, () => {
-    // Check if there is a message waiting in the store
     const message = toastStore.consume(); 
     
     if (message) {
