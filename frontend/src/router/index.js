@@ -19,6 +19,7 @@ import Blog from '@/views/Blog.vue'
 import ItineraryEdit from '@/views/ItineraryEdit.vue'
 import Account from '@/views/Account.vue'
 import UpdatePassword from '@/views/UpdatePassword.vue';
+import NoOpenHours from '@/views/NoOpenHours.vue';
 
 const routes = [
     {
@@ -33,7 +34,9 @@ const routes = [
             {path: '/Registration', name: 'Registration', component: Registration},
             {path: '/Edit', name: 'Edit', component: ItineraryEdit},
             {path: '/Account', name: 'Account', component: Account, meta: { requiresProfile: true }},
-            {path: '/UpdatePassword', name: 'UpdatePassword', component: UpdatePassword}
+            {path: '/UpdatePassword', name: 'UpdatePassword', component: UpdatePassword},
+            {path: '/oops', name: 'Oops', component: NoOpenHours}
+
             
         ]
     },
