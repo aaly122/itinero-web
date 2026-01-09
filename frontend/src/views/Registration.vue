@@ -279,12 +279,12 @@
   </script>
   
   <template>
-      <section class="h-full md:h-[100dvh] w-screen flex bg-gradient-to-tr from-purple-300 via-purple-100 to-white overflow-hidden font-['Inter']">
+      <section class="min-h-full md:h-[100dvh] w-screen flex bg-gradient-to-tr from-purple-300 via-purple-100 to-white overflow-hidden font-['Inter']">
           <div class="w-full lg:w-1/2 flex flex-col justify-center items-start p-4 md:pl-25 lg:pl-40 pr-8 relative">
               <div class="w-full max-w-md flex flex-col gap-6">
   
                   <div class="animate-enter" style="--delay: 0s">
-                      <h1 class="min-h-[120px] md:min-h-[60px] text-5xl font-extrabold tracking-tight leading-tight pb-2 bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-500 bg-clip-text text-transparent drop-shadow-sm">
+                      <h1 class="pt-6 min-h-[100px] md:min-h-[60px] text-5xl font-extrabold tracking-tight leading-tight pb-2 bg-gradient-to-r from-purple-700 via-purple-600 to-indigo-500 bg-clip-text text-transparent drop-shadow-sm">
                           {{ displayedText }}<span class="blinking-cursor text-purple-600">|</span>
                       </h1>
                       <p v-if="!isSignedUp && !resetEmailSent" class="text-surface-600 font-medium italic">Please enter your details to continue.</p>

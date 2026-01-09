@@ -46,6 +46,10 @@
     // --- NEW VARIABLES FOR LATE NIGHT WARNING ---
     const lateTimeWarning = ref(false);
     const lateTimeAcknowledged = ref(false);
+
+    // --- NEW VARIABLES FOR LONG TIME SINGLE INTEREST WARNING ---
+    const longTimeSingleInterestWarning = ref(false);
+    const longTimeWarningAcknowledged = ref(false);
     
     //Autocomplete Import
     const { startingLocation, endingLocation, startingLocationPlaceName,
@@ -148,22 +152,15 @@
         { id: 6, name: 'Attractions', icon:'attractions', type: 'tourist_attraction'},
     ]);
     
-    ///// STEP 3: INTERESTS LOGIC /////
     const interestLimit = computed(() => {
         const minutes = simpleTime.value;
         
-        // 1 Hour or less -> 1 Stop
         if (minutes <= 60) return 1;
         
-        // 2.5 Hours or less -> 2 Stops
-        // (120 mins is often too tight for 2 major stops + travel)
         if (minutes <= 150) return 2;
         
-        // 4.5 Hours or less -> 3 Stops
-        // (Allows for a relaxed 3-stop trip)
         if (minutes <= 270) return 3;
         
-        // Anything above 4.5 Hours -> Unlimited
         return availableTags.value.length; 
     });
 
@@ -179,7 +176,6 @@
         if (selectedTagIds.value.length >= interestLimit.value) {
             const limit = interestLimit.value;
             
-            // Dynamic error messages
             if (limit === 1) {
                 limitMessage.value = "With 1 hour or less, you can only pick 1 interest.";
             } else if (limit === 2) {
@@ -220,24 +216,31 @@
     
     ////FORM AND DATA HANDLER////
     const submitHandler = () => {
-        // 1. HARD ERROR: Check at least one selected
         if (selectedTagIds.value.length === 0) {
             noInterests.value = true;
             setTimeout(() => noInterests.value = false, 5000);
             return;
         }
-    
-        // 2. SOFT WARNING: Check for Late Time (8PM - 5AM)
-        // Only check if we haven't acknowledged it yet
+
+        // Check for long time with single interest warning
+        if (!longTimeWarningAcknowledged.value && simpleTime.value >= 240 && selectedTagTypes.value.length === 1) {
+            longTimeSingleInterestWarning.value = true;
+            longTimeWarningAcknowledged.value = true; // Set flag so NEXT click goes through
+
+            // Hide the message after 5 seconds, but keep the flag true
+            setTimeout(() => longTimeSingleInterestWarning.value = false, 5000);
+            return; // STOP submission here
+        }
+
         if (!lateTimeAcknowledged.value) {
             const now = new Date();
             const currentHour = now.getHours();
-    
+
             // 20 is 8PM, 5 is 5AM
             if (currentHour >= 20 || currentHour < 5) {
                 lateTimeWarning.value = true;
                 lateTimeAcknowledged.value = true; // Set flag so NEXT click goes through
-                
+
                 // Hide the message after 5 seconds, but keep the flag true
                 setTimeout(() => lateTimeWarning.value = false, 5000);
                 return; // STOP submission here
@@ -269,7 +272,7 @@
     
     <template>
     
-      <div class="h-full w-full p-4 md:p-20 flex flex-col justify-center items-center overflow-hidden gradient-5">
+      <div class="h-full w-full p-4 md:p-20 md:pl-25 flex flex-col justify-center items-center overflow-hidden gradient-5">
         <Stepper value="1" linear class="md:w-[70%] h-full mt-15 md:mt-10 !z-1 animate-enter text-sm" style="--delay: 0s">
             <StepList class="text-xs max-w-90%">
                 <Step value="1" >Location</Step>
@@ -347,10 +350,11 @@
                     
                     <div class="md:h-15 h-20">
                         <Transition name="fade">
-                            <div v-show="noInterests || limitedInterests || lateTimeWarning" class="flex justify-center items-center pointer-events-none m-2 flex-col">
+                            <div v-show="noInterests || limitedInterests || lateTimeWarning || longTimeSingleInterestWarning" class="flex justify-center items-center pointer-events-none m-2 flex-col">
                                 <Message severity="error" v-show="noInterests">Select at least 1 interest.</Message>
                                 <Message severity="warn" v-show="limitedInterests">{{ limitMessage }}</Message>
                                 <Message severity="warn" v-show="lateTimeWarning">It is late (8PM-5AM). Limited establishments may be open. Click Generate again to proceed.</Message>
+                                <Message severity="warn" class="text-center" v-show="longTimeSingleInterestWarning">With 4+ hours and only one interest, your itinerary may feel repetitive. Consider adding more interests. Click Generate again to proceed.</Message>
                             </div>
                         </Transition>
                      </div>
@@ -377,6 +381,9 @@
                 </StepPanel>
             </StepPanels>
         </Stepper>
+        <div class="flex justify-end w-full">
+            <Button icon="pi pi-question" class="interactive-btn-primary rounded-full! w-12 h-12"/>
+        </div>
       </div>
     </template>
     

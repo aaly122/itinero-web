@@ -18,8 +18,9 @@
 
     const router = useRouter();
     const userStore = useUserStore();
+    
 
-    const isLoggedIn = userStore.hasProfile;
+ 
 
     // Use computed for username to ensure reactivity if store updates
     const username = computed(() => userStore.profile?.user_name || 'User');

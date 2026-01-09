@@ -186,7 +186,7 @@ let helpVisible = ref(false);
                 <p class="text-lg text-slate-600 subtext-animate text-center md:text-left">Your saved itineraries and discoveries.</p>
             </div>
             <div class="flex gap-2 items-center">
-                <Button v-if="isLoggedIn" label="Sign in to use this feature!" class="interactive-btn-primary" @click="router.push('/Registration')"/>
+                <Button v-if="!isLoggedIn" label="Sign in to use this feature!" class="interactive-btn-primary" @click="router.push('/Registration')"/>
                 <Button icon="pi pi-question" class="h-10 w-10  rounded-full" @click="helpVisible = true"></Button>
             </div>
 

@@ -53,15 +53,20 @@ export const useFormStore = defineStore('form', {
       this.SuccessMessage = response.data.message;
       console.log('Status', response.data.status)
 
-      this.tripData.stops = response.data.final_schedule
-      this.tripData.otherResults = response.data.other_results
-      this.tripData.distances = response.data.segments.distances
-      this.tripData.durations = response.data.segments.durations
-      this.tripData.polyline = response.data.polyline
-      this.tripData.totalDistance = response.data.total_distance
-      this.tripData.totalDuration = response.data.total_time
-      
-      routerInstance.push('/Dashboard');
+      if (response.data.status == 'success') {
+        this.tripData.stops = response.data.final_schedule
+        this.tripData.otherResults = response.data.other_results
+        this.tripData.distances = response.data.segments.distances
+        this.tripData.durations = response.data.segments.durations
+        this.tripData.polyline = response.data.polyline
+        this.tripData.totalDistance = response.data.total_distance
+        this.tripData.totalDuration = response.data.total_time
+        
+        routerInstance.push('/Dashboard');
+      } else  {
+        routerInstance.push('/oops');
+      }
+
         
       // } catch (error) {
       //   this.errorthis.error = error.response.data.error || 'Network error.';

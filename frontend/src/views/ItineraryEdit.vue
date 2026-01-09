@@ -55,7 +55,9 @@
         arrivalTime: place.arrival_time,
         departureTime: place.leave_time,
         id: place.places.id,
-        placeId: place.places.id
+        placeId: place.places.id,
+        openingHours: place.places.readable_hours || 'Hours not available',
+        rawHours: place.places.regularOpeningHours
     }));
     
     // 3. Initialize Refs safely (Handle case where stops might be empty)
@@ -84,9 +86,43 @@
                     id: place.id,
                     lat: place.location.latitude,
                     lng: place.location.longitude,
+                    openingHours: place.readable_hours || 'Hours not available',
+                    rawHours: place.regularOpeningHours
                 }))
         )
     })
+
+    // Check if current arrival time is within the string "09:00 AM - 05:00 PM"
+const isTimeWarning = (stop) => {
+    if (!stop.arrivalTime || stop.arrivalTime === '--:--') return false;
+    if (!stop.openingHours || !stop.openingHours.includes('-')) return false;
+
+    try {
+        // Parse the range "09:00 AM - 05:00 PM"
+        const [openStr, closeStr] = stop.openingHours.split(' - ');
+        
+        // Convert strict strings to minutes for comparison
+        const parseMinutes = (timeStr) => {
+            const [time, mod] = timeStr.split(' ');
+            let [h, m] = time.split(':').map(Number);
+            if (mod === 'PM' && h !== 12) h += 12;
+            if (mod === 'AM' && h === 12) h = 0;
+            return h * 60 + m;
+        };
+
+        const arrivalMins = parseMinutes(stop.arrivalTime);
+        const openMins = parseMinutes(openStr);
+        let closeMins = parseMinutes(closeStr);
+
+        // Handle overnight (e.g., closes at 2 AM)
+        if (closeMins < openMins) closeMins += 1440;
+
+        // Tolerance: Warn if arriving 30 mins before close or before open
+        return (arrivalMins < openMins) || (arrivalMins > closeMins - 30);
+    } catch (e) {
+        return false;
+    }
+}
     
     const handleDragEnd = () => {}
     
@@ -281,6 +317,19 @@
                                 </div>
 
                                 <p class="text-slate-700 italic text-md flex-1 overflow-hidden">{{ stop.address }}</p>
+
+                                <div class="flex items-center gap-2 mt-1">
+                                    <i class="pi pi-clock text-xs" 
+                                    :class="isTimeWarning(stop) ? 'text-red-500' : 'text-slate-400'">
+                                    </i>
+                                    <span class="text-xs font-medium" 
+                                        :class="isTimeWarning(stop) ? 'text-red-500' : 'text-slate-500'">
+                                        {{ stop.openingHours }}
+                                        <span v-if="isTimeWarning(stop)" class="font-bold ml-1">
+                                            (Check Time!)
+                                        </span>
+                                    </span>
+                                </div>
                                 
                                 <div class="flex flex-col gap-1 text-sm mt-1 w-full border-t border-slate-200 pt-2">
                                     <div class="flex items-center justify-between w-full">
@@ -357,12 +406,25 @@
                     <div
                         v-for="(stop, stopIndex) in otherStops"
                         :key="stop.title"
-                        class="h-auto min-h-[10rem] md:min-h-40 w-full card bg-white p-3 flex flex-col justify-between hover:bg-slate-100 transition-all cursor-pointer animate-enter"
+                        class="min-h-[10rem] md:min-h-40 w-full card bg-white p-3 flex flex-col justify-between hover:bg-slate-100 transition-all cursor-pointer animate-enter"
                     >
                         <div>
                             <p class="font-bold text-lg mb-1 text-slate-700 leading-tight">{{ stop.title }}</p>
                             <p class="text-sm text-slate-600 mb-2 line-clamp-2">{{ stop.address }}</p>
                         </div>
+
+                        <div class="flex items-center gap-2 mt-1">
+                                    <i class="pi pi-clock text-xs" 
+                                    :class="isTimeWarning(stop) ? 'text-red-500' : 'text-slate-400'">
+                                    </i>
+                                    <span class="text-xs font-medium" 
+                                        :class="isTimeWarning(stop) ? 'text-red-500' : 'text-slate-500'">
+                                        {{ stop.openingHours }}
+                                        <span v-if="isTimeWarning(stop)" class="font-bold ml-1">
+                                            (Check Time!)
+                                        </span>
+                                    </span>
+                                </div>
                         <div class="flex justify-between items-center mt-2">
                             <Chip :label="stop.tag.charAt(0).toUpperCase() + stop.tag.slice(1)" class="border-1 border-slate-300 flex justify-center p-2 text-sm min-w-15 rounded-xl"/>
                             <Button @click="addStop(stop)" :disabled="draggableStops.length >= 6" rounded class="w-auto px-4 interactive-btn-secondary text-sm">Add</Button>
