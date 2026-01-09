@@ -210,7 +210,6 @@ import { length } from '@vee-validate/rules';
         <Tabs value="0" >
             <TabList>
                 <Tab value="0">Saved</Tab>
-                <Tab value="1">Settings</Tab>
             </TabList>
             <TabPanels>
                 <TabPanel value="0">
@@ -227,12 +226,6 @@ import { length } from '@vee-validate/rules';
                             </div>
                         </div>
                     </div>
-
-                </TabPanel>
-                <TabPanel value="1">
-                  <div class="flex justify-center items-center h-full">
-                        <p class="text-slate-500 text-xl">This page is in progress</p>
-                    </div>
                 </TabPanel>
             </TabPanels>
         </Tabs>
@@ -243,7 +236,7 @@ import { length } from '@vee-validate/rules';
     :header="selectedItinerary?.title || 'Edit Itinerary'" 
     :style="{ width: '60rem'}" 
     :breakpoints="{ '960px': '75vw', '641px': '100vw' }"
-    class="card gradient-5 h-full md:h-150"
+    class="card gradient-5 h-full m-2 md:m-0 md:h-250"
 >
     <div class="h-full flex flex-col justify-between">
         
@@ -326,8 +319,8 @@ import { length } from '@vee-validate/rules';
             
             <div class="flex flex-col md:flex-row gap-2 w-full md:w-auto">
                 <div class="flex gap-2">
-                    <Button type="button" label="Delete" severity="secondary" @click="deleteItinerary()" class="interactive-btn-secondary w-full md:w-25" :disabled="saving"></Button>
-                    <Button type="button" label="Open" severity="secondary" @click="openItineraryInViewer()" class="interactive-btn-secondary w-full md:w-25" :disabled="saving"></Button>
+                    <Button type="button" icon="pi pi-trash" severity="secondary" @click="deleteItinerary()" class="interactive-btn-secondary w-full md:w-15" :disabled="saving"></Button>
+                    <Button type="button" icon="pi pi-window-maximize" severity="secondary" @click="openItineraryInViewer()" class="interactive-btn-secondary w-full md:w-15" :disabled="saving"></Button>
                 </div>
             </div>
 
