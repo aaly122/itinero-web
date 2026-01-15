@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-01T01:53:01.211238+00:00",
+  "last_updated": "2026-01-15T01:44:09.713821+00:00",
   "establishments": {
     "restaurant": {
       "distance": [
@@ -124,7 +124,7 @@
               "Saturday: 9:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T14:00:00Z"
+            "nextCloseTime": "2026-01-15T14:00:00Z"
           }
         },
         {
@@ -274,7 +274,7 @@
               "Saturday: 10:00 AM – 8:00 PM",
               "Sunday: 10:00 AM – 8:00 PM"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         },
         {
@@ -385,7 +385,7 @@
               "Saturday: 8:00 AM – 8:00 PM",
               "Sunday: 8:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T12:00:00Z"
+            "nextCloseTime": "2026-01-15T12:00:00Z"
           }
         },
         {
@@ -400,6 +400,117 @@
           },
           "formattedAddress": "334-B Magallanes St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": null
+        },
+        {
+          "place_id": "ChIJTfqjXz3KlzMRkADVWol-KjA",
+          "displayName": {
+            "text": "NRC Canteen",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.590813099999998,
+            "longitude": 120.97493109999999
+          },
+          "formattedAddress": "Naval Reserve Compound Phil Navy Cabildo St, Bgy 656, Zone 069 Intramuros, Manila, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 17,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 17,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 17,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 17,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 17,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 17,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 17,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 7:30 AM – 5:00 PM",
+              "Tuesday: 7:30 AM – 5:00 PM",
+              "Wednesday: 7:30 AM – 5:00 PM",
+              "Thursday: 7:30 AM – 5:00 PM",
+              "Friday: 7:30 AM – 5:00 PM",
+              "Saturday: 7:30 AM – 5:00 PM",
+              "Sunday: 7:30 AM – 5:00 PM"
+            ],
+            "nextCloseTime": "2026-01-15T09:00:00Z"
+          }
         },
         {
           "place_id": "ChIJQWJCXz3KlzMRYc1EUehelO8",
@@ -509,7 +620,7 @@
               "Saturday: 10:00 AM – 10:00 PM",
               "Sunday: 10:00 AM – 10:00 PM"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         }
       ],
@@ -622,7 +733,7 @@
               "Saturday: 9:00 AM – 9:00 PM",
               "Sunday: 9:00 AM – 9:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T13:00:00Z"
+            "nextCloseTime": "2026-01-15T13:00:00Z"
           }
         },
         {
@@ -733,7 +844,7 @@
               "Saturday: 7:00 AM – 10:00 PM",
               "Sunday: 7:00 AM – 10:00 PM"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         },
         {
@@ -844,7 +955,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T14:00:00Z"
+            "nextCloseTime": "2026-01-15T14:00:00Z"
           }
         },
         {
@@ -955,7 +1066,7 @@
               "Saturday: 6:00 AM – 11:00 PM",
               "Sunday: 6:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T14:00:00Z"
+            "nextCloseTime": "2026-01-15T14:00:00Z"
           }
         },
         {
@@ -1066,7 +1177,7 @@
               "Saturday: 5:30 AM – 10:00 PM",
               "Sunday: 5:30 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T14:00:00Z"
+            "nextCloseTime": "2026-01-15T14:00:00Z"
           }
         },
         {
@@ -1177,7 +1288,7 @@
               "Saturday: 4:00 – 11:00 PM",
               "Sunday: 4:00 – 11:00 PM"
             ],
-            "nextOpenTime": "2026-01-01T08:00:00Z"
+            "nextOpenTime": "2026-01-15T08:00:00Z"
           }
         },
         {
@@ -1288,7 +1399,7 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextOpenTime": "2026-01-01T03:00:00Z"
+            "nextOpenTime": "2026-01-15T03:00:00Z"
           }
         },
         {
@@ -1399,7 +1510,7 @@
               "Saturday: 6:00 AM – 8:00 PM",
               "Sunday: 6:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T13:00:00Z"
+            "nextCloseTime": "2026-01-15T13:00:00Z"
           }
         },
         {
@@ -1510,7 +1621,7 @@
               "Saturday: 10:00 AM – 8:30 PM",
               "Sunday: 10:00 AM – 8:30 PM"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         },
         {
@@ -1621,7 +1732,7 @@
               "Saturday: 8:30 AM – 8:00 PM",
               "Sunday: 8:30 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T12:00:00Z"
+            "nextCloseTime": "2026-01-15T12:00:00Z"
           }
         }
       ]
@@ -1639,6 +1750,19 @@
             "longitude": 120.97500819999998
           },
           "formattedAddress": "Mapua Canteen Muralla St, Bgy 658, Zone 070 Intramuros, Manila, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": null
+        },
+        {
+          "place_id": "ChIJMZGl5RfKlzMRMmM2mcTVnuo",
+          "displayName": {
+            "text": "Cup Eat Area",
+            "languageCode": "fil"
+          },
+          "location": {
+            "latitude": 14.5915529,
+            "longitude": 120.97511019999997
+          },
+          "formattedAddress": "HXRG+J2H, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": null
         },
         {
@@ -1788,7 +1912,7 @@
               "Saturday: 10:00 AM – 8:00 PM",
               "Sunday: 10:00 AM – 8:00 PM"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         },
         {
@@ -1887,7 +2011,7 @@
               "Saturday: 11:00 AM – 9:00 PM",
               "Sunday: Closed"
             ],
-            "nextOpenTime": "2026-01-01T03:00:00Z"
+            "nextOpenTime": "2026-01-15T03:00:00Z"
           }
         },
         {
@@ -1998,8 +2122,21 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T13:00:00Z"
+            "nextCloseTime": "2026-01-15T13:00:00Z"
           }
+        },
+        {
+          "place_id": "ChIJQZa4lBfKlzMRobKhshHnwgU",
+          "displayName": {
+            "text": "Cafe Mercantile",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.5922085,
+            "longitude": 120.974992
+          },
+          "formattedAddress": "Mercantile Insurance Bldg Gen Luna St, Bgy 655, Zone 069 Intramuros Manila, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": null
         },
         {
           "place_id": "ChIJ4a8oQ0_LlzMRrC84Tc1q00E",
@@ -2109,7 +2246,7 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextOpenTime": "2026-01-01T03:00:00Z"
+            "nextOpenTime": "2026-01-15T03:00:00Z"
           }
         }
       ],
@@ -2222,7 +2359,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T13:00:00Z"
+            "nextCloseTime": "2026-01-15T13:00:00Z"
           }
         },
         {
@@ -2333,7 +2470,7 @@
               "Saturday: 7:00 AM – 10:00 PM",
               "Sunday: 7:00 AM – 10:00 PM"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         },
         {
@@ -2444,7 +2581,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T14:00:00Z"
+            "nextCloseTime": "2026-01-15T14:00:00Z"
           }
         },
         {
@@ -2555,7 +2692,7 @@
               "Saturday: 7:00 AM – 11:00 PM",
               "Sunday: 7:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T14:00:00Z"
+            "nextCloseTime": "2026-01-15T14:00:00Z"
           }
         },
         {
@@ -2666,7 +2803,7 @@
               "Saturday: 8:00 AM – 8:00 PM",
               "Sunday: 8:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T13:00:00Z"
+            "nextCloseTime": "2026-01-15T13:00:00Z"
           }
         },
         {
@@ -2777,7 +2914,7 @@
               "Saturday: 10:30 AM – 8:00 PM",
               "Sunday: 10:30 AM – 8:00 PM"
             ],
-            "nextOpenTime": "2026-01-01T02:30:00Z"
+            "nextOpenTime": "2026-01-15T02:30:00Z"
           }
         },
         {
@@ -2888,7 +3025,7 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextOpenTime": "2026-01-01T03:00:00Z"
+            "nextOpenTime": "2026-01-15T03:00:00Z"
           }
         },
         {
@@ -2999,7 +3136,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T13:00:00Z"
+            "nextCloseTime": "2026-01-15T13:00:00Z"
           }
         },
         {
@@ -3110,7 +3247,118 @@
               "Saturday: 7:00 AM – 8:00 PM",
               "Sunday: 8:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T13:00:00Z"
+            "nextCloseTime": "2026-01-15T13:00:00Z"
+          }
+        },
+        {
+          "place_id": "ChIJW6KSTwDLlzMRvQT2k4Wz-sg",
+          "displayName": {
+            "text": "Starbucks Noble Place Binondo",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.596891399999999,
+            "longitude": 120.9754543
+          },
+          "formattedAddress": "203, 119 Juan Luna St, Binondo, Manila, 1006 Metro Manila, Philippines",
+          "regularOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 7,
+                  "minute": 30
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 22,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 8,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 22,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 7:30 AM – 10:00 PM",
+              "Tuesday: 7:30 AM – 10:00 PM",
+              "Wednesday: 7:30 AM – 10:00 PM",
+              "Thursday: 7:30 AM – 10:00 PM",
+              "Friday: 7:30 AM – 10:00 PM",
+              "Saturday: 8:00 AM – 10:00 PM",
+              "Sunday: 8:00 AM – 10:00 PM"
+            ],
+            "nextCloseTime": "2026-01-15T14:00:00Z"
           }
         }
       ]
@@ -3213,7 +3461,7 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         },
         {
@@ -3325,7 +3573,131 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
+            "nextCloseTime": "2026-01-15T10:00:00Z"
+          }
+        },
+        {
+          "place_id": "ChIJ09JFFQDLlzMR4oey0C32QxM",
+          "displayName": {
+            "text": "Intramuros maynila",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.589597200000002,
+            "longitude": 120.9747258
+          },
+          "formattedAddress": "HXQF+RVQ, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": null
+        },
+        {
+          "place_id": "ChIJ6a10IwDLlzMR_zFaT_Phd9Q",
+          "displayName": {
+            "text": "National Museum of the Philippines",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.589597200000002,
+            "longitude": 120.9747258
+          },
+          "formattedAddress": "HXQF+RVQ, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 18,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 9:00 AM – 6:00 PM",
+              "Tuesday: 9:00 AM – 6:00 PM",
+              "Wednesday: 9:00 AM – 6:00 PM",
+              "Thursday: 9:00 AM – 6:00 PM",
+              "Friday: 9:00 AM – 6:00 PM",
+              "Saturday: 9:00 AM – 6:00 PM",
+              "Sunday: 9:00 AM – 6:00 PM"
+            ],
+            "nextCloseTime": "2026-01-15T10:00:00Z"
           }
         },
         {
@@ -3425,7 +3797,7 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         },
         {
@@ -3524,7 +3896,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
+            "nextCloseTime": "2026-01-15T10:00:00Z"
           }
         },
         {
@@ -3538,7 +3910,93 @@
             "longitude": 120.97344040000002
           },
           "formattedAddress": "Corner Arzobispo, HXQF+X98, Anda St, Intramuros, Manila, 1002 Metro Manila, Philippines",
-          "regularOpeningHours": null
+          "regularOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 18,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: Closed",
+              "Tuesday: 9:00 AM – 6:00 PM",
+              "Wednesday: 9:00 AM – 6:00 PM",
+              "Thursday: 9:00 AM – 6:00 PM",
+              "Friday: 9:00 AM – 6:00 PM",
+              "Saturday: 9:00 AM – 6:00 PM",
+              "Sunday: 9:00 AM – 6:00 PM"
+            ],
+            "nextCloseTime": "2026-01-15T10:00:00Z"
+          }
         },
         {
           "place_id": "ChIJnzSlPD3KlzMRfqgTwJ3ku98",
@@ -3732,7 +4190,7 @@
               "Saturday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM",
               "Sunday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T04:00:00Z"
+            "nextCloseTime": "2026-01-15T04:00:00Z"
           }
         }
       ],
@@ -3833,7 +4291,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
+            "nextCloseTime": "2026-01-15T10:00:00Z"
           }
         },
         {
@@ -3932,7 +4390,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
+            "nextCloseTime": "2026-01-15T10:00:00Z"
           }
         },
         {
@@ -4031,7 +4489,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
+            "nextCloseTime": "2026-01-15T10:00:00Z"
           }
         },
         {
@@ -4130,7 +4588,7 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         },
         {
@@ -4325,7 +4783,7 @@
               "Saturday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM",
               "Sunday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T04:00:00Z"
+            "nextCloseTime": "2026-01-15T04:00:00Z"
           }
         },
         {
@@ -4424,7 +4882,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
+            "nextCloseTime": "2026-01-15T10:00:00Z"
           }
         },
         {
@@ -4523,7 +4981,131 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
+          }
+        },
+        {
+          "place_id": "ChIJKQIAxzzKlzMRfYFMR_yMKs4",
+          "displayName": {
+            "text": "Intramuros and Rizal’s Bagumbayan Light and Sound Museum",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.586961200000001,
+            "longitude": 120.975235
+          },
+          "formattedAddress": "HXPG+Q3Q, Victoria St, Intramuros, Manila, 1000 Metro Manila, Philippines",
+          "regularOpeningHours": null
+        },
+        {
+          "place_id": "ChIJ6a10IwDLlzMR_zFaT_Phd9Q",
+          "displayName": {
+            "text": "National Museum of the Philippines",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.589597200000002,
+            "longitude": 120.9747258
+          },
+          "formattedAddress": "HXQF+RVQ, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 18,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 9,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 18,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 9:00 AM – 6:00 PM",
+              "Tuesday: 9:00 AM – 6:00 PM",
+              "Wednesday: 9:00 AM – 6:00 PM",
+              "Thursday: 9:00 AM – 6:00 PM",
+              "Friday: 9:00 AM – 6:00 PM",
+              "Saturday: 9:00 AM – 6:00 PM",
+              "Sunday: 9:00 AM – 6:00 PM"
+            ],
+            "nextCloseTime": "2026-01-15T10:00:00Z"
           }
         },
         {
@@ -4697,7 +5279,7 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         },
         {
@@ -4767,19 +5349,6 @@
           }
         },
         {
-          "place_id": "ChIJk8gdJgDLlzMR4fP_eYR3u9M",
-          "displayName": {
-            "text": "Inner Garden",
-            "languageCode": "en"
-          },
-          "location": {
-            "latitude": 14.588735,
-            "longitude": 120.9750227
-          },
-          "formattedAddress": "658, Intramuros, Manila, 1002 Metro Manila, Philippines",
-          "regularOpeningHours": null
-        },
-        {
           "place_id": "ChIJkzKOIknLlzMRKe441nk71nU",
           "displayName": {
             "text": "Plaza Willard",
@@ -4806,16 +5375,42 @@
           "regularOpeningHours": null
         },
         {
-          "place_id": "ChIJsyh16RzLlzMRdVXLIrqGsws",
+          "place_id": "ChIJGy3pYgDLlzMR7SG8CALLA4Y",
           "displayName": {
-            "text": "Fray Andres de Urdaneta Garden",
+            "text": "Parking space",
             "languageCode": "en"
           },
           "location": {
-            "latitude": 14.588567600000001,
-            "longitude": 120.97407159999999
+            "latitude": 14.594278,
+            "longitude": 120.97514299999999
           },
-          "formattedAddress": "658 Intramuros Manila 1002, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "formattedAddress": "1000 Magallanes St, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": null
+        },
+        {
+          "place_id": "ChIJX26pburLlzMRTFIazT8cmrg",
+          "displayName": {
+            "text": "Plaza Mexico",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.5944553,
+            "longitude": 120.97458989999998
+          },
+          "formattedAddress": "HXVF+QRP, Magallanes Dr, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": null
+        },
+        {
+          "place_id": "ChIJEzyUBC7LlzMRGn0yES7QLdQ",
+          "displayName": {
+            "text": "Galleria De Los Presedentes De La Republica Pilipina",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.588151700000001,
+            "longitude": 120.97411149999999
+          },
+          "formattedAddress": "HXQF+7J9, Sta. Lucia St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": null
         }
       ],
@@ -4928,7 +5523,7 @@
               "Saturday: 10:00 AM – 12:00 AM",
               "Sunday: 10:00 AM – 12:00 AM"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         },
         {
@@ -4945,117 +5540,6 @@
           "regularOpeningHours": null
         },
         {
-          "place_id": "ChIJEWjKJSPKlzMRqHB5OJgKmpo",
-          "displayName": {
-            "text": "Ilustrado Restaurant",
-            "languageCode": "en"
-          },
-          "location": {
-            "latitude": 14.587856399999998,
-            "longitude": 120.9773446
-          },
-          "formattedAddress": "744 Cabildo Street, corner Recoletos St, Intramuros, Manila, 1002 Metro Manila, Philippines",
-          "regularOpeningHours": {
-            "openNow": true,
-            "periods": [
-              {
-                "open": {
-                  "day": 0,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 0,
-                  "hour": 18,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 1,
-                  "hour": 8,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 1,
-                  "hour": 22,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 2,
-                  "hour": 8,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 2,
-                  "hour": 22,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 3,
-                  "hour": 8,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 3,
-                  "hour": 22,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 4,
-                  "hour": 8,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 4,
-                  "hour": 22,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 5,
-                  "hour": 8,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 5,
-                  "hour": 22,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 6,
-                  "hour": 8,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 6,
-                  "hour": 22,
-                  "minute": 0
-                }
-              }
-            ],
-            "weekdayDescriptions": [
-              "Monday: 8:00 AM – 10:00 PM",
-              "Tuesday: 8:00 AM – 10:00 PM",
-              "Wednesday: 8:00 AM – 10:00 PM",
-              "Thursday: 8:00 AM – 10:00 PM",
-              "Friday: 8:00 AM – 10:00 PM",
-              "Saturday: 8:00 AM – 10:00 PM",
-              "Sunday: 9:00 AM – 6:00 PM"
-            ],
-            "nextCloseTime": "2026-01-01T14:00:00Z"
-          }
-        },
-        {
           "place_id": "ChIJ1z7dUrnLlzMRNTQRI_lU2xM",
           "displayName": {
             "text": "Puerta Real Gardens",
@@ -5066,93 +5550,7 @@
             "longitude": 120.977372
           },
           "formattedAddress": "HXPG+8WH, Intramuros, Manila, 1002 Metro Manila, Philippines",
-          "regularOpeningHours": {
-            "openNow": true,
-            "periods": [
-              {
-                "open": {
-                  "day": 0,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 0,
-                  "hour": 18,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 2,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 2,
-                  "hour": 18,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 3,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 3,
-                  "hour": 18,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 4,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 4,
-                  "hour": 18,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 5,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 5,
-                  "hour": 18,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 6,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 6,
-                  "hour": 18,
-                  "minute": 0
-                }
-              }
-            ],
-            "weekdayDescriptions": [
-              "Monday: Closed",
-              "Tuesday: 9:00 AM – 6:00 PM",
-              "Wednesday: 9:00 AM – 6:00 PM",
-              "Thursday: 9:00 AM – 6:00 PM",
-              "Friday: 9:00 AM – 6:00 PM",
-              "Saturday: 9:00 AM – 6:00 PM",
-              "Sunday: 9:00 AM – 6:00 PM"
-            ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
-          }
+          "regularOpeningHours": null
         },
         {
           "place_id": "ChIJMUp7NBbKlzMRqR_GBP8HBMk",
@@ -5295,118 +5693,7 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
-          }
-        },
-        {
-          "place_id": "ChIJCeM62RjKlzMRrc9fx641khA",
-          "displayName": {
-            "text": "Mehan Garden Manila",
-            "languageCode": "en"
-          },
-          "location": {
-            "latitude": 14.592343999999999,
-            "longitude": 120.980823
-          },
-          "formattedAddress": "HXRJ+W8P, Taft Ave, Ermita, Manila, 1000 Metro Manila, Philippines",
-          "regularOpeningHours": {
-            "openNow": true,
-            "periods": [
-              {
-                "open": {
-                  "day": 0,
-                  "hour": 7,
-                  "minute": 30
-                },
-                "close": {
-                  "day": 0,
-                  "hour": 20,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 1,
-                  "hour": 7,
-                  "minute": 30
-                },
-                "close": {
-                  "day": 1,
-                  "hour": 20,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 2,
-                  "hour": 7,
-                  "minute": 30
-                },
-                "close": {
-                  "day": 2,
-                  "hour": 20,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 3,
-                  "hour": 7,
-                  "minute": 30
-                },
-                "close": {
-                  "day": 3,
-                  "hour": 20,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 4,
-                  "hour": 7,
-                  "minute": 30
-                },
-                "close": {
-                  "day": 4,
-                  "hour": 20,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 5,
-                  "hour": 7,
-                  "minute": 30
-                },
-                "close": {
-                  "day": 5,
-                  "hour": 20,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 6,
-                  "hour": 8,
-                  "minute": 30
-                },
-                "close": {
-                  "day": 6,
-                  "hour": 21,
-                  "minute": 30
-                }
-              }
-            ],
-            "weekdayDescriptions": [
-              "Monday: 7:30 AM – 8:00 PM",
-              "Tuesday: 7:30 AM – 8:00 PM",
-              "Wednesday: 7:30 AM – 8:00 PM",
-              "Thursday: 7:30 AM – 8:00 PM",
-              "Friday: 7:30 AM – 8:00 PM",
-              "Saturday: 8:30 AM – 9:30 PM",
-              "Sunday: 7:30 AM – 8:00 PM"
-            ],
-            "nextCloseTime": "2026-01-01T12:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         },
         {
@@ -5453,93 +5740,7 @@
             "longitude": 120.9757118
           },
           "formattedAddress": "HXPG+87G, Sta. Lucia St, Intramuros, Manila, 1002 Metro Manila, Philippines",
-          "regularOpeningHours": {
-            "openNow": true,
-            "periods": [
-              {
-                "open": {
-                  "day": 0,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 0,
-                  "hour": 18,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 2,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 2,
-                  "hour": 18,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 3,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 3,
-                  "hour": 18,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 4,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 4,
-                  "hour": 18,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 5,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 5,
-                  "hour": 18,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 6,
-                  "hour": 9,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 6,
-                  "hour": 18,
-                  "minute": 0
-                }
-              }
-            ],
-            "weekdayDescriptions": [
-              "Monday: Closed",
-              "Tuesday: 9:00 AM – 6:00 PM",
-              "Wednesday: 9:00 AM – 6:00 PM",
-              "Thursday: 9:00 AM – 6:00 PM",
-              "Friday: 9:00 AM – 6:00 PM",
-              "Saturday: 9:00 AM – 6:00 PM",
-              "Sunday: 9:00 AM – 6:00 PM"
-            ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
-          }
+          "regularOpeningHours": null
         },
         {
           "place_id": "ChIJX26pburLlzMRTFIazT8cmrg",
@@ -5552,105 +5753,33 @@
             "longitude": 120.97458989999998
           },
           "formattedAddress": "HXVF+QRP, Magallanes Dr, Intramuros, Manila, 1002 Metro Manila, Philippines",
-          "regularOpeningHours": {
-            "openNow": true,
-            "periods": [
-              {
-                "open": {
-                  "day": 0,
-                  "hour": 1,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 0,
-                  "hour": 23,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 1,
-                  "hour": 1,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 1,
-                  "hour": 23,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 2,
-                  "hour": 1,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 2,
-                  "hour": 23,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 3,
-                  "hour": 1,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 3,
-                  "hour": 23,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 4,
-                  "hour": 1,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 4,
-                  "hour": 23,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 5,
-                  "hour": 1,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 5,
-                  "hour": 23,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 6,
-                  "hour": 1,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 6,
-                  "hour": 23,
-                  "minute": 0
-                }
-              }
-            ],
-            "weekdayDescriptions": [
-              "Monday: 1:00 AM – 23:00 PM",
-              "Tuesday: 1:00 AM – 23:00 PM",
-              "Wednesday: 1:00 AM – 23:00 PM",
-              "Thursday: 1:00 AM – 23:00 PM",
-              "Friday: 1:00 AM – 23:00 PM",
-              "Saturday: 1:00 AM – 23:00 PM",
-              "Sunday: 1:00 AM – 23:00 PM"
-            ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
-          }
+          "regularOpeningHours": null
+        },
+        {
+          "place_id": "ChIJAYO57mfLlzMRPJZR7tPIf3Q",
+          "displayName": {
+            "text": "Manila Hidden Garden",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.593892700000001,
+            "longitude": 120.97950139999999
+          },
+          "formattedAddress": "HXVH+HR2, Ermita, Manila, 1000 Metro Manila, Philippines",
+          "regularOpeningHours": null
+        },
+        {
+          "place_id": "ChIJizltVgDLlzMRtvGw84LogXA",
+          "displayName": {
+            "text": "Pasig River Esplanade - Phase 3",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.594687599999999,
+            "longitude": 120.97387280000001
+          },
+          "formattedAddress": "中菲友谊园南观景台, Philippine-China Friendship Park, Riverside Dr, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": null
         }
       ]
     },
@@ -5792,7 +5921,7 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         },
         {
@@ -5824,7 +5953,7 @@
         {
           "place_id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
           "displayName": {
-            "text": "The Manila Cathedral",
+            "text": "Minor Basilica and Metropolitan Cathedral of the Immaculate Conception - The Manila Cathedral",
             "languageCode": "en"
           },
           "location": {
@@ -5929,7 +6058,7 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         },
         {
@@ -5963,7 +6092,7 @@
         {
           "place_id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
           "displayName": {
-            "text": "The Manila Cathedral",
+            "text": "Minor Basilica and Metropolitan Cathedral of the Immaculate Conception - The Manila Cathedral",
             "languageCode": "en"
           },
           "location": {
@@ -6068,7 +6197,7 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         },
         {
@@ -6167,7 +6296,7 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         },
         {
@@ -6181,6 +6310,32 @@
             "longitude": 120.97283350000001
           },
           "formattedAddress": "121 Arzobispo St, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": null
+        },
+        {
+          "place_id": "ChIJR41caALLlzMRWWi7iCyuznk",
+          "displayName": {
+            "text": "Former Santo Domingo Church Site",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.5932698,
+            "longitude": 120.9748959
+          },
+          "formattedAddress": "HXVF+8X2, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": null
+        },
+        {
+          "place_id": "ChIJKZR-e52VrzMRRiL6gOXhwBk",
+          "displayName": {
+            "text": "Barbaza",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.594127999999998,
+            "longitude": 120.9747599
+          },
+          "formattedAddress": "HXVF+MW2, Intramuros, Barbaza, 1002 Metro Manila, Philippines",
           "regularOpeningHours": null
         },
         {
@@ -6246,19 +6401,6 @@
             "longitude": 120.9776967
           },
           "formattedAddress": "Solana Street, Corner San Francisco St, Intramuros, Manila, 1002 Metro Manila, Philippines",
-          "regularOpeningHours": null
-        },
-        {
-          "place_id": "ChIJhSGOR6LLlzMRmzFgz_bb5Dc",
-          "displayName": {
-            "text": "Tempoy Church (Former Site)",
-            "languageCode": "en"
-          },
-          "location": {
-            "latitude": 14.587762300000001,
-            "longitude": 120.978172
-          },
-          "formattedAddress": "Cabildo Street, Corner Recoletos St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": null
         }
       ]
@@ -6361,7 +6503,7 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         },
         {
@@ -6505,7 +6647,7 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         },
         {
@@ -6616,7 +6758,7 @@
               "Saturday: 9:00 AM – 3:00 PM",
               "Sunday: 9:00 AM – 3:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T07:00:00Z"
+            "nextCloseTime": "2026-01-15T07:00:00Z"
           }
         },
         {
@@ -6715,7 +6857,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
+            "nextCloseTime": "2026-01-15T10:00:00Z"
           }
         },
         {
@@ -6734,7 +6876,7 @@
         {
           "place_id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
           "displayName": {
-            "text": "The Manila Cathedral",
+            "text": "Minor Basilica and Metropolitan Cathedral of the Immaculate Conception - The Manila Cathedral",
             "languageCode": "en"
           },
           "location": {
@@ -6839,7 +6981,7 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         },
         {
@@ -6950,7 +7092,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
+            "nextCloseTime": "2026-01-15T10:00:00Z"
           }
         },
         {
@@ -7109,7 +7251,7 @@
               "Saturday: 8:00 AM – 11:00 PM",
               "Sunday: 8:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T15:00:00Z"
+            "nextCloseTime": "2026-01-15T15:00:00Z"
           }
         },
         {
@@ -7220,13 +7362,13 @@
               "Saturday: 10:00 AM – 12:00 AM",
               "Sunday: 10:00 AM – 12:00 AM"
             ],
-            "nextOpenTime": "2026-01-01T02:00:00Z"
+            "nextOpenTime": "2026-01-15T02:00:00Z"
           }
         },
         {
           "place_id": "ChIJeWcu0hfKlzMRnYOqfe-gowY",
           "displayName": {
-            "text": "The Manila Cathedral",
+            "text": "Minor Basilica and Metropolitan Cathedral of the Immaculate Conception - The Manila Cathedral",
             "languageCode": "en"
           },
           "location": {
@@ -7331,7 +7473,7 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         },
         {
@@ -7463,7 +7605,7 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         },
         {
@@ -7595,7 +7737,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
+            "nextCloseTime": "2026-01-15T10:00:00Z"
           }
         },
         {
@@ -7706,7 +7848,7 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         },
         {
@@ -7817,7 +7959,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-01T10:00:00Z"
+            "nextCloseTime": "2026-01-15T10:00:00Z"
           }
         },
         {
@@ -7904,7 +8046,7 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextCloseTime": "2026-01-01T09:00:00Z"
+            "nextCloseTime": "2026-01-15T09:00:00Z"
           }
         }
       ]
