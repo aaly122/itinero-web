@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-01-15T01:44:09.713821+00:00",
+  "last_updated": "2026-01-29T02:00:36.035635+00:00",
   "establishments": {
     "restaurant": {
       "distance": [
@@ -124,7 +124,7 @@
               "Saturday: 9:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T14:00:00Z"
+            "nextCloseTime": "2026-01-29T14:00:00Z"
           }
         },
         {
@@ -178,7 +178,7 @@
           },
           "formattedAddress": "5 Muralla Puerta De Isabel II, Bgy 654, Zone 069 Intramuros, Manila, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -274,7 +274,7 @@
               "Saturday: 10:00 AM – 8:00 PM",
               "Sunday: 10:00 AM – 8:00 PM"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T12:00:00Z"
           }
         },
         {
@@ -385,7 +385,7 @@
               "Saturday: 8:00 AM – 8:00 PM",
               "Sunday: 8:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T12:00:00Z"
+            "nextCloseTime": "2026-01-29T12:00:00Z"
           }
         },
         {
@@ -509,7 +509,7 @@
               "Saturday: 7:30 AM – 5:00 PM",
               "Sunday: 7:30 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -524,7 +524,7 @@
           },
           "formattedAddress": "Bldg 3 Asean Garden P Burgos St, Bgy 654, Zone 069 Intramuros, Manila, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -620,7 +620,7 @@
               "Saturday: 10:00 AM – 10:00 PM",
               "Sunday: 10:00 AM – 10:00 PM"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T14:00:00Z"
           }
         }
       ],
@@ -733,7 +733,7 @@
               "Saturday: 9:00 AM – 9:00 PM",
               "Sunday: 9:00 AM – 9:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T13:00:00Z"
+            "nextCloseTime": "2026-01-29T13:00:00Z"
           }
         },
         {
@@ -748,7 +748,7 @@
           },
           "formattedAddress": "Victoria St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -844,7 +844,7 @@
               "Saturday: 7:00 AM – 10:00 PM",
               "Sunday: 7:00 AM – 10:00 PM"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T14:00:00Z"
           }
         },
         {
@@ -955,7 +955,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T14:00:00Z"
+            "nextCloseTime": "2026-01-29T14:00:00Z"
           }
         },
         {
@@ -1066,7 +1066,7 @@
               "Saturday: 6:00 AM – 11:00 PM",
               "Sunday: 6:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T14:00:00Z"
+            "nextCloseTime": "2026-01-29T14:00:00Z"
           }
         },
         {
@@ -1177,7 +1177,7 @@
               "Saturday: 5:30 AM – 10:00 PM",
               "Sunday: 5:30 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T14:00:00Z"
+            "nextCloseTime": "2026-01-29T14:00:00Z"
           }
         },
         {
@@ -1288,7 +1288,7 @@
               "Saturday: 4:00 – 11:00 PM",
               "Sunday: 4:00 – 11:00 PM"
             ],
-            "nextOpenTime": "2026-01-15T08:00:00Z"
+            "nextOpenTime": "2026-01-29T08:00:00Z"
           }
         },
         {
@@ -1399,7 +1399,7 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextOpenTime": "2026-01-15T03:00:00Z"
+            "nextOpenTime": "2026-01-29T03:00:00Z"
           }
         },
         {
@@ -1510,7 +1510,7 @@
               "Saturday: 6:00 AM – 8:00 PM",
               "Sunday: 6:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T13:00:00Z"
+            "nextCloseTime": "2026-01-29T13:00:00Z"
           }
         },
         {
@@ -1525,7 +1525,7 @@
           },
           "formattedAddress": "Plaza San Luis Complex General Luna Street, cor Real St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -1621,7 +1621,7 @@
               "Saturday: 10:00 AM – 8:30 PM",
               "Sunday: 10:00 AM – 8:30 PM"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T12:00:00Z"
           }
         },
         {
@@ -1732,7 +1732,7 @@
               "Saturday: 8:30 AM – 8:00 PM",
               "Sunday: 8:30 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T12:00:00Z"
+            "nextCloseTime": "2026-01-29T12:00:00Z"
           }
         }
       ]
@@ -1816,7 +1816,7 @@
           },
           "formattedAddress": "1002, Cabildo Street, Corner Beaterio Street, Intramuros, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -1912,7 +1912,7 @@
               "Saturday: 10:00 AM – 8:00 PM",
               "Sunday: 10:00 AM – 8:00 PM"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T12:00:00Z"
           }
         },
         {
@@ -2011,7 +2011,7 @@
               "Saturday: 11:00 AM – 9:00 PM",
               "Sunday: Closed"
             ],
-            "nextOpenTime": "2026-01-15T03:00:00Z"
+            "nextOpenTime": "2026-01-29T03:00:00Z"
           }
         },
         {
@@ -2122,7 +2122,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T13:00:00Z"
+            "nextCloseTime": "2026-01-29T13:00:00Z"
           }
         },
         {
@@ -2246,7 +2246,7 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextOpenTime": "2026-01-15T03:00:00Z"
+            "nextOpenTime": "2026-01-29T03:00:00Z"
           }
         }
       ],
@@ -2359,7 +2359,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T13:00:00Z"
+            "nextCloseTime": "2026-01-29T13:00:00Z"
           }
         },
         {
@@ -2374,7 +2374,7 @@
           },
           "formattedAddress": "Victoria St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -2470,7 +2470,7 @@
               "Saturday: 7:00 AM – 10:00 PM",
               "Sunday: 7:00 AM – 10:00 PM"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T14:00:00Z"
           }
         },
         {
@@ -2581,7 +2581,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T14:00:00Z"
+            "nextCloseTime": "2026-01-29T14:00:00Z"
           }
         },
         {
@@ -2692,7 +2692,7 @@
               "Saturday: 7:00 AM – 11:00 PM",
               "Sunday: 7:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T14:00:00Z"
+            "nextCloseTime": "2026-01-29T14:00:00Z"
           }
         },
         {
@@ -2803,7 +2803,7 @@
               "Saturday: 8:00 AM – 8:00 PM",
               "Sunday: 8:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T13:00:00Z"
+            "nextCloseTime": "2026-01-29T13:00:00Z"
           }
         },
         {
@@ -2914,7 +2914,7 @@
               "Saturday: 10:30 AM – 8:00 PM",
               "Sunday: 10:30 AM – 8:00 PM"
             ],
-            "nextOpenTime": "2026-01-15T02:30:00Z"
+            "nextOpenTime": "2026-01-29T02:30:00Z"
           }
         },
         {
@@ -3025,7 +3025,7 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextOpenTime": "2026-01-15T03:00:00Z"
+            "nextOpenTime": "2026-01-29T03:00:00Z"
           }
         },
         {
@@ -3136,7 +3136,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T13:00:00Z"
+            "nextCloseTime": "2026-01-29T13:00:00Z"
           }
         },
         {
@@ -3247,7 +3247,7 @@
               "Saturday: 7:00 AM – 8:00 PM",
               "Sunday: 8:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T13:00:00Z"
+            "nextCloseTime": "2026-01-29T13:00:00Z"
           }
         },
         {
@@ -3358,7 +3358,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T14:00:00Z"
+            "nextCloseTime": "2026-01-29T14:00:00Z"
           }
         }
       ]
@@ -3377,7 +3377,7 @@
           },
           "formattedAddress": "32 Anda St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -3461,7 +3461,7 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T08:30:00Z"
           }
         },
         {
@@ -3573,7 +3573,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -3697,7 +3697,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -3725,7 +3725,7 @@
           },
           "formattedAddress": "HXQG+RC9, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -3797,7 +3797,7 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T08:00:00Z"
           }
         },
         {
@@ -3896,7 +3896,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -3995,7 +3995,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -4190,7 +4190,7 @@
               "Saturday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM",
               "Sunday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T04:00:00Z"
+            "nextCloseTime": "2026-01-29T04:00:00Z"
           }
         }
       ],
@@ -4291,7 +4291,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -4390,7 +4390,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -4489,7 +4489,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -4504,7 +4504,7 @@
           },
           "formattedAddress": "32 Anda St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -4588,7 +4588,7 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T08:30:00Z"
           }
         },
         {
@@ -4783,7 +4783,7 @@
               "Saturday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM",
               "Sunday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T04:00:00Z"
+            "nextCloseTime": "2026-01-29T04:00:00Z"
           }
         },
         {
@@ -4882,7 +4882,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -4981,7 +4981,7 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -5105,7 +5105,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -5279,7 +5279,7 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -5427,7 +5427,7 @@
           },
           "formattedAddress": "448, 1000 Riverside Dr, Ermita, Manila, 1000 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -5523,7 +5523,7 @@
               "Saturday: 10:00 AM – 12:00 AM",
               "Sunday: 10:00 AM – 12:00 AM"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T16:00:00Z"
           }
         },
         {
@@ -5693,7 +5693,7 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -5921,7 +5921,7 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -6058,7 +6058,7 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -6197,7 +6197,7 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -6296,7 +6296,7 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -6419,7 +6419,7 @@
           },
           "formattedAddress": "32 Anda St, Intramuros, Manila, 1002 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -6503,7 +6503,7 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T08:30:00Z"
           }
         },
         {
@@ -6647,7 +6647,7 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -6758,7 +6758,7 @@
               "Saturday: 9:00 AM – 3:00 PM",
               "Sunday: 9:00 AM – 3:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T07:00:00Z"
+            "nextCloseTime": "2026-01-29T07:00:00Z"
           }
         },
         {
@@ -6857,7 +6857,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -6981,7 +6981,7 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -7092,7 +7092,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -7251,7 +7251,7 @@
               "Saturday: 8:00 AM – 11:00 PM",
               "Sunday: 8:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T15:00:00Z"
+            "nextCloseTime": "2026-01-29T15:00:00Z"
           }
         },
         {
@@ -7266,7 +7266,7 @@
           },
           "formattedAddress": "448, 1000 Riverside Dr, Ermita, Manila, 1000 Metro Manila, Philippines",
           "regularOpeningHours": {
-            "openNow": false,
+            "openNow": true,
             "periods": [
               {
                 "open": {
@@ -7362,7 +7362,7 @@
               "Saturday: 10:00 AM – 12:00 AM",
               "Sunday: 10:00 AM – 12:00 AM"
             ],
-            "nextOpenTime": "2026-01-15T02:00:00Z"
+            "nextCloseTime": "2026-01-29T16:00:00Z"
           }
         },
         {
@@ -7473,7 +7473,7 @@
               "Saturday: 7:00 AM – 5:00 PM",
               "Sunday: 7:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -7486,7 +7486,7 @@
             "latitude": 14.595792099999999,
             "longitude": 120.97722220000001
           },
-          "formattedAddress": "HXWG+8V9, Jones Brg, Binondo, Manila, Metro Manila, Philippines",
+          "formattedAddress": "Jones Brg, Binondo, Manila, Metro Manila, Philippines",
           "regularOpeningHours": {
             "openNow": true,
             "periods": [
@@ -7605,7 +7605,7 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -7737,7 +7737,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -7848,7 +7848,7 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         },
         {
@@ -7959,7 +7959,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-01-15T10:00:00Z"
+            "nextCloseTime": "2026-01-29T10:00:00Z"
           }
         },
         {
@@ -8046,7 +8046,7 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextCloseTime": "2026-01-15T09:00:00Z"
+            "nextCloseTime": "2026-01-29T09:00:00Z"
           }
         }
       ]
