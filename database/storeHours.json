@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-03-15T02:25:57.539212+00:00",
+  "last_updated": "2026-03-29T02:27:46.264711+00:00",
   "establishments": {
     "restaurant": {
       "distance": [
@@ -124,7 +124,7 @@
               "Saturday: 9:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T14:00:00Z"
+            "nextCloseTime": "2026-03-29T14:00:00Z"
           }
         },
         {
@@ -274,7 +274,7 @@
               "Saturday: 10:00 AM – 8:00 PM",
               "Sunday: 10:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T12:00:00Z"
+            "nextCloseTime": "2026-03-29T12:00:00Z"
           }
         },
         {
@@ -385,7 +385,7 @@
               "Saturday: 8:00 AM – 8:00 PM",
               "Sunday: 8:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T12:00:00Z"
+            "nextCloseTime": "2026-03-29T12:00:00Z"
           }
         },
         {
@@ -509,7 +509,7 @@
               "Saturday: 7:30 AM – 5:00 PM",
               "Sunday: 7:30 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T09:00:00Z"
+            "nextCloseTime": "2026-03-29T09:00:00Z"
           }
         },
         {
@@ -620,7 +620,7 @@
               "Saturday: 10:00 AM – 10:00 PM",
               "Sunday: 10:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T14:00:00Z"
+            "nextCloseTime": "2026-03-29T14:00:00Z"
           }
         }
       ],
@@ -733,7 +733,7 @@
               "Saturday: 9:00 AM – 9:00 PM",
               "Sunday: 9:00 AM – 9:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T13:00:00Z"
+            "nextCloseTime": "2026-03-29T13:00:00Z"
           }
         },
         {
@@ -832,7 +832,7 @@
               "Saturday: 11:00 AM – 9:00 PM",
               "Sunday: 11:00 AM – 9:00 PM"
             ],
-            "nextOpenTime": "2026-03-15T03:00:00Z"
+            "nextOpenTime": "2026-03-29T03:00:00Z"
           }
         },
         {
@@ -943,7 +943,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -1054,7 +1054,7 @@
               "Saturday: 6:00 AM – 11:00 PM",
               "Sunday: 6:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T15:00:00Z"
+            "nextCloseTime": "2026-03-29T15:00:00Z"
           }
         },
         {
@@ -1165,7 +1165,7 @@
               "Saturday: 5:30 AM – 10:00 PM",
               "Sunday: 5:30 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T14:00:00Z"
+            "nextCloseTime": "2026-03-29T14:00:00Z"
           }
         },
         {
@@ -1276,7 +1276,7 @@
               "Saturday: 4:00 – 11:00 PM",
               "Sunday: 4:00 – 11:00 PM"
             ],
-            "nextOpenTime": "2026-03-15T08:00:00Z"
+            "nextOpenTime": "2026-03-29T08:00:00Z"
           }
         },
         {
@@ -1387,7 +1387,7 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextOpenTime": "2026-03-15T03:00:00Z"
+            "nextOpenTime": "2026-03-29T03:00:00Z"
           }
         },
         {
@@ -1498,7 +1498,7 @@
               "Saturday: 6:00 AM – 8:00 PM",
               "Sunday: 6:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T12:00:00Z"
+            "nextCloseTime": "2026-03-29T12:00:00Z"
           }
         },
         {
@@ -1609,7 +1609,7 @@
               "Saturday: 10:00 AM – 8:30 PM",
               "Sunday: 10:00 AM – 8:30 PM"
             ],
-            "nextCloseTime": "2026-03-15T12:30:00Z"
+            "nextCloseTime": "2026-03-29T12:30:00Z"
           }
         },
         {
@@ -1720,7 +1720,7 @@
               "Saturday: 8:30 AM – 8:00 PM",
               "Sunday: 8:30 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T12:00:00Z"
+            "nextCloseTime": "2026-03-29T12:00:00Z"
           }
         }
       ]
@@ -1900,106 +1900,7 @@
               "Saturday: 10:00 AM – 8:00 PM",
               "Sunday: 10:00 AM – 8:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T12:00:00Z"
-          }
-        },
-        {
-          "place_id": "ChIJX-DM0bjLlzMRUNlxJEbuznI",
-          "displayName": {
-            "text": "BigBrew Intramuros",
-            "languageCode": "en"
-          },
-          "location": {
-            "latitude": 14.5919519,
-            "longitude": 120.97466130000001
-          },
-          "formattedAddress": "684 Beaterio St, Intramuros, Manila, 1002 Metro Manila, Philippines",
-          "regularOpeningHours": {
-            "openNow": false,
-            "periods": [
-              {
-                "open": {
-                  "day": 1,
-                  "hour": 11,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 1,
-                  "hour": 21,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 2,
-                  "hour": 11,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 2,
-                  "hour": 21,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 3,
-                  "hour": 11,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 3,
-                  "hour": 21,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 4,
-                  "hour": 11,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 4,
-                  "hour": 21,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 5,
-                  "hour": 11,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 5,
-                  "hour": 21,
-                  "minute": 0
-                }
-              },
-              {
-                "open": {
-                  "day": 6,
-                  "hour": 11,
-                  "minute": 0
-                },
-                "close": {
-                  "day": 6,
-                  "hour": 21,
-                  "minute": 0
-                }
-              }
-            ],
-            "weekdayDescriptions": [
-              "Monday: 11:00 AM – 9:00 PM",
-              "Tuesday: 11:00 AM – 9:00 PM",
-              "Wednesday: 11:00 AM – 9:00 PM",
-              "Thursday: 11:00 AM – 9:00 PM",
-              "Friday: 11:00 AM – 9:00 PM",
-              "Saturday: 11:00 AM – 9:00 PM",
-              "Sunday: Closed"
-            ],
-            "nextOpenTime": "2026-03-16T03:00:00Z"
+            "nextCloseTime": "2026-03-29T12:00:00Z"
           }
         },
         {
@@ -2110,7 +2011,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T14:00:00Z"
+            "nextCloseTime": "2026-03-29T14:00:00Z"
           }
         },
         {
@@ -2234,7 +2135,118 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextOpenTime": "2026-03-15T03:00:00Z"
+            "nextOpenTime": "2026-03-29T03:00:00Z"
+          }
+        },
+        {
+          "place_id": "ChIJiUEJVT3KlzMR-FMPswNKMD0",
+          "displayName": {
+            "text": "Tamayo's",
+            "languageCode": "en"
+          },
+          "location": {
+            "latitude": 14.5906069,
+            "longitude": 120.9759557
+          },
+          "formattedAddress": "Chamber I Puerta De Isabel II Cor Muralle &amp; Magallanes Sts, Intramuros Manila, HXRG+69W, Intramuros, Manila, 1002 Metro Manila, Philippines",
+          "regularOpeningHours": {
+            "openNow": true,
+            "periods": [
+              {
+                "open": {
+                  "day": 0,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 0,
+                  "hour": 20,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 1,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 1,
+                  "hour": 20,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 2,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 2,
+                  "hour": 20,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 3,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 3,
+                  "hour": 20,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 4,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 4,
+                  "hour": 20,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 5,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 5,
+                  "hour": 20,
+                  "minute": 0
+                }
+              },
+              {
+                "open": {
+                  "day": 6,
+                  "hour": 10,
+                  "minute": 0
+                },
+                "close": {
+                  "day": 6,
+                  "hour": 20,
+                  "minute": 0
+                }
+              }
+            ],
+            "weekdayDescriptions": [
+              "Monday: 10:00 AM – 8:00 PM",
+              "Tuesday: 10:00 AM – 8:00 PM",
+              "Wednesday: 10:00 AM – 8:00 PM",
+              "Thursday: 10:00 AM – 8:00 PM",
+              "Friday: 10:00 AM – 8:00 PM",
+              "Saturday: 10:00 AM – 8:00 PM",
+              "Sunday: 10:00 AM – 8:00 PM"
+            ],
+            "nextCloseTime": "2026-03-29T12:00:00Z"
           }
         }
       ],
@@ -2347,7 +2359,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T14:00:00Z"
+            "nextCloseTime": "2026-03-29T14:00:00Z"
           }
         },
         {
@@ -2446,7 +2458,7 @@
               "Saturday: 11:00 AM – 9:00 PM",
               "Sunday: 11:00 AM – 9:00 PM"
             ],
-            "nextOpenTime": "2026-03-15T03:00:00Z"
+            "nextOpenTime": "2026-03-29T03:00:00Z"
           }
         },
         {
@@ -2557,7 +2569,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -2668,7 +2680,7 @@
               "Saturday: 7:00 AM – 11:00 PM",
               "Sunday: 7:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T15:00:00Z"
+            "nextCloseTime": "2026-03-29T15:00:00Z"
           }
         },
         {
@@ -2689,7 +2701,7 @@
                 "open": {
                   "day": 0,
                   "hour": 7,
-                  "minute": 0
+                  "minute": 30
                 },
                 "close": {
                   "day": 0,
@@ -2701,7 +2713,7 @@
                 "open": {
                   "day": 1,
                   "hour": 6,
-                  "minute": 0
+                  "minute": 30
                 },
                 "close": {
                   "day": 1,
@@ -2713,7 +2725,7 @@
                 "open": {
                   "day": 2,
                   "hour": 6,
-                  "minute": 0
+                  "minute": 30
                 },
                 "close": {
                   "day": 2,
@@ -2725,7 +2737,7 @@
                 "open": {
                   "day": 3,
                   "hour": 6,
-                  "minute": 0
+                  "minute": 30
                 },
                 "close": {
                   "day": 3,
@@ -2737,7 +2749,7 @@
                 "open": {
                   "day": 4,
                   "hour": 6,
-                  "minute": 0
+                  "minute": 30
                 },
                 "close": {
                   "day": 4,
@@ -2749,7 +2761,7 @@
                 "open": {
                   "day": 5,
                   "hour": 6,
-                  "minute": 0
+                  "minute": 30
                 },
                 "close": {
                   "day": 5,
@@ -2761,7 +2773,7 @@
                 "open": {
                   "day": 6,
                   "hour": 7,
-                  "minute": 0
+                  "minute": 30
                 },
                 "close": {
                   "day": 6,
@@ -2771,15 +2783,15 @@
               }
             ],
             "weekdayDescriptions": [
-              "Monday: 6:00 AM – 10:00 PM",
-              "Tuesday: 6:00 AM – 10:00 PM",
-              "Wednesday: 6:00 AM – 10:00 PM",
-              "Thursday: 6:00 AM – 10:00 PM",
-              "Friday: 6:00 AM – 10:00 PM",
-              "Saturday: 7:00 AM – 9:00 PM",
-              "Sunday: 7:00 AM – 9:00 PM"
+              "Monday: 6:30 AM – 10:00 PM",
+              "Tuesday: 6:30 AM – 10:00 PM",
+              "Wednesday: 6:30 AM – 10:00 PM",
+              "Thursday: 6:30 AM – 10:00 PM",
+              "Friday: 6:30 AM – 10:00 PM",
+              "Saturday: 7:30 AM – 9:00 PM",
+              "Sunday: 7:30 AM – 9:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T13:00:00Z"
+            "nextCloseTime": "2026-03-29T13:00:00Z"
           }
         },
         {
@@ -2890,7 +2902,7 @@
               "Saturday: 10:30 AM – 8:00 PM",
               "Sunday: 10:30 AM – 8:00 PM"
             ],
-            "nextOpenTime": "2026-03-15T02:30:00Z"
+            "nextOpenTime": "2026-03-29T02:30:00Z"
           }
         },
         {
@@ -3001,7 +3013,7 @@
               "Saturday: 11:00 AM – 2:00 AM",
               "Sunday: 11:00 AM – 1:30 AM"
             ],
-            "nextOpenTime": "2026-03-15T03:00:00Z"
+            "nextOpenTime": "2026-03-29T03:00:00Z"
           }
         },
         {
@@ -3112,7 +3124,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T14:00:00Z"
+            "nextCloseTime": "2026-03-29T14:00:00Z"
           }
         },
         {
@@ -3223,7 +3235,7 @@
               "Saturday: 7:00 AM – 8:00 PM",
               "Sunday: 8:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -3334,7 +3346,7 @@
               "Saturday: 8:00 AM – 10:00 PM",
               "Sunday: 8:00 AM – 10:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T14:00:00Z"
+            "nextCloseTime": "2026-03-29T14:00:00Z"
           }
         }
       ]
@@ -3437,7 +3449,7 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextCloseTime": "2026-03-15T08:30:00Z"
+            "nextCloseTime": "2026-03-29T08:30:00Z"
           }
         },
         {
@@ -3549,7 +3561,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -3673,7 +3685,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -3760,7 +3772,7 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextOpenTime": "2026-03-16T02:00:00Z"
+            "nextOpenTime": "2026-03-30T02:00:00Z"
           }
         },
         {
@@ -3859,7 +3871,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -3958,7 +3970,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -4153,7 +4165,7 @@
               "Saturday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM",
               "Sunday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T04:00:00Z"
+            "nextCloseTime": "2026-03-29T04:00:00Z"
           }
         },
         {
@@ -4267,7 +4279,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -4366,7 +4378,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -4465,7 +4477,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -4564,7 +4576,7 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextCloseTime": "2026-03-15T08:30:00Z"
+            "nextCloseTime": "2026-03-29T08:30:00Z"
           }
         },
         {
@@ -4759,7 +4771,7 @@
               "Saturday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM",
               "Sunday: 8:00 AM – 12:00 PM, 1:00 – 5:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T04:00:00Z"
+            "nextCloseTime": "2026-03-29T04:00:00Z"
           }
         },
         {
@@ -4858,7 +4870,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -4957,7 +4969,7 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T09:00:00Z"
+            "nextCloseTime": "2026-03-29T09:00:00Z"
           }
         },
         {
@@ -5081,7 +5093,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -5255,7 +5267,7 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T09:00:00Z"
+            "nextCloseTime": "2026-03-29T09:00:00Z"
           }
         },
         {
@@ -5499,7 +5511,7 @@
               "Saturday: 10:00 AM – 12:00 AM",
               "Sunday: 10:00 AM – 12:00 AM"
             ],
-            "nextCloseTime": "2026-03-15T16:00:00Z"
+            "nextCloseTime": "2026-03-29T16:00:00Z"
           }
         },
         {
@@ -5669,7 +5681,7 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T09:00:00Z"
+            "nextCloseTime": "2026-03-29T09:00:00Z"
           }
         },
         {
@@ -5897,7 +5909,7 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextOpenTime": "2026-03-16T00:00:00Z"
+            "nextOpenTime": "2026-03-30T00:00:00Z"
           }
         },
         {
@@ -6022,7 +6034,7 @@
               "Saturday: 8:00 AM – 4:30 PM",
               "Sunday: 8:00 – 11:30 AM"
             ],
-            "nextCloseTime": "2026-03-15T03:30:00Z"
+            "nextCloseTime": "2026-03-29T03:30:00Z"
           }
         },
         {
@@ -6149,7 +6161,7 @@
               "Saturday: 8:00 AM – 4:30 PM",
               "Sunday: 8:00 – 11:30 AM"
             ],
-            "nextCloseTime": "2026-03-15T03:30:00Z"
+            "nextCloseTime": "2026-03-29T03:30:00Z"
           }
         },
         {
@@ -6248,7 +6260,7 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T09:00:00Z"
+            "nextCloseTime": "2026-03-29T09:00:00Z"
           }
         },
         {
@@ -6455,7 +6467,7 @@
               "Saturday: 10:00 AM – 4:30 PM",
               "Sunday: 10:00 AM – 4:30 PM"
             ],
-            "nextCloseTime": "2026-03-15T08:30:00Z"
+            "nextCloseTime": "2026-03-29T08:30:00Z"
           }
         },
         {
@@ -6599,7 +6611,7 @@
               "Saturday: 9:00 AM – 5:00 PM",
               "Sunday: 9:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T09:00:00Z"
+            "nextCloseTime": "2026-03-29T09:00:00Z"
           }
         },
         {
@@ -6710,7 +6722,7 @@
               "Saturday: 9:00 AM – 3:00 PM",
               "Sunday: 9:00 AM – 3:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T07:00:00Z"
+            "nextCloseTime": "2026-03-29T07:00:00Z"
           }
         },
         {
@@ -6809,7 +6821,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -6921,7 +6933,7 @@
               "Saturday: 8:00 AM – 4:30 PM",
               "Sunday: 8:00 – 11:30 AM"
             ],
-            "nextCloseTime": "2026-03-15T03:30:00Z"
+            "nextCloseTime": "2026-03-29T03:30:00Z"
           }
         },
         {
@@ -7032,7 +7044,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -7191,7 +7203,7 @@
               "Saturday: 8:00 AM – 11:00 PM",
               "Sunday: 8:00 AM – 11:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T15:00:00Z"
+            "nextCloseTime": "2026-03-29T15:00:00Z"
           }
         },
         {
@@ -7302,7 +7314,7 @@
               "Saturday: 10:00 AM – 12:00 AM",
               "Sunday: 10:00 AM – 12:00 AM"
             ],
-            "nextCloseTime": "2026-03-15T16:00:00Z"
+            "nextCloseTime": "2026-03-29T16:00:00Z"
           }
         },
         {
@@ -7401,7 +7413,7 @@
               "Saturday: 8:00 AM – 4:30 PM",
               "Sunday: 8:00 – 11:30 AM"
             ],
-            "nextCloseTime": "2026-03-15T03:30:00Z"
+            "nextCloseTime": "2026-03-29T03:30:00Z"
           }
         },
         {
@@ -7533,7 +7545,7 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T09:00:00Z"
+            "nextCloseTime": "2026-03-29T09:00:00Z"
           }
         },
         {
@@ -7665,7 +7677,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -7776,7 +7788,7 @@
               "Saturday: 8:00 AM – 5:00 PM",
               "Sunday: 8:00 AM – 5:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T09:00:00Z"
+            "nextCloseTime": "2026-03-29T09:00:00Z"
           }
         },
         {
@@ -7887,7 +7899,7 @@
               "Saturday: 9:00 AM – 6:00 PM",
               "Sunday: 9:00 AM – 6:00 PM"
             ],
-            "nextCloseTime": "2026-03-15T10:00:00Z"
+            "nextCloseTime": "2026-03-29T10:00:00Z"
           }
         },
         {
@@ -7974,7 +7986,7 @@
               "Saturday: Closed",
               "Sunday: Closed"
             ],
-            "nextOpenTime": "2026-03-16T00:00:00Z"
+            "nextOpenTime": "2026-03-30T00:00:00Z"
           }
         }
       ]
