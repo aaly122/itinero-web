@@ -10,42 +10,8 @@ by a Nearest Neighbor Algorithm. The result is then presented into a GUI that a 
 
 ## Features
 * Automatic Itinerary Generator using Flask and Vue
-* Explore page with ability to share and discover user made itineraries
+* Explore page with ability to share and discover user made itineraries (Discontinued)
 * Dynamically changing time boxes depending on POI type and time allottment
-
-## Installation
-Before getting started, you must first install the following dependencies:
-* [Node.js](https://nodejs.org/en)
-* [Python](https://www.python.org/)
-
-1. Navigate to the folder you want to clone to and clone the repository.
-
-`https://github.com/karlo-alano/itinero.git` or `git@github.com:karlo-alano/itinero.git`
-
-2. Navigate to ./frontend/ and download the necesarry dependencies.
-
-`npm install`
-
-After installation, the code should now be editable.
-
-3. To run and test, make the dev server live
-
-`npm run dev`
-
-## Completed Features:
-* Basic Create Module. From data gathering to data processing to data presentation.
-* Basic wireframe of static UI components 
-
-## Uncompleted Features:
-* Itinerary editing, regeneration, and saving
-* User account creation
-* User content creation (Blog and Pocket Journal creation)
-* Database integration
-* User authentication and session management
-
-
-## Unpolished features:
-* UI/UX
-* Automatic Scheduling Algorithm 
+* Dynamic Route Drawing 
 
 
