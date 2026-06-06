@@ -1,6 +1,5 @@
 name: Refresh Store Hours
 on:
-  # Add this section to force it to run on your branch
   push:
     branches:
       - feature/setup-automation
@@ -11,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write         # Gives permission to commit the JSON file back
+  contents: write
 
 jobs:
   refresh-data:
@@ -30,7 +29,7 @@ jobs:
 
       - name: Run refresh script
         env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }} # Inject the secret
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY_GITHUB }}
         run: python backend/cache_refresh.py
 
       - name: Commit and push changes
